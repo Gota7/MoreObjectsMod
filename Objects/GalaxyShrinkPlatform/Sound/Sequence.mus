@@ -1,0 +1,15 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;  Sequence.mus
+;     Made by Gota7
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+@SEQ_TABLE
+NCS_SE_GALAXY_SHRINKING_PLATFORM:	NCS_SE_GALAXY_SHRINKING_PLATFORM,	NCS_BANK_CUSTOM_SE,	127,	120,	64,	NCS_PLAYER_SE_SCENE_TRG
+
+@SEQ_DATA
+NCS_SE_GALAXY_SHRINKING_PLATFORM:
+	prg 0
+	cn4 85, 0
+	fin

@@ -1,0 +1,1252 @@
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
+
+
+   1              		.arch armv5te
+   2              		.eabi_attribute 23, 1
+   3              		.eabi_attribute 24, 1
+   4              		.eabi_attribute 25, 1
+   5              		.eabi_attribute 26, 1
+   6              		.eabi_attribute 30, 2
+   7              		.eabi_attribute 34, 0
+   8              		.eabi_attribute 18, 4
+   9              		.file	"SilverCoin.cpp"
+  10              		.text
+  11              	.Ltext0:
+  12              		.cfi_sections	.debug_frame
+  13              		.align	2
+  14              		.global	_ZN10SilverCoin13OnYoshiTryEatEv
+  15              		.syntax unified
+  16              		.arm
+  17              		.fpu softvfp
+  19              	_ZN10SilverCoin13OnYoshiTryEatEv:
+  20              	.LVL0:
+  21              	.LFB1161:
+  22              		.file 1 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp"
+  23              		.loc 1 113 1 view -0
+  24              		.cfi_startproc
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28              		.loc 1 114 2 view .LVU1
+  29              		.loc 1 115 1 is_stmt 0 view .LVU2
+  30 0000 0400A0E3 		mov	r0, #4
+  31              	.LVL1:
+  32              		.loc 1 115 1 view .LVU3
+  33 0004 1EFF2FE1 		bx	lr
+  34              		.cfi_endproc
+  35              	.LFE1161:
+  37              		.align	2
+  38              		.global	_ZN10SilverCoin5SpawnEv
+  39              		.syntax unified
+  40              		.arm
+  41              		.fpu softvfp
+  43              	_ZN10SilverCoin5SpawnEv:
+  44              	.LFB1149:
+  45              		.loc 1 36 1 is_stmt 1 view -0
+  46              		.cfi_startproc
+  47              		@ args = 0, pretend = 0, frame = 0
+  48              		@ frame_needed = 0, uses_anonymous_args = 0
+  49              		.loc 1 37 2 view .LVU5
+  50              		.loc 1 36 1 is_stmt 0 view .LVU6
+  51 0008 10402DE9 		push	{r4, lr}
+  52              		.cfi_def_cfa_offset 8
+  53              		.cfi_offset 4, -8
+  54              		.cfi_offset 14, -4
+  55              		.loc 1 37 13 view .LVU7
+  56 000c 3B0EA0E3 		mov	r0, #944
+  57 0010 FEFFFFEB 		bl	_ZN9ActorBasenwEj
+  58              	.LVL2:
+  59 0014 0040A0E1 		mov	r4, r0
+  60              	.LVL3:
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 2
+
+
+  61              	.LBB159:
+  62              	.LBI159:
+  63              		.file 2 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.h"
+  64              		.loc 2 6 8 is_stmt 1 view .LVU8
+  65              	.LBB160:
+  66 0018 FEFFFFEB 		bl	_ZN8PlatformC2Ev
+  67              	.LVL4:
+  68              		.loc 2 6 8 is_stmt 0 view .LVU9
+  69 001c 0400A0E1 		mov	r0, r4
+  70 0020 1C309FE5 		ldr	r3, .L5
+  71 0024 203380E4 		str	r3, [r0], #800
+  72 0028 FEFFFFEB 		bl	_ZN12CylinderClsnC1Ev
+  73              	.LVL5:
+  74 002c D50F84E2 		add	r0, r4, #852
+  75 0030 FEFFFFEB 		bl	_ZN12ShadowVolumeC1Ev
+  76              	.LVL6:
+  77              	.LBB161:
+  78              	.LBI161:
+  79              		.file 3 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SM64DS_Common.h"
+  80              		.loc 3 205 8 is_stmt 1 view .LVU10
+  81              	.LBB162:
+  82              	.LBI162:
+  83              		.loc 3 34 9 view .LVU11
+  84              		.loc 3 34 9 is_stmt 0 view .LVU12
+  85              	.LBE162:
+  86              	.LBB163:
+  87              	.LBI163:
+  88              		.loc 3 34 9 is_stmt 1 view .LVU13
+  89              		.loc 3 34 9 is_stmt 0 view .LVU14
+  90              	.LBE163:
+  91              	.LBB164:
+  92              	.LBI164:
+  93              		.loc 3 34 9 is_stmt 1 view .LVU15
+  94              		.loc 3 34 9 is_stmt 0 view .LVU16
+  95              	.LBE164:
+  96              	.LBB165:
+  97              	.LBI165:
+  98              		.loc 3 34 9 is_stmt 1 view .LVU17
+  99              		.loc 3 34 9 is_stmt 0 view .LVU18
+ 100              	.LBE165:
+ 101              	.LBB166:
+ 102              	.LBI166:
+ 103              		.loc 3 34 9 is_stmt 1 view .LVU19
+ 104              		.loc 3 34 9 is_stmt 0 view .LVU20
+ 105              	.LBE166:
+ 106              	.LBB167:
+ 107              	.LBI167:
+ 108              		.loc 3 34 9 is_stmt 1 view .LVU21
+ 109              		.loc 3 34 9 is_stmt 0 view .LVU22
+ 110              	.LBE167:
+ 111              	.LBB168:
+ 112              	.LBI168:
+ 113              		.loc 3 34 9 is_stmt 1 view .LVU23
+ 114              		.loc 3 34 9 is_stmt 0 view .LVU24
+ 115              	.LBE168:
+ 116              	.LBB169:
+ 117              	.LBI169:
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 3
+
+
+ 118              		.loc 3 34 9 is_stmt 1 view .LVU25
+ 119              		.loc 3 34 9 is_stmt 0 view .LVU26
+ 120              	.LBE169:
+ 121              	.LBB170:
+ 122              	.LBI170:
+ 123              		.loc 3 34 9 is_stmt 1 view .LVU27
+ 124              		.loc 3 34 9 is_stmt 0 view .LVU28
+ 125              	.LBE170:
+ 126              	.LBB171:
+ 127              	.LBI171:
+ 128              		.loc 3 34 9 is_stmt 1 view .LVU29
+ 129              		.loc 3 34 9 is_stmt 0 view .LVU30
+ 130              	.LBE171:
+ 131              	.LBB172:
+ 132              	.LBI172:
+ 133              		.loc 3 34 9 is_stmt 1 view .LVU31
+ 134              		.loc 3 34 9 is_stmt 0 view .LVU32
+ 135              	.LBE172:
+ 136              	.LBB173:
+ 137              	.LBI173:
+ 138              		.loc 3 34 9 is_stmt 1 view .LVU33
+ 139              		.loc 3 34 9 is_stmt 0 view .LVU34
+ 140              	.LBE173:
+ 141              	.LBE161:
+ 142              		.loc 2 6 8 view .LVU35
+ 143 0034 0130A0E3 		mov	r3, #1
+ 144              	.LBE160:
+ 145              	.LBE159:
+ 146              		.loc 1 38 1 view .LVU36
+ 147 0038 0400A0E1 		mov	r0, r4
+ 148              	.LBB175:
+ 149              	.LBB174:
+ 150              		.loc 2 6 8 view .LVU37
+ 151 003c AC33C4E5 		strb	r3, [r4, #940]
+ 152              	.LVL7:
+ 153              		.loc 2 6 8 view .LVU38
+ 154              	.LBE174:
+ 155              	.LBE175:
+ 156              		.loc 1 38 1 view .LVU39
+ 157 0040 1080BDE8 		pop	{r4, pc}
+ 158              	.L6:
+ 159              		.align	2
+ 160              	.L5:
+ 161 0044 08000000 		.word	.LANCHOR0+8
+ 162              		.cfi_endproc
+ 163              	.LFE1149:
+ 165              		.align	2
+ 166              		.global	_ZN10SilverCoin16CleanupResourcesEv
+ 167              		.syntax unified
+ 168              		.arm
+ 169              		.fpu softvfp
+ 171              	_ZN10SilverCoin16CleanupResourcesEv:
+ 172              	.LVL8:
+ 173              	.LFB1156:
+ 174              		.loc 1 71 1 is_stmt 1 view -0
+ 175              		.cfi_startproc
+ 176              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 4
+
+
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178              		.loc 1 72 2 view .LVU41
+ 179              		.loc 1 71 1 is_stmt 0 view .LVU42
+ 180 0048 10402DE9 		push	{r4, lr}
+ 181              		.cfi_def_cfa_offset 8
+ 182              		.cfi_offset 4, -8
+ 183              		.cfi_offset 14, -4
+ 184              		.loc 1 72 19 view .LVU43
+ 185 004c 08009FE5 		ldr	r0, .L9
+ 186              	.LVL9:
+ 187              		.loc 1 72 19 view .LVU44
+ 188 0050 FEFFFFEB 		bl	_ZN13SharedFilePtr7ReleaseEv
+ 189              	.LVL10:
+ 190              		.loc 1 73 2 is_stmt 1 view .LVU45
+ 191              		.loc 1 74 1 is_stmt 0 view .LVU46
+ 192 0054 0100A0E3 		mov	r0, #1
+ 193 0058 1080BDE8 		pop	{r4, pc}
+ 194              	.L10:
+ 195              		.align	2
+ 196              	.L9:
+ 197 005c 00000000 		.word	.LANCHOR1
+ 198              		.cfi_endproc
+ 199              	.LFE1156:
+ 201              		.align	2
+ 202              		.global	_ZN10SilverCoin4KillEv
+ 203              		.syntax unified
+ 204              		.arm
+ 205              		.fpu softvfp
+ 207              	_ZN10SilverCoin4KillEv:
+ 208              	.LVL11:
+ 209              	.LFB1162:
+ 210              		.loc 1 118 1 is_stmt 1 view -0
+ 211              		.cfi_startproc
+ 212              		@ args = 0, pretend = 0, frame = 0
+ 213              		@ frame_needed = 0, uses_anonymous_args = 0
+ 214              		.loc 1 119 2 view .LVU48
+ 215              		.loc 1 118 1 is_stmt 0 view .LVU49
+ 216 0060 10402DE9 		push	{r4, lr}
+ 217              		.cfi_def_cfa_offset 8
+ 218              		.cfi_offset 4, -8
+ 219              		.cfi_offset 14, -4
+ 220              		.loc 1 118 1 view .LVU50
+ 221 0064 0040A0E1 		mov	r4, r0
+ 222              	.LBB179:
+ 223              	.LBB180:
+ 224              		.loc 3 40 68 view .LVU51
+ 225 0068 602094E5 		ldr	r2, [r4, #96]
+ 226              	.LBE180:
+ 227              	.LBE179:
+ 228              		.loc 1 119 29 view .LVU52
+ 229 006c 643094E5 		ldr	r3, [r4, #100]
+ 230 0070 0A2982E2 		add	r2, r2, #163840
+ 231 0074 5C1094E5 		ldr	r1, [r4, #92]
+ 232 0078 D200A0E3 		mov	r0, #210
+ 233              	.LVL12:
+ 234              	.LBB183:
+ 235              	.LBI179:
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 5
+
+
+ 236              		.loc 3 40 28 is_stmt 1 view .LVU53
+ 237              	.LBB182:
+ 238              	.LBB181:
+ 239              	.LBI181:
+ 240              		.loc 3 35 28 view .LVU54
+ 241              		.loc 3 35 28 is_stmt 0 view .LVU55
+ 242              	.LBE181:
+ 243              	.LBE182:
+ 244              	.LBE183:
+ 245              		.loc 1 119 29 view .LVU56
+ 246 007c FEFFFFEB 		bl	_ZN8Particle6System9NewSimpleEj5Fix12IiES2_S2_
+ 247              	.LVL13:
+ 248              		.loc 1 120 2 is_stmt 1 view .LVU57
+ 249              		.loc 1 120 18 is_stmt 0 view .LVU58
+ 250 0080 741084E2 		add	r1, r4, #116
+ 251 0084 1100A0E3 		mov	r0, #17
+ 252 0088 FEFFFFEB 		bl	_ZN5Sound9PlayBank3EjRK7Vector3
+ 253              	.LVL14:
+ 254              		.loc 1 121 2 is_stmt 1 view .LVU59
+ 255              		.loc 1 121 26 is_stmt 0 view .LVU60
+ 256 008c 0400A0E1 		mov	r0, r4
+ 257 0090 FEFFFFEB 		bl	_ZN5Actor24KillAndTrackInDeathTableEv
+ 258              	.LVL15:
+ 259              		.loc 1 122 2 is_stmt 1 view .LVU61
+ 260              		.syntax divided
+ 261              	@ 122 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp" 1
+ 262 0094 0000A0E3 		mov r0, #0
+ 263              	@ 0 "" 2
+ 264              		.loc 1 123 2 view .LVU62
+ 265              	@ 123 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp" 1
+ 266 0098 0110A0E3 		mov r1, #1
+ 267              	@ 0 "" 2
+ 268              		.loc 1 124 2 view .LVU63
+ 269              	@ 124 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp" 1
+ 270 009c FEFFFFEB 		bl 0x0202A7B8
+ 271              	@ 0 "" 2
+ 272              		.loc 1 125 1 is_stmt 0 view .LVU64
+ 273              		.arm
+ 274              		.syntax unified
+ 275 00a0 1080BDE8 		pop	{r4, pc}
+ 276              		.cfi_endproc
+ 277              	.LFE1162:
+ 279              		.align	2
+ 280              		.global	_ZN10SilverCoin13OnTurnIntoEggER6Player
+ 281              		.syntax unified
+ 282              		.arm
+ 283              		.fpu softvfp
+ 285              	_ZN10SilverCoin13OnTurnIntoEggER6Player:
+ 286              	.LVL16:
+ 287              	.LFB1160:
+ 288              		.loc 1 107 1 is_stmt 1 view -0
+ 289              		.cfi_startproc
+ 290              		@ args = 0, pretend = 0, frame = 0
+ 291              		@ frame_needed = 0, uses_anonymous_args = 0
+ 292              		.loc 1 108 2 view .LVU66
+ 293              		.loc 1 108 7 is_stmt 0 view .LVU67
+ 294 00a4 003090E5 		ldr	r3, [r0]
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 6
+
+
+ 295 00a8 64209FE5 		ldr	r2, .L17
+ 296 00ac 7C3093E5 		ldr	r3, [r3, #124]
+ 297              		.loc 1 107 1 view .LVU68
+ 298 00b0 10402DE9 		push	{r4, lr}
+ 299              		.cfi_def_cfa_offset 8
+ 300              		.cfi_offset 4, -8
+ 301              		.cfi_offset 14, -4
+ 302 00b4 020053E1 		cmp	r3, r2
+ 303              		.loc 1 107 1 view .LVU69
+ 304 00b8 0040A0E1 		mov	r4, r0
+ 305 00bc 1000001A 		bne	.L14
+ 306              	.LVL17:
+ 307              	.LBB189:
+ 308              	.LBI189:
+ 309              		.loc 1 117 6 is_stmt 1 view .LVU70
+ 310              	.LBB190:
+ 311              		.loc 1 119 2 view .LVU71
+ 312              	.LBB191:
+ 313              	.LBI191:
+ 314              		.loc 3 40 28 view .LVU72
+ 315              	.LBB192:
+ 316              	.LBB193:
+ 317              	.LBI193:
+ 318              		.loc 3 35 28 view .LVU73
+ 319              		.loc 3 35 28 is_stmt 0 view .LVU74
+ 320              	.LBE193:
+ 321              		.loc 3 40 68 view .LVU75
+ 322 00c0 602090E5 		ldr	r2, [r0, #96]
+ 323              	.LBE192:
+ 324              	.LBE191:
+ 325              		.loc 1 119 29 view .LVU76
+ 326 00c4 643090E5 		ldr	r3, [r0, #100]
+ 327 00c8 0A2982E2 		add	r2, r2, #163840
+ 328 00cc 5C1090E5 		ldr	r1, [r0, #92]
+ 329              	.LVL18:
+ 330              		.loc 1 119 29 view .LVU77
+ 331 00d0 D200A0E3 		mov	r0, #210
+ 332              	.LVL19:
+ 333              		.loc 1 119 29 view .LVU78
+ 334 00d4 FEFFFFEB 		bl	_ZN8Particle6System9NewSimpleEj5Fix12IiES2_S2_
+ 335              	.LVL20:
+ 336              		.loc 1 120 2 is_stmt 1 view .LVU79
+ 337              		.loc 1 120 18 is_stmt 0 view .LVU80
+ 338 00d8 741084E2 		add	r1, r4, #116
+ 339 00dc 1100A0E3 		mov	r0, #17
+ 340 00e0 FEFFFFEB 		bl	_ZN5Sound9PlayBank3EjRK7Vector3
+ 341              	.LVL21:
+ 342              		.loc 1 121 2 is_stmt 1 view .LVU81
+ 343              		.loc 1 121 26 is_stmt 0 view .LVU82
+ 344 00e4 0400A0E1 		mov	r0, r4
+ 345 00e8 FEFFFFEB 		bl	_ZN5Actor24KillAndTrackInDeathTableEv
+ 346              	.LVL22:
+ 347              		.loc 1 122 2 is_stmt 1 view .LVU83
+ 348              		.syntax divided
+ 349              	@ 122 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp" 1
+ 350 00ec 0000A0E3 		mov r0, #0
+ 351              	@ 0 "" 2
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 7
+
+
+ 352              		.loc 1 123 2 view .LVU84
+ 353              	@ 123 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp" 1
+ 354 00f0 0110A0E3 		mov r1, #1
+ 355              	@ 0 "" 2
+ 356              		.loc 1 124 2 view .LVU85
+ 357              	@ 124 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp" 1
+ 358 00f4 FEFFFFEB 		bl 0x0202A7B8
+ 359              	@ 0 "" 2
+ 360              	.LVL23:
+ 361              		.loc 1 124 2 is_stmt 0 view .LVU86
+ 362              		.arm
+ 363              		.syntax unified
+ 364              	.LBE190:
+ 365              	.LBE189:
+ 366              		.loc 1 109 2 is_stmt 1 view .LVU87
+ 367              		.loc 1 109 9 is_stmt 0 view .LVU88
+ 368 00f8 0400A0E1 		mov	r0, r4
+ 369              		.loc 1 110 1 view .LVU89
+ 370 00fc 1040BDE8 		pop	{r4, lr}
+ 371              		.cfi_remember_state
+ 372              		.cfi_restore 14
+ 373              		.cfi_restore 4
+ 374              		.cfi_def_cfa_offset 0
+ 375              	.LVL24:
+ 376              		.loc 1 109 9 view .LVU90
+ 377 0100 FEFFFFEA 		b	_ZN9ActorBase7DestroyEv
+ 378              	.LVL25:
+ 379              	.L14:
+ 380              		.cfi_restore_state
+ 381              		.loc 1 108 6 view .LVU91
+ 382 0104 33FF2FE1 		blx	r3
+ 383              	.LVL26:
+ 384              		.loc 1 109 2 is_stmt 1 view .LVU92
+ 385              		.loc 1 109 9 is_stmt 0 view .LVU93
+ 386 0108 0400A0E1 		mov	r0, r4
+ 387              		.loc 1 110 1 view .LVU94
+ 388 010c 1040BDE8 		pop	{r4, lr}
+ 389              		.cfi_restore 14
+ 390              		.cfi_restore 4
+ 391              		.cfi_def_cfa_offset 0
+ 392              	.LVL27:
+ 393              		.loc 1 109 9 view .LVU95
+ 394 0110 FEFFFFEA 		b	_ZN9ActorBase7DestroyEv
+ 395              	.LVL28:
+ 396              	.L18:
+ 397              		.loc 1 109 9 view .LVU96
+ 398              		.align	2
+ 399              	.L17:
+ 400 0114 00000000 		.word	_ZN10SilverCoin4KillEv
+ 401              		.cfi_endproc
+ 402              	.LFE1160:
+ 404              		.align	2
+ 405              		.global	_ZN10SilverCoin20UpdateModelTransformEv
+ 406              		.syntax unified
+ 407              		.arm
+ 408              		.fpu softvfp
+ 410              	_ZN10SilverCoin20UpdateModelTransformEv:
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 8
+
+
+ 411              	.LVL29:
+ 412              	.LFB1153:
+ 413              		.loc 1 41 1 is_stmt 1 view -0
+ 414              		.cfi_startproc
+ 415              		@ args = 0, pretend = 0, frame = 0
+ 416              		@ frame_needed = 0, uses_anonymous_args = 0
+ 417              		.loc 1 42 2 view .LVU98
+ 418              		.loc 1 41 1 is_stmt 0 view .LVU99
+ 419 0118 10402DE9 		push	{r4, lr}
+ 420              		.cfi_def_cfa_offset 8
+ 421              		.cfi_offset 4, -8
+ 422              		.cfi_offset 14, -4
+ 423 011c 0040A0E1 		mov	r4, r0
+ 424              	.LVL30:
+ 425              	.LBB194:
+ 426              	.LBI194:
+ 427              		.loc 3 217 14 is_stmt 1 view .LVU100
+ 428              	.LBB195:
+ 429              		.loc 3 217 45 view .LVU101
+ 430              	.LBE195:
+ 431              	.LBE194:
+ 432              		.loc 1 41 1 is_stmt 0 view .LVU102
+ 433 0120 08D04DE2 		sub	sp, sp, #8
+ 434              		.cfi_def_cfa_offset 16
+ 435              	.LBB197:
+ 436              	.LBB196:
+ 437              		.loc 3 217 68 view .LVU103
+ 438 0124 FE18D0E1 		ldrsh	r1, [r0, #142]
+ 439 0128 F00080E2 		add	r0, r0, #240
+ 440              	.LVL31:
+ 441              		.loc 3 217 68 view .LVU104
+ 442 012c FEFFFFEB 		bl	Matrix4x3_FromRotationY
+ 443              	.LVL32:
+ 444              		.loc 3 217 68 view .LVU105
+ 445              	.LBE196:
+ 446              	.LBE197:
+ 447              		.loc 1 43 2 is_stmt 1 view .LVU106
+ 448              	.LBB198:
+ 449              	.LBI198:
+ 450              		.loc 3 54 28 view .LVU107
+ 451              	.LBB199:
+ 452              	.LBB200:
+ 453              	.LBI200:
+ 454              		.loc 3 35 28 view .LVU108
+ 455              		.loc 3 35 28 is_stmt 0 view .LVU109
+ 456              	.LBE200:
+ 457              	.LBE199:
+ 458              	.LBE198:
+ 459              		.loc 1 46 21 view .LVU110
+ 460 0130 0206A0E3 		mov	r0, #2097152
+ 461 0134 0F10A0E3 		mov	r1, #15
+ 462              	.LBB203:
+ 463              	.LBB201:
+ 464              		.loc 3 54 68 view .LVU111
+ 465 0138 5C2094E5 		ldr	r2, [r4, #92]
+ 466              	.LBE201:
+ 467              	.LBE203:
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 9
+
+
+ 468              	.LBB204:
+ 469              	.LBB205:
+ 470 013c 603094E5 		ldr	r3, [r4, #96]
+ 471              	.LBE205:
+ 472              	.LBE204:
+ 473              	.LBB208:
+ 474              	.LBB202:
+ 475 0140 C221A0E1 		asr	r2, r2, #3
+ 476              	.LBE202:
+ 477              	.LBE208:
+ 478              		.loc 1 43 31 view .LVU112
+ 479 0144 142184E5 		str	r2, [r4, #276]
+ 480              		.loc 1 44 2 is_stmt 1 view .LVU113
+ 481              	.LVL33:
+ 482              	.LBB209:
+ 483              	.LBI204:
+ 484              		.loc 3 54 28 view .LVU114
+ 485              	.LBB207:
+ 486              	.LBB206:
+ 487              	.LBI206:
+ 488              		.loc 3 35 28 view .LVU115
+ 489              		.loc 3 35 28 is_stmt 0 view .LVU116
+ 490              	.LBE206:
+ 491              		.loc 3 54 68 view .LVU117
+ 492 0148 C331A0E1 		asr	r3, r3, #3
+ 493              	.LBE207:
+ 494              	.LBE209:
+ 495              	.LBB210:
+ 496              	.LBB211:
+ 497 014c 642094E5 		ldr	r2, [r4, #100]
+ 498              	.LBE211:
+ 499              	.LBE210:
+ 500              		.loc 1 44 31 view .LVU118
+ 501 0150 183184E5 		str	r3, [r4, #280]
+ 502              		.loc 1 45 2 is_stmt 1 view .LVU119
+ 503              	.LVL34:
+ 504              	.LBB215:
+ 505              	.LBI210:
+ 506              		.loc 3 54 28 view .LVU120
+ 507              	.LBB213:
+ 508              	.LBB212:
+ 509              	.LBI212:
+ 510              		.loc 3 35 28 view .LVU121
+ 511              		.loc 3 35 28 is_stmt 0 view .LVU122
+ 512              	.LBE212:
+ 513              	.LBE213:
+ 514              	.LBE215:
+ 515              		.loc 1 46 21 view .LVU123
+ 516 0154 24309FE5 		ldr	r3, .L21
+ 517              	.LBB216:
+ 518              	.LBB214:
+ 519              		.loc 3 54 68 view .LVU124
+ 520 0158 C221A0E1 		asr	r2, r2, #3
+ 521              	.LBE214:
+ 522              	.LBE216:
+ 523              		.loc 1 45 31 view .LVU125
+ 524 015c 1C2184E5 		str	r2, [r4, #284]
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 10
+
+
+ 525              		.loc 1 46 2 is_stmt 1 view .LVU126
+ 526              		.loc 1 46 21 is_stmt 0 view .LVU127
+ 527 0160 883093E5 		ldr	r3, [r3, #136]
+ 528 0164 03008DE8 		stm	sp, {r0, r1}
+ 529 0168 DF2F84E2 		add	r2, r4, #892
+ 530 016c 0400A0E1 		mov	r0, r4
+ 531 0170 D51F84E2 		add	r1, r4, #852
+ 532 0174 FEFFFFEB 		bl	_ZN5Actor19DropShadowRadHeightER12ShadowVolumeRK9Matrix4x35Fix12IiES6_j
+ 533              	.LVL35:
+ 534              		.loc 1 47 1 view .LVU128
+ 535 0178 08D08DE2 		add	sp, sp, #8
+ 536              		.cfi_def_cfa_offset 8
+ 537              		@ sp needed
+ 538 017c 1080BDE8 		pop	{r4, pc}
+ 539              	.LVL36:
+ 540              	.L22:
+ 541              		.loc 1 47 1 view .LVU129
+ 542              		.align	2
+ 543              	.L21:
+ 544 0180 00000000 		.word	.LANCHOR0
+ 545              		.cfi_endproc
+ 546              	.LFE1153:
+ 548              		.align	2
+ 549              		.global	_ZN10SilverCoin13InitResourcesEv
+ 550              		.syntax unified
+ 551              		.arm
+ 552              		.fpu softvfp
+ 554              	_ZN10SilverCoin13InitResourcesEv:
+ 555              	.LVL37:
+ 556              	.LFB1154:
+ 557              		.loc 1 51 1 is_stmt 1 view -0
+ 558              		.cfi_startproc
+ 559              		@ args = 0, pretend = 0, frame = 48
+ 560              		@ frame_needed = 0, uses_anonymous_args = 0
+ 561              		.loc 1 52 2 view .LVU131
+ 562              		.loc 1 51 1 is_stmt 0 view .LVU132
+ 563 0184 F0412DE9 		push	{r4, r5, r6, r7, r8, lr}
+ 564              		.cfi_def_cfa_offset 24
+ 565              		.cfi_offset 4, -24
+ 566              		.cfi_offset 5, -20
+ 567              		.cfi_offset 6, -16
+ 568              		.cfi_offset 7, -12
+ 569              		.cfi_offset 8, -8
+ 570              		.cfi_offset 14, -4
+ 571 0188 0040A0E1 		mov	r4, r0
+ 572 018c 38D04DE2 		sub	sp, sp, #56
+ 573              		.cfi_def_cfa_offset 80
+ 574              		.loc 1 52 32 view .LVU133
+ 575 0190 A0009FE5 		ldr	r0, .L25
+ 576              	.LVL38:
+ 577              		.loc 1 52 32 view .LVU134
+ 578 0194 FEFFFFEB 		bl	_ZN5Model8LoadFileER13SharedFilePtr
+ 579              	.LVL39:
+ 580              		.loc 1 61 14 view .LVU135
+ 581 0198 0289A0E3 		mov	r8, #32768
+ 582              		.loc 1 52 32 view .LVU136
+ 583 019c 0010A0E1 		mov	r1, r0
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 11
+
+
+ 584              	.LVL40:
+ 585              		.loc 1 53 2 is_stmt 1 view .LVU137
+ 586              		.loc 1 53 15 is_stmt 0 view .LVU138
+ 587 01a0 0030E0E3 		mvn	r3, #0
+ 588 01a4 0120A0E3 		mov	r2, #1
+ 589 01a8 D40084E2 		add	r0, r4, #212
+ 590              	.LVL41:
+ 591              		.loc 1 53 15 view .LVU139
+ 592 01ac FEFFFFEB 		bl	_ZN5Model7SetFileEPcii
+ 593              	.LVL42:
+ 594              		.loc 1 54 2 is_stmt 1 view .LVU140
+ 595              		.loc 1 54 21 is_stmt 0 view .LVU141
+ 596 01b0 D50F84E2 		add	r0, r4, #852
+ 597 01b4 FEFFFFEB 		bl	_ZN12ShadowVolume12InitCylinderEv
+ 598              	.LVL43:
+ 599              		.loc 1 56 2 is_stmt 1 view .LVU142
+ 600              		.loc 1 56 22 is_stmt 0 view .LVU143
+ 601 01b8 0400A0E1 		mov	r0, r4
+ 602 01bc FEFFFFEB 		bl	_ZN10SilverCoin20UpdateModelTransformEv
+ 603              	.LVL44:
+ 604              		.loc 1 57 2 is_stmt 1 view .LVU144
+ 605              		.loc 1 57 21 is_stmt 0 view .LVU145
+ 606 01c0 0400A0E1 		mov	r0, r4
+ 607 01c4 FEFFFFEB 		bl	_ZN8Platform19UpdateClsnPosAndRotEv
+ 608              	.LVL45:
+ 609              		.loc 1 58 2 is_stmt 1 view .LVU146
+ 610              	.LBB217:
+ 611              	.LBI217:
+ 612              		.loc 3 235 19 view .LVU147
+ 613              	.LBB218:
+ 614              		.loc 3 235 56 view .LVU148
+ 615              	.LBB219:
+ 616              	.LBI219:
+ 617              		.loc 3 205 8 view .LVU149
+ 618              	.LBB220:
+ 619              	.LBI220:
+ 620              		.loc 3 34 9 view .LVU150
+ 621              		.loc 3 34 9 is_stmt 0 view .LVU151
+ 622              	.LBE220:
+ 623              	.LBB221:
+ 624              	.LBI221:
+ 625              		.loc 3 34 9 is_stmt 1 view .LVU152
+ 626              		.loc 3 34 9 is_stmt 0 view .LVU153
+ 627              	.LBE221:
+ 628              	.LBB222:
+ 629              	.LBI222:
+ 630              		.loc 3 34 9 is_stmt 1 view .LVU154
+ 631              		.loc 3 34 9 is_stmt 0 view .LVU155
+ 632              	.LBE222:
+ 633              	.LBB223:
+ 634              	.LBI223:
+ 635              		.loc 3 34 9 is_stmt 1 view .LVU156
+ 636              		.loc 3 34 9 is_stmt 0 view .LVU157
+ 637              	.LBE223:
+ 638              	.LBB224:
+ 639              	.LBI224:
+ 640              		.loc 3 34 9 is_stmt 1 view .LVU158
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 12
+
+
+ 641              		.loc 3 34 9 is_stmt 0 view .LVU159
+ 642              	.LBE224:
+ 643              	.LBB225:
+ 644              	.LBI225:
+ 645              		.loc 3 34 9 is_stmt 1 view .LVU160
+ 646              		.loc 3 34 9 is_stmt 0 view .LVU161
+ 647              	.LBE225:
+ 648              	.LBB226:
+ 649              	.LBI226:
+ 650              		.loc 3 34 9 is_stmt 1 view .LVU162
+ 651              		.loc 3 34 9 is_stmt 0 view .LVU163
+ 652              	.LBE226:
+ 653              	.LBB227:
+ 654              	.LBI227:
+ 655              		.loc 3 34 9 is_stmt 1 view .LVU164
+ 656              		.loc 3 34 9 is_stmt 0 view .LVU165
+ 657              	.LBE227:
+ 658              	.LBB228:
+ 659              	.LBI228:
+ 660              		.loc 3 34 9 is_stmt 1 view .LVU166
+ 661              		.loc 3 34 9 is_stmt 0 view .LVU167
+ 662              	.LBE228:
+ 663              	.LBB229:
+ 664              	.LBI229:
+ 665              		.loc 3 34 9 is_stmt 1 view .LVU168
+ 666              		.loc 3 34 9 is_stmt 0 view .LVU169
+ 667              	.LBE229:
+ 668              	.LBB230:
+ 669              	.LBI230:
+ 670              		.loc 3 34 9 is_stmt 1 view .LVU170
+ 671              		.loc 3 34 9 is_stmt 0 view .LVU171
+ 672              	.LBE230:
+ 673              	.LBB231:
+ 674              	.LBI231:
+ 675              		.loc 3 34 9 is_stmt 1 view .LVU172
+ 676              		.loc 3 34 9 is_stmt 0 view .LVU173
+ 677              	.LBE231:
+ 678              	.LBE219:
+ 679              		.loc 3 235 71 is_stmt 1 view .LVU174
+ 680              		.loc 3 235 91 is_stmt 0 view .LVU175
+ 681 01c8 08208DE2 		add	r2, sp, #8
+ 682 01cc F01084E2 		add	r1, r4, #240
+ 683              	.LVL46:
+ 684              		.loc 3 235 91 view .LVU176
+ 685 01d0 64009FE5 		ldr	r0, .L25+4
+ 686 01d4 FEFFFFEB 		bl	Math_MulMat4x3Mat4x3
+ 687              	.LVL47:
+ 688              		.loc 3 235 109 is_stmt 1 view .LVU177
+ 689              		.loc 3 235 109 is_stmt 0 view .LVU178
+ 690              	.LBE218:
+ 691              	.LBE217:
+ 692              		.loc 1 58 40 view .LVU179
+ 693 01d8 08C08DE2 		add	ip, sp, #8
+ 694 01dc DFEF84E2 		add	lr, r4, #892
+ 695 01e0 0F00BCE8 		ldmia	ip!, {r0, r1, r2, r3}
+ 696 01e4 0F00AEE8 		stmia	lr!, {r0, r1, r2, r3}
+ 697 01e8 0F00BCE8 		ldmia	ip!, {r0, r1, r2, r3}
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 13
+
+
+ 698 01ec 0F00AEE8 		stmia	lr!, {r0, r1, r2, r3}
+ 699 01f0 0F009CE8 		ldm	ip, {r0, r1, r2, r3}
+ 700 01f4 0F008EE8 		stm	lr, {r0, r1, r2, r3}
+ 701              		.loc 1 59 2 is_stmt 1 view .LVU180
+ 702              	.LVL48:
+ 703              	.LBB232:
+ 704              	.LBI232:
+ 705              		.loc 3 41 28 view .LVU181
+ 706              	.LBE232:
+ 707              		.loc 1 61 14 is_stmt 0 view .LVU182
+ 708 01f8 40509FE5 		ldr	r5, .L25+8
+ 709 01fc 04808DE5 		str	r8, [sp, #4]
+ 710 0200 00508DE5 		str	r5, [sp]
+ 711              	.LBB236:
+ 712              	.LBB233:
+ 713              		.loc 3 41 65 view .LVU183
+ 714 0204 A4C394E5 		ldr	ip, [r4, #932]
+ 715              	.LBE233:
+ 716              	.LBE236:
+ 717              		.loc 1 61 14 view .LVU184
+ 718 0208 34709FE5 		ldr	r7, .L25+12
+ 719 020c 34609FE5 		ldr	r6, .L25+16
+ 720              	.LBB237:
+ 721              	.LBB234:
+ 722              		.loc 3 41 65 view .LVU185
+ 723 0210 0ACB4CE2 		sub	ip, ip, #10240
+ 724              	.LBE234:
+ 725              	.LBE237:
+ 726              		.loc 1 61 14 view .LVU186
+ 727 0214 320E84E2 		add	r0, r4, #800
+ 728 0218 0410A0E1 		mov	r1, r4
+ 729 021c 003097E5 		ldr	r3, [r7]
+ 730 0220 882096E5 		ldr	r2, [r6, #136]
+ 731              	.LBB238:
+ 732              	.LBB235:
+ 733              		.loc 3 41 65 view .LVU187
+ 734 0224 A4C384E5 		str	ip, [r4, #932]
+ 735              	.LVL49:
+ 736              		.loc 3 41 65 view .LVU188
+ 737              	.LBE235:
+ 738              	.LBE238:
+ 739              		.loc 1 61 2 is_stmt 1 view .LVU189
+ 740              		.loc 1 61 14 is_stmt 0 view .LVU190
+ 741 0228 FEFFFFEB 		bl	_ZN12CylinderClsn4InitEP5Actor5Fix12IiES3_jj
+ 742              	.LVL50:
+ 743              		.loc 1 67 2 is_stmt 1 view .LVU191
+ 744              		.loc 1 68 1 is_stmt 0 view .LVU192
+ 745 022c 0100A0E3 		mov	r0, #1
+ 746 0230 38D08DE2 		add	sp, sp, #56
+ 747              		.cfi_def_cfa_offset 24
+ 748              		@ sp needed
+ 749 0234 F081BDE8 		pop	{r4, r5, r6, r7, r8, pc}
+ 750              	.LVL51:
+ 751              	.L26:
+ 752              		.loc 1 68 1 view .LVU193
+ 753              		.align	2
+ 754              	.L25:
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 14
+
+
+ 755 0238 00000000 		.word	.LANCHOR1
+ 756 023c 00000000 		.word	_ZN9Matrix4x38IDENTITYE
+ 757 0240 02001000 		.word	1048578
+ 758 0244 88000000 		.word	_ZN12_GLOBAL__N_1L6HEIGHTE
+ 759 0248 00000000 		.word	.LANCHOR0
+ 760              		.cfi_endproc
+ 761              	.LFE1154:
+ 763              		.align	2
+ 764              		.global	_ZN10SilverCoin10HandleClsnEv
+ 765              		.syntax unified
+ 766              		.arm
+ 767              		.fpu softvfp
+ 769              	_ZN10SilverCoin10HandleClsnEv:
+ 770              	.LVL52:
+ 771              	.LFB1159:
+ 772              		.loc 1 92 31 is_stmt 1 view -0
+ 773              		.cfi_startproc
+ 774              		@ args = 0, pretend = 0, frame = 0
+ 775              		@ frame_needed = 0, uses_anonymous_args = 0
+ 776              		.loc 1 93 2 view .LVU195
+ 777              		.loc 1 92 31 is_stmt 0 view .LVU196
+ 778 024c 10402DE9 		push	{r4, lr}
+ 779              		.cfi_def_cfa_offset 8
+ 780              		.cfi_offset 4, -8
+ 781              		.cfi_offset 14, -4
+ 782              		.loc 1 92 31 view .LVU197
+ 783 0250 0040A0E1 		mov	r4, r0
+ 784              		.loc 1 93 34 view .LVU198
+ 785 0254 440390E5 		ldr	r0, [r0, #836]
+ 786              	.LVL53:
+ 787              		.loc 1 93 34 view .LVU199
+ 788 0258 FEFFFFEB 		bl	_ZN5Actor10FindWithIDEj
+ 789              	.LVL54:
+ 790              		.loc 1 94 2 is_stmt 1 view .LVU200
+ 791 025c 000050E3 		cmp	r0, #0
+ 792              		.loc 1 94 2 is_stmt 0 view .LVU201
+ 793 0260 1080BD08 		popeq	{r4, pc}
+ 794              		.loc 1 96 2 is_stmt 1 view .LVU202
+ 795 0264 BC30D0E1 		ldrh	r3, [r0, #12]
+ 796 0268 BF0053E3 		cmp	r3, #191
+ 797 026c 1080BD18 		popne	{r4, pc}
+ 798              		.loc 1 98 2 view .LVU203
+ 799              	.LVL55:
+ 800              		.loc 1 99 2 view .LVU204
+ 801              		.loc 1 99 16 is_stmt 0 view .LVU205
+ 802 0270 403394E5 		ldr	r3, [r4, #832]
+ 803              		.loc 1 99 2 view .LVU206
+ 804 0274 020913E3 		tst	r3, #32768
+ 805 0278 1600001A 		bne	.L29
+ 806              		.loc 1 99 31 discriminator 1 view .LVU207
+ 807 027c AC33D4E5 		ldrb	r3, [r4, #940]	@ zero_extendqisi2
+ 808 0280 000053E3 		cmp	r3, #0
+ 809 0284 1300000A 		beq	.L29
+ 810              	.LVL56:
+ 811              	.LBB246:
+ 812              	.LBI246:
+ 813              		.loc 1 92 6 is_stmt 1 view .LVU208
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 15
+
+
+ 814              	.LBB247:
+ 815              		.loc 1 100 3 view .LVU209
+ 816              		.loc 1 100 8 is_stmt 0 view .LVU210
+ 817 0288 003094E5 		ldr	r3, [r4]
+ 818 028c 5C209FE5 		ldr	r2, .L38
+ 819 0290 7C3093E5 		ldr	r3, [r3, #124]
+ 820 0294 020053E1 		cmp	r3, r2
+ 821 0298 1100001A 		bne	.L30
+ 822              	.LVL57:
+ 823              	.LBB248:
+ 824              	.LBI248:
+ 825              		.loc 1 117 6 is_stmt 1 view .LVU211
+ 826              	.LBB249:
+ 827              		.loc 1 119 2 view .LVU212
+ 828              	.LBB250:
+ 829              	.LBI250:
+ 830              		.loc 3 40 28 view .LVU213
+ 831              	.LBB251:
+ 832              	.LBB252:
+ 833              	.LBI252:
+ 834              		.loc 3 35 28 view .LVU214
+ 835              		.loc 3 35 28 is_stmt 0 view .LVU215
+ 836              	.LBE252:
+ 837              		.loc 3 40 68 view .LVU216
+ 838 029c 602094E5 		ldr	r2, [r4, #96]
+ 839              	.LBE251:
+ 840              	.LBE250:
+ 841              		.loc 1 119 29 view .LVU217
+ 842 02a0 643094E5 		ldr	r3, [r4, #100]
+ 843 02a4 0A2982E2 		add	r2, r2, #163840
+ 844 02a8 5C1094E5 		ldr	r1, [r4, #92]
+ 845 02ac D200A0E3 		mov	r0, #210
+ 846              	.LVL58:
+ 847              		.loc 1 119 29 view .LVU218
+ 848 02b0 FEFFFFEB 		bl	_ZN8Particle6System9NewSimpleEj5Fix12IiES2_S2_
+ 849              	.LVL59:
+ 850              		.loc 1 120 2 is_stmt 1 view .LVU219
+ 851              		.loc 1 120 18 is_stmt 0 view .LVU220
+ 852 02b4 741084E2 		add	r1, r4, #116
+ 853 02b8 1100A0E3 		mov	r0, #17
+ 854 02bc FEFFFFEB 		bl	_ZN5Sound9PlayBank3EjRK7Vector3
+ 855              	.LVL60:
+ 856              		.loc 1 121 2 is_stmt 1 view .LVU221
+ 857              		.loc 1 121 26 is_stmt 0 view .LVU222
+ 858 02c0 0400A0E1 		mov	r0, r4
+ 859 02c4 FEFFFFEB 		bl	_ZN5Actor24KillAndTrackInDeathTableEv
+ 860              	.LVL61:
+ 861              		.loc 1 122 2 is_stmt 1 view .LVU223
+ 862              		.syntax divided
+ 863              	@ 122 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp" 1
+ 864 02c8 0000A0E3 		mov r0, #0
+ 865              	@ 0 "" 2
+ 866              		.loc 1 123 2 view .LVU224
+ 867              	@ 123 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp" 1
+ 868 02cc 0110A0E3 		mov r1, #1
+ 869              	@ 0 "" 2
+ 870              		.loc 1 124 2 view .LVU225
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 16
+
+
+ 871              	@ 124 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp" 1
+ 872 02d0 FEFFFFEB 		bl 0x0202A7B8
+ 873              	@ 0 "" 2
+ 874              		.loc 1 125 1 is_stmt 0 view .LVU226
+ 875              		.arm
+ 876              		.syntax unified
+ 877 02d4 1080BDE8 		pop	{r4, pc}
+ 878              	.LVL62:
+ 879              	.L29:
+ 880              		.loc 1 125 1 view .LVU227
+ 881              	.LBE249:
+ 882              	.LBE248:
+ 883              	.LBE247:
+ 884              	.LBE246:
+ 885              		.loc 1 102 3 is_stmt 1 view .LVU228
+ 886              		.loc 1 102 12 is_stmt 0 view .LVU229
+ 887 02d8 0030A0E3 		mov	r3, #0
+ 888 02dc AC33C4E5 		strb	r3, [r4, #940]
+ 889              		.loc 1 104 1 view .LVU230
+ 890 02e0 1080BDE8 		pop	{r4, pc}
+ 891              	.LVL63:
+ 892              	.L30:
+ 893              	.LBB255:
+ 894              	.LBB253:
+ 895              		.loc 1 100 7 view .LVU231
+ 896 02e4 0400A0E1 		mov	r0, r4
+ 897              	.LVL64:
+ 898              		.loc 1 100 7 view .LVU232
+ 899              	.LBE253:
+ 900              	.LBE255:
+ 901              		.loc 1 104 1 view .LVU233
+ 902 02e8 1040BDE8 		pop	{r4, lr}
+ 903              		.cfi_restore 14
+ 904              		.cfi_restore 4
+ 905              		.cfi_def_cfa_offset 0
+ 906              	.LVL65:
+ 907              	.LBB256:
+ 908              	.LBB254:
+ 909              		.loc 1 100 7 view .LVU234
+ 910 02ec 13FF2FE1 		bx	r3	@ indirect register sibling call
+ 911              	.LVL66:
+ 912              	.L39:
+ 913              		.loc 1 100 7 view .LVU235
+ 914              		.align	2
+ 915              	.L38:
+ 916 02f0 00000000 		.word	_ZN10SilverCoin4KillEv
+ 917              	.LBE254:
+ 918              	.LBE256:
+ 919              		.cfi_endproc
+ 920              	.LFE1159:
+ 922              		.align	2
+ 923              		.global	_ZN10SilverCoin8BehaviorEv
+ 924              		.syntax unified
+ 925              		.arm
+ 926              		.fpu softvfp
+ 928              	_ZN10SilverCoin8BehaviorEv:
+ 929              	.LVL67:
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 17
+
+
+ 930              	.LFB1157:
+ 931              		.loc 1 77 1 is_stmt 1 view -0
+ 932              		.cfi_startproc
+ 933              		@ args = 0, pretend = 0, frame = 0
+ 934              		@ frame_needed = 0, uses_anonymous_args = 0
+ 935              		.loc 1 78 2 view .LVU237
+ 936              		.loc 1 77 1 is_stmt 0 view .LVU238
+ 937 02f4 70402DE9 		push	{r4, r5, r6, lr}
+ 938              		.cfi_def_cfa_offset 16
+ 939              		.cfi_offset 4, -16
+ 940              		.cfi_offset 5, -12
+ 941              		.cfi_offset 6, -8
+ 942              		.cfi_offset 14, -4
+ 943              		.loc 1 77 1 view .LVU239
+ 944 02f8 0040A0E1 		mov	r4, r0
+ 945              		.loc 1 78 8 view .LVU240
+ 946 02fc BE38D0E1 		ldrh	r3, [r0, #142]
+ 947              		.loc 1 81 15 view .LVU241
+ 948 0300 325E80E2 		add	r5, r0, #800
+ 949              		.loc 1 78 8 view .LVU242
+ 950 0304 033B83E2 		add	r3, r3, #3072
+ 951 0308 BE38C0E1 		strh	r3, [r0, #142]	@ movhi
+ 952              		.loc 1 79 2 is_stmt 1 view .LVU243
+ 953              		.loc 1 79 22 is_stmt 0 view .LVU244
+ 954 030c FEFFFFEB 		bl	_ZN10SilverCoin20UpdateModelTransformEv
+ 955              	.LVL68:
+ 956              		.loc 1 80 2 is_stmt 1 view .LVU245
+ 957              		.loc 1 80 12 is_stmt 0 view .LVU246
+ 958 0310 0400A0E1 		mov	r0, r4
+ 959 0314 FEFFFFEB 		bl	_ZN10SilverCoin10HandleClsnEv
+ 960              	.LVL69:
+ 961              		.loc 1 81 2 is_stmt 1 view .LVU247
+ 962              		.loc 1 81 15 is_stmt 0 view .LVU248
+ 963 0318 0500A0E1 		mov	r0, r5
+ 964 031c FEFFFFEB 		bl	_ZN12CylinderClsn5ClearEv
+ 965              	.LVL70:
+ 966              		.loc 1 82 2 is_stmt 1 view .LVU249
+ 967              		.loc 1 82 16 is_stmt 0 view .LVU250
+ 968 0320 0500A0E1 		mov	r0, r5
+ 969 0324 FEFFFFEB 		bl	_ZN12CylinderClsn6UpdateEv
+ 970              	.LVL71:
+ 971              		.loc 1 83 2 is_stmt 1 view .LVU251
+ 972              		.loc 1 84 1 is_stmt 0 view .LVU252
+ 973 0328 0100A0E3 		mov	r0, #1
+ 974 032c 7080BDE8 		pop	{r4, r5, r6, pc}
+ 975              		.cfi_endproc
+ 976              	.LFE1157:
+ 978              		.align	2
+ 979              		.global	_ZN10SilverCoin6RenderEv
+ 980              		.syntax unified
+ 981              		.arm
+ 982              		.fpu softvfp
+ 984              	_ZN10SilverCoin6RenderEv:
+ 985              	.LVL72:
+ 986              	.LFB1158:
+ 987              		.loc 1 87 1 is_stmt 1 view -0
+ 988              		.cfi_startproc
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 18
+
+
+ 989              		@ args = 0, pretend = 0, frame = 0
+ 990              		@ frame_needed = 0, uses_anonymous_args = 0
+ 991              		.loc 1 88 2 view .LVU254
+ 992              		.loc 1 88 14 is_stmt 0 view .LVU255
+ 993 0330 0010A0E3 		mov	r1, #0
+ 994              		.loc 1 87 1 view .LVU256
+ 995 0334 10402DE9 		push	{r4, lr}
+ 996              		.cfi_def_cfa_offset 8
+ 997              		.cfi_offset 4, -8
+ 998              		.cfi_offset 14, -4
+ 999              		.loc 1 88 14 view .LVU257
+ 1000 0338 D40080E2 		add	r0, r0, #212
+ 1001              	.LVL73:
+ 1002              		.loc 1 88 14 view .LVU258
+ 1003 033c FEFFFFEB 		bl	_ZN5Model6RenderEPK7Vector3
+ 1004              	.LVL74:
+ 1005              		.loc 1 89 2 is_stmt 1 view .LVU259
+ 1006              		.loc 1 90 1 is_stmt 0 view .LVU260
+ 1007 0340 0100A0E3 		mov	r0, #1
+ 1008 0344 1080BDE8 		pop	{r4, pc}
+ 1009              		.cfi_endproc
+ 1010              	.LFE1158:
+ 1012              		.align	2
+ 1013              		.global	_ZN10SilverCoinD2Ev
+ 1014              		.syntax unified
+ 1015              		.arm
+ 1016              		.fpu softvfp
+ 1018              	_ZN10SilverCoinD2Ev:
+ 1019              	.LVL75:
+ 1020              	.LFB1164:
+ 1021              		.loc 1 127 1 is_stmt 1 view -0
+ 1022              		.cfi_startproc
+ 1023              		@ args = 0, pretend = 0, frame = 0
+ 1024              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1025              		.loc 1 127 1 is_stmt 0 view .LVU262
+ 1026 0348 10402DE9 		push	{r4, lr}
+ 1027              		.cfi_def_cfa_offset 8
+ 1028              		.cfi_offset 4, -8
+ 1029              		.cfi_offset 14, -4
+ 1030              		.loc 1 127 1 view .LVU263
+ 1031 034c 0040A0E1 		mov	r4, r0
+ 1032              	.LBB258:
+ 1033              		.loc 1 127 25 view .LVU264
+ 1034 0350 1C309FE5 		ldr	r3, .L46
+ 1035 0354 543380E4 		str	r3, [r0], #852
+ 1036              	.LVL76:
+ 1037              		.loc 1 127 25 view .LVU265
+ 1038 0358 FEFFFFEB 		bl	_ZN12ShadowVolumeD1Ev
+ 1039              	.LVL77:
+ 1040 035c 320E84E2 		add	r0, r4, #800
+ 1041 0360 FEFFFFEB 		bl	_ZN12CylinderClsnD1Ev
+ 1042              	.LVL78:
+ 1043 0364 0400A0E1 		mov	r0, r4
+ 1044 0368 FEFFFFEB 		bl	_ZN8PlatformD2Ev
+ 1045              	.LVL79:
+ 1046              	.LBE258:
+ 1047              		.loc 1 127 28 view .LVU266
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 19
+
+
+ 1048 036c 0400A0E1 		mov	r0, r4
+ 1049 0370 1080BDE8 		pop	{r4, pc}
+ 1050              	.L47:
+ 1051              		.align	2
+ 1052              	.L46:
+ 1053 0374 08000000 		.word	.LANCHOR0+8
+ 1054              		.cfi_endproc
+ 1055              	.LFE1164:
+ 1057              		.global	_ZN10SilverCoinD1Ev
+ 1058              		.set	_ZN10SilverCoinD1Ev,_ZN10SilverCoinD2Ev
+ 1059              		.align	2
+ 1060              		.global	_ZN10SilverCoinD0Ev
+ 1061              		.syntax unified
+ 1062              		.arm
+ 1063              		.fpu softvfp
+ 1065              	_ZN10SilverCoinD0Ev:
+ 1066              	.LVL80:
+ 1067              	.LFB1166:
+ 1068              		.loc 1 127 1 is_stmt 1 view -0
+ 1069              		.cfi_startproc
+ 1070              		@ args = 0, pretend = 0, frame = 0
+ 1071              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1072              		.loc 1 127 1 is_stmt 0 view .LVU268
+ 1073 0378 10402DE9 		push	{r4, lr}
+ 1074              		.cfi_def_cfa_offset 8
+ 1075              		.cfi_offset 4, -8
+ 1076              		.cfi_offset 14, -4
+ 1077              		.loc 1 127 1 view .LVU269
+ 1078 037c 0040A0E1 		mov	r4, r0
+ 1079              	.LVL81:
+ 1080              	.LBB264:
+ 1081              	.LBI264:
+ 1082              		.loc 1 127 1 is_stmt 1 view .LVU270
+ 1083              	.LBB265:
+ 1084              		.loc 1 127 25 is_stmt 0 view .LVU271
+ 1085 0380 2C309FE5 		ldr	r3, .L50
+ 1086 0384 543380E4 		str	r3, [r0], #852
+ 1087              	.LVL82:
+ 1088              		.loc 1 127 25 view .LVU272
+ 1089 0388 FEFFFFEB 		bl	_ZN12ShadowVolumeD1Ev
+ 1090              	.LVL83:
+ 1091 038c 320E84E2 		add	r0, r4, #800
+ 1092 0390 FEFFFFEB 		bl	_ZN12CylinderClsnD1Ev
+ 1093              	.LVL84:
+ 1094 0394 0400A0E1 		mov	r0, r4
+ 1095 0398 FEFFFFEB 		bl	_ZN8PlatformD2Ev
+ 1096              	.LVL85:
+ 1097              		.loc 1 127 25 view .LVU273
+ 1098              	.LBE265:
+ 1099              	.LBE264:
+ 1100              	.LBB266:
+ 1101              	.LBI266:
+ 1102              		.file 4 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SM64DS_2.h"
+ 1103              		.loc 4 91 14 is_stmt 1 view .LVU274
+ 1104              	.LBB267:
+ 1105              		.loc 4 91 42 view .LVU275
+ 1106              		.loc 4 91 60 is_stmt 0 view .LVU276
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 20
+
+
+ 1107 039c 14309FE5 		ldr	r3, .L50+4
+ 1108 03a0 0400A0E1 		mov	r0, r4
+ 1109 03a4 AC1E93E5 		ldr	r1, [r3, #3756]
+ 1110 03a8 FEFFFFEB 		bl	FreeHeapAllocation
+ 1111              	.LVL86:
+ 1112              		.loc 4 91 60 view .LVU277
+ 1113              	.LBE267:
+ 1114              	.LBE266:
+ 1115              		.loc 1 127 28 view .LVU278
+ 1116 03ac 0400A0E1 		mov	r0, r4
+ 1117 03b0 1080BDE8 		pop	{r4, pc}
+ 1118              	.L51:
+ 1119              		.align	2
+ 1120              	.L50:
+ 1121 03b4 08000000 		.word	.LANCHOR0+8
+ 1122 03b8 00000A02 		.word	34209792
+ 1123              		.cfi_endproc
+ 1124              	.LFE1166:
+ 1126              		.global	_ZTV10SilverCoin
+ 1127              		.global	_ZN10SilverCoin9spawnDataE
+ 1128              		.global	_ZN10SilverCoin9modelFileE
+ 1129              		.set	_ZN12_GLOBAL__N_1L6HEIGHTE,_ZN12_GLOBAL__N_1L6RADIUSE
+ 1130              		.section	.rodata
+ 1131              		.align	2
+ 1132              		.set	.LANCHOR0,. + 0
+ 1135              	_ZTV10SilverCoin:
+ 1136 0000 00000000 		.word	0
+ 1137 0004 00000000 		.word	0
+ 1138 0008 00000000 		.word	_ZN10SilverCoin13InitResourcesEv
+ 1139 000c 00000000 		.word	_ZN5Actor19BeforeInitResourcesEv
+ 1140 0010 00000000 		.word	_ZN5Actor18AfterInitResourcesEj
+ 1141 0014 00000000 		.word	_ZN10SilverCoin16CleanupResourcesEv
+ 1142 0018 00000000 		.word	_ZN5Actor22BeforeCleanupResourcesEv
+ 1143 001c 00000000 		.word	_ZN5Actor21AfterCleanupResourcesEj
+ 1144 0020 00000000 		.word	_ZN10SilverCoin8BehaviorEv
+ 1145 0024 00000000 		.word	_ZN5Actor14BeforeBehaviorEv
+ 1146 0028 00000000 		.word	_ZN5Actor13AfterBehaviorEj
+ 1147 002c 00000000 		.word	_ZN10SilverCoin6RenderEv
+ 1148 0030 00000000 		.word	_ZN5Actor12BeforeRenderEv
+ 1149 0034 00000000 		.word	_ZN5Actor11AfterRenderEj
+ 1150 0038 00000000 		.word	_ZN9ActorBase9Virtual30Ev
+ 1151 003c 00000000 		.word	_ZN9ActorBase9Virtual34Ejj
+ 1152 0040 00000000 		.word	_ZN9ActorBase9Virtual38Ejj
+ 1153 0044 00000000 		.word	_ZN9ActorBase9Virtual3cEv
+ 1154 0048 00000000 		.word	_ZN10SilverCoinD1Ev
+ 1155 004c 00000000 		.word	_ZN10SilverCoinD0Ev
+ 1156 0050 00000000 		.word	_ZN10SilverCoin13OnYoshiTryEatEv
+ 1157 0054 00000000 		.word	_ZN10SilverCoin13OnTurnIntoEggER6Player
+ 1158 0058 00000000 		.word	_ZN5Actor9Virtual50Ev
+ 1159 005c 00000000 		.word	_ZN5Actor15OnGroundPoundedERS_
+ 1160 0060 00000000 		.word	_ZN5Actor11OnAttacked1ERS_
+ 1161 0064 00000000 		.word	_ZN5Actor11OnAttacked2ERS_
+ 1162 0068 00000000 		.word	_ZN5Actor8OnKickedERS_
+ 1163 006c 00000000 		.word	_ZN5Actor8OnPushedERS_
+ 1164 0070 00000000 		.word	_ZN5Actor24OnHitByCannonBlastedCharERS_
+ 1165 0074 00000000 		.word	_ZN5Actor15OnHitByMegaCharER6Player
+ 1166 0078 00000000 		.word	_ZN5Actor9Virtual70ERS_
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 21
+
+
+ 1167 007c 00000000 		.word	_ZN5Actor16OnAimedAtWithEggEv
+ 1168 0080 00000000 		.word	_ZN5Actor25OnAimedAtWithEggReturnVecEv
+ 1169 0084 00000000 		.word	_ZN10SilverCoin4KillEv
+ 1172              	_ZN12_GLOBAL__N_1L6RADIUSE:
+ 1173 0088 00400600 		.word	409600
+ 1174              		.data
+ 1175              		.align	2
+ 1178              	_ZN10SilverCoin9spawnDataE:
+ 1179 0000 00000000 		.word	_ZN10SilverCoin5SpawnEv
+ 1180 0004 3000     		.short	48
+ 1181 0006 0001     		.short	256
+ 1182 0008 02000000 		.word	2
+ 1183 000c 00400600 		.word	409600
+ 1184 0010 00800C00 		.word	819200
+ 1185 0014 00000001 		.word	16777216
+ 1186 0018 00000001 		.word	16777216
+ 1187              		.bss
+ 1188              		.align	2
+ 1189              		.set	.LANCHOR1,. + 0
+ 1192              	_ZN10SilverCoin9modelFileE:
+ 1193 0000 00000000 		.space	8
+ 1193      00000000 
+ 1194              		.text
+ 1195              	.Letext0:
+ 1196              		.file 5 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\cstdint"
+ 1197              		.file 6 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\type_traits"
+ 1198              		.file 7 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\debug\\debug.h"
+ 1199              		.file 8 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\bits\\std_abs.h"
+ 1200              		.file 9 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\cstdlib"
+ 1201              		.file 10 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\arm-none-eabi\\bits\\c++c
+ 1202              		.file 11 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\bits\\algorithmfwd.h"
+ 1203              		.file 12 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\bits\\stl_pair.h"
+ 1204              		.file 13 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\bits\\exception_ptr.h"
+ 1205              		.file 14 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\bits\\predefined_ops.h"
+ 1206              		.file 15 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 1207              		.file 16 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 1208              		.file 17 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdint.h"
+ 1209              		.file 18 "c:\\devkitpro\\devkitarm\\lib\\gcc\\arm-none-eabi\\10.1.0\\include\\stddef.h"
+ 1210              		.file 19 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h"
+ 1211              		.file 20 "C:/devkitPro/libnds/include/nds/ndstypes.h"
+ 1212              		.file 21 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\stdlib.h"
+ 1213              		.file 22 "C:/devkitPro/libnds/include/nds/arm9/dynamicArray.h"
+ 1214              		.file 23 "C:/devkitPro/libnds/include/nds/arm9/videoGL.h"
+ 1215              		.file 24 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Model.h"
+ 1216              		.file 25 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Collision.h"
+ 1217              		.file 26 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Level.h"
+ 1218              		.file 27 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Particle.h"
+ 1219              		.file 28 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Sound.h"
+ 1220              		.file 29 "<built-in>"

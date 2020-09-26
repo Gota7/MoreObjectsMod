@@ -1,0 +1,537 @@
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3nrBGc.s 			page 1
+
+
+   1              		.arch armv5te
+   2              		.eabi_attribute 23, 1
+   3              		.eabi_attribute 24, 1
+   4              		.eabi_attribute 25, 1
+   5              		.eabi_attribute 26, 1
+   6              		.eabi_attribute 30, 2
+   7              		.eabi_attribute 34, 0
+   8              		.eabi_attribute 18, 4
+   9              		.file	"MOMLoader.cpp"
+  10              		.text
+  11              	.Ltext0:
+  12              		.cfi_sections	.debug_frame
+  13              		.align	2
+  14              		.global	_Z4initv
+  15              		.syntax unified
+  16              		.arm
+  17              		.fpu softvfp
+  19              	_Z4initv:
+  20              	.LFB1152:
+  21              		.file 1 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/MOMLoader.cpp"
+  22              		.loc 1 59 1 view -0
+  23              		.cfi_startproc
+  24              		@ args = 0, pretend = 0, frame = 0
+  25              		@ frame_needed = 0, uses_anonymous_args = 0
+  26              		.loc 1 62 2 view .LVU1
+  27              		.loc 1 59 1 is_stmt 0 view .LVU2
+  28 0000 70402DE9 		push	{r4, r5, r6, lr}
+  29              		.cfi_def_cfa_offset 16
+  30              		.cfi_offset 4, -16
+  31              		.cfi_offset 5, -12
+  32              		.cfi_offset 6, -8
+  33              		.cfi_offset 14, -4
+  34              		.loc 1 62 24 view .LVU3
+  35 0004 58019FE5 		ldr	r0, .L29
+  36 0008 FEFFFFEB 		bl	LoadFile
+  37              	.LVL0:
+  38              		.loc 1 65 15 view .LVU4
+  39 000c 54319FE5 		ldr	r3, .L29+4
+  40              		.loc 1 62 24 view .LVU5
+  41 0010 0040A0E1 		mov	r4, r0
+  42              	.LVL1:
+  43              		.loc 1 65 2 is_stmt 1 view .LVU6
+  44              		.loc 1 68 2 view .LVU7
+  45              	.LBB36:
+  46              	.LBI36:
+  47              		.loc 1 43 7 view .LVU8
+  48              	.LBB37:
+  49              		.loc 1 45 3 view .LVU9
+  50              		.loc 1 45 3 is_stmt 0 view .LVU10
+  51              	.LBE37:
+  52              	.LBE36:
+  53              		.loc 1 39 3 is_stmt 1 view .LVU11
+  54              		.loc 1 65 6 is_stmt 0 view .LVU12
+  55 0014 0050D3E5 		ldrb	r5, [r3]	@ zero_extendqisi2
+  56              	.LBB39:
+  57              	.LBB38:
+  58              		.loc 1 45 40 view .LVU13
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3nrBGc.s 			page 2
+
+
+  59 0018 0532D0E7 		ldrb	r3, [r0, r5, lsl #4]	@ zero_extendqisi2
+  60              	.LVL2:
+  61              		.loc 1 45 40 view .LVU14
+  62              	.LBE38:
+  63              	.LBE39:
+  64              		.loc 1 39 3 is_stmt 1 view .LVU15
+  65              		.loc 1 68 2 is_stmt 0 view .LVU16
+  66 001c 010013E3 		tst	r3, #1
+  67 0020 0A00001A 		bne	.L24
+  68              		.loc 1 74 2 is_stmt 1 view .LVU17
+  69              	.LVL3:
+  70              	.LBB40:
+  71              	.LBI40:
+  72              		.loc 1 43 7 view .LVU18
+  73              	.LBB41:
+  74              		.loc 1 45 3 view .LVU19
+  75              		.loc 1 45 3 is_stmt 0 view .LVU20
+  76              	.LBE41:
+  77              	.LBE40:
+  78              		.loc 1 39 3 is_stmt 1 view .LVU21
+  79              		.loc 1 39 3 view .LVU22
+  80              		.loc 1 74 2 is_stmt 0 view .LVU23
+  81 0024 020013E3 		tst	r3, #2
+  82 0028 1A00001A 		bne	.L25
+  83              	.LVL4:
+  84              	.L3:
+  85              		.loc 1 78 2 is_stmt 1 view .LVU24
+  86              	.LBB44:
+  87              	.LBI44:
+  88              		.loc 1 43 7 view .LVU25
+  89              	.LBB45:
+  90              		.loc 1 45 3 view .LVU26
+  91              		.loc 1 45 3 is_stmt 0 view .LVU27
+  92              	.LBE45:
+  93              	.LBE44:
+  94              		.loc 1 39 3 is_stmt 1 view .LVU28
+  95              		.loc 1 39 3 view .LVU29
+  96              		.loc 1 78 2 is_stmt 0 view .LVU30
+  97 002c 040013E3 		tst	r3, #4
+  98 0030 2400001A 		bne	.L26
+  99              	.L4:
+ 100              		.loc 1 82 2 is_stmt 1 view .LVU31
+ 101              	.LVL5:
+ 102              	.LBB48:
+ 103              	.LBI48:
+ 104              		.loc 1 43 7 view .LVU32
+ 105              	.LBB49:
+ 106              		.loc 1 45 3 view .LVU33
+ 107              		.loc 1 45 3 is_stmt 0 view .LVU34
+ 108              	.LBE49:
+ 109              	.LBE48:
+ 110              		.loc 1 39 3 is_stmt 1 view .LVU35
+ 111              		.loc 1 39 3 view .LVU36
+ 112              		.loc 1 82 2 is_stmt 0 view .LVU37
+ 113 0034 080013E3 		tst	r3, #8
+ 114 0038 2E00001A 		bne	.L27
+ 115              	.L5:
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3nrBGc.s 			page 3
+
+
+ 116              		.loc 1 87 2 is_stmt 1 view .LVU38
+ 117              	.LVL6:
+ 118              	.LBB52:
+ 119              	.LBI52:
+ 120              		.loc 1 43 7 view .LVU39
+ 121              	.LBB53:
+ 122              		.loc 1 45 3 view .LVU40
+ 123              		.loc 1 45 3 is_stmt 0 view .LVU41
+ 124              	.LBE53:
+ 125              	.LBE52:
+ 126              		.loc 1 39 3 is_stmt 1 view .LVU42
+ 127              		.loc 1 39 3 view .LVU43
+ 128              		.loc 1 87 2 is_stmt 0 view .LVU44
+ 129 003c 100013E3 		tst	r3, #16
+ 130 0040 3B00001A 		bne	.L28
+ 131              	.L6:
+ 132              		.loc 1 93 2 is_stmt 1 view .LVU45
+ 133              		.loc 1 93 8 is_stmt 0 view .LVU46
+ 134 0044 0400A0E1 		mov	r0, r4
+ 135              		.loc 1 96 1 view .LVU47
+ 136 0048 7040BDE8 		pop	{r4, r5, r6, lr}
+ 137              		.cfi_remember_state
+ 138              		.cfi_restore 14
+ 139              		.cfi_restore 6
+ 140              		.cfi_restore 5
+ 141              		.cfi_restore 4
+ 142              		.cfi_def_cfa_offset 0
+ 143              	.LVL7:
+ 144              		.loc 1 93 8 view .LVU48
+ 145 004c FEFFFFEA 		b	_ZdlPv
+ 146              	.LVL8:
+ 147              	.L24:
+ 148              		.cfi_restore_state
+ 149              		.loc 1 69 3 is_stmt 1 view .LVU49
+ 150              	.LBB56:
+ 151              	.LBB57:
+ 152              		.loc 1 51 30 is_stmt 0 view .LVU50
+ 153 0050 14319FE5 		ldr	r3, .L29+8
+ 154 0054 14119FE5 		ldr	r1, .L29+12
+ 155              	.LBE57:
+ 156              	.LBE56:
+ 157              		.loc 1 69 11 view .LVU51
+ 158 0058 14219FE5 		ldr	r2, .L29+16
+ 159              	.LVL9:
+ 160              	.LBB59:
+ 161              	.LBI56:
+ 162              		.loc 1 49 7 is_stmt 1 view .LVU52
+ 163              	.LBB58:
+ 164              		.loc 1 51 3 view .LVU53
+ 165              		.loc 1 51 30 is_stmt 0 view .LVU54
+ 166 005c BC1BC3E1 		strh	r1, [r3, #188]	@ movhi
+ 167              	.LVL10:
+ 168              		.loc 1 52 3 is_stmt 1 view .LVU55
+ 169              		.loc 1 52 26 is_stmt 0 view .LVU56
+ 170 0060 133C83E2 		add	r3, r3, #4864
+ 171 0064 082B83E5 		str	r2, [r3, #2824]
+ 172              	.LVL11:
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3nrBGc.s 			page 4
+
+
+ 173              		.loc 1 52 26 view .LVU57
+ 174              	.LBE58:
+ 175              	.LBE59:
+ 176              		.loc 1 70 3 is_stmt 1 view .LVU58
+ 177              		.loc 1 70 82 is_stmt 0 view .LVU59
+ 178 0068 0110A0E3 		mov	r1, #1
+ 179 006c 04019FE5 		ldr	r0, .L29+20
+ 180              	.LVL12:
+ 181              		.loc 1 70 82 view .LVU60
+ 182 0070 FEFFFFEB 		bl	_ZN13SharedFilePtr9ConstructEj
+ 183              	.LVL13:
+ 184              		.loc 1 71 6 is_stmt 1 view .LVU61
+ 185              		.loc 1 71 89 is_stmt 0 view .LVU62
+ 186 0074 0210A0E3 		mov	r1, #2
+ 187 0078 FC009FE5 		ldr	r0, .L29+24
+ 188 007c FEFFFFEB 		bl	_ZN13SharedFilePtr9ConstructEj
+ 189              	.LVL14:
+ 190              		.loc 1 72 6 is_stmt 1 view .LVU63
+ 191              		.loc 1 72 96 is_stmt 0 view .LVU64
+ 192 0080 0010A0E3 		mov	r1, #0
+ 193 0084 F4009FE5 		ldr	r0, .L29+28
+ 194 0088 FEFFFFEB 		bl	_ZN13SharedFilePtr9ConstructEj
+ 195              	.LVL15:
+ 196              	.LBB60:
+ 197              	.LBB42:
+ 198              		.loc 1 45 40 view .LVU65
+ 199 008c 0532D4E7 		ldrb	r3, [r4, r5, lsl #4]	@ zero_extendqisi2
+ 200              	.LBE42:
+ 201              	.LBE60:
+ 202              		.loc 1 74 2 is_stmt 1 view .LVU66
+ 203              	.LVL16:
+ 204              	.LBB61:
+ 205              		.loc 1 43 7 view .LVU67
+ 206              	.LBB43:
+ 207              		.loc 1 45 3 view .LVU68
+ 208              		.loc 1 45 3 is_stmt 0 view .LVU69
+ 209              	.LBE43:
+ 210              	.LBE61:
+ 211              		.loc 1 39 3 is_stmt 1 view .LVU70
+ 212              		.loc 1 39 3 view .LVU71
+ 213              		.loc 1 74 2 is_stmt 0 view .LVU72
+ 214 0090 020013E3 		tst	r3, #2
+ 215 0094 E4FFFF0A 		beq	.L3
+ 216              	.L25:
+ 217              		.loc 1 75 3 is_stmt 1 view .LVU73
+ 218              	.LBB62:
+ 219              	.LBB63:
+ 220              		.loc 1 51 30 is_stmt 0 view .LVU74
+ 221 0098 CC309FE5 		ldr	r3, .L29+8
+ 222 009c E0109FE5 		ldr	r1, .L29+32
+ 223              	.LBE63:
+ 224              	.LBE62:
+ 225              		.loc 1 75 11 view .LVU75
+ 226 00a0 E0209FE5 		ldr	r2, .L29+36
+ 227              	.LVL17:
+ 228              	.LBB65:
+ 229              	.LBI62:
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3nrBGc.s 			page 5
+
+
+ 230              		.loc 1 49 7 is_stmt 1 view .LVU76
+ 231              	.LBB64:
+ 232              		.loc 1 51 3 view .LVU77
+ 233              		.loc 1 51 30 is_stmt 0 view .LVU78
+ 234 00a4 BE1BC3E1 		strh	r1, [r3, #190]	@ movhi
+ 235              		.loc 1 52 3 is_stmt 1 view .LVU79
+ 236              		.loc 1 52 26 is_stmt 0 view .LVU80
+ 237 00a8 133C83E2 		add	r3, r3, #4864
+ 238 00ac 0C2B83E5 		str	r2, [r3, #2828]
+ 239              	.LVL18:
+ 240              		.loc 1 52 26 view .LVU81
+ 241              	.LBE64:
+ 242              	.LBE65:
+ 243              		.loc 1 76 3 is_stmt 1 view .LVU82
+ 244              		.loc 1 76 55 is_stmt 0 view .LVU83
+ 245 00b0 0310A0E3 		mov	r1, #3
+ 246 00b4 D0009FE5 		ldr	r0, .L29+40
+ 247 00b8 FEFFFFEB 		bl	_ZN13SharedFilePtr9ConstructEj
+ 248              	.LVL19:
+ 249              	.LBB66:
+ 250              	.LBB46:
+ 251              		.loc 1 45 40 view .LVU84
+ 252 00bc 0532D4E7 		ldrb	r3, [r4, r5, lsl #4]	@ zero_extendqisi2
+ 253              	.LBE46:
+ 254              	.LBE66:
+ 255              		.loc 1 78 2 is_stmt 1 view .LVU85
+ 256              	.LVL20:
+ 257              	.LBB67:
+ 258              		.loc 1 43 7 view .LVU86
+ 259              	.LBB47:
+ 260              		.loc 1 45 3 view .LVU87
+ 261              		.loc 1 45 3 is_stmt 0 view .LVU88
+ 262              	.LBE47:
+ 263              	.LBE67:
+ 264              		.loc 1 39 3 is_stmt 1 view .LVU89
+ 265              		.loc 1 39 3 view .LVU90
+ 266              		.loc 1 78 2 is_stmt 0 view .LVU91
+ 267 00c0 040013E3 		tst	r3, #4
+ 268 00c4 DAFFFF0A 		beq	.L4
+ 269              	.L26:
+ 270              		.loc 1 79 3 is_stmt 1 view .LVU92
+ 271              	.LBB68:
+ 272              	.LBB69:
+ 273              		.loc 1 51 30 is_stmt 0 view .LVU93
+ 274 00c8 16EEA0E3 		mov	lr, #352
+ 275              		.loc 1 52 26 view .LVU94
+ 276 00cc BC309FE5 		ldr	r3, .L29+44
+ 277              	.LBE69:
+ 278              	.LBE68:
+ 279              		.loc 1 79 11 view .LVU95
+ 280 00d0 BC209FE5 		ldr	r2, .L29+48
+ 281              	.LVL21:
+ 282              	.LBB73:
+ 283              	.LBI68:
+ 284              		.loc 1 49 7 is_stmt 1 view .LVU96
+ 285              	.LBB70:
+ 286              		.loc 1 51 3 view .LVU97
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3nrBGc.s 			page 6
+
+
+ 287              		.loc 1 51 30 is_stmt 0 view .LVU98
+ 288 00d4 90C09FE5 		ldr	ip, .L29+8
+ 289              	.LBE70:
+ 290              	.LBE73:
+ 291              		.loc 1 80 64 view .LVU99
+ 292 00d8 0510A0E3 		mov	r1, #5
+ 293              	.LBB74:
+ 294              	.LBB71:
+ 295              		.loc 1 51 30 view .LVU100
+ 296 00dc B0ECCCE1 		strh	lr, [ip, #192]	@ movhi
+ 297              		.loc 1 52 3 is_stmt 1 view .LVU101
+ 298              	.LBE71:
+ 299              	.LBE74:
+ 300              		.loc 1 80 64 is_stmt 0 view .LVU102
+ 301 00e0 B0009FE5 		ldr	r0, .L29+52
+ 302              	.LBB75:
+ 303              	.LBB72:
+ 304              		.loc 1 52 26 view .LVU103
+ 305 00e4 102B83E5 		str	r2, [r3, #2832]
+ 306              	.LVL22:
+ 307              		.loc 1 52 26 view .LVU104
+ 308              	.LBE72:
+ 309              	.LBE75:
+ 310              		.loc 1 80 3 is_stmt 1 view .LVU105
+ 311              		.loc 1 80 64 is_stmt 0 view .LVU106
+ 312 00e8 FEFFFFEB 		bl	_ZN13SharedFilePtr9ConstructEj
+ 313              	.LVL23:
+ 314              	.LBB76:
+ 315              	.LBB50:
+ 316              		.loc 1 45 40 view .LVU107
+ 317 00ec 0532D4E7 		ldrb	r3, [r4, r5, lsl #4]	@ zero_extendqisi2
+ 318              	.LBE50:
+ 319              	.LBE76:
+ 320              		.loc 1 82 2 is_stmt 1 view .LVU108
+ 321              	.LVL24:
+ 322              	.LBB77:
+ 323              		.loc 1 43 7 view .LVU109
+ 324              	.LBB51:
+ 325              		.loc 1 45 3 view .LVU110
+ 326              		.loc 1 45 3 is_stmt 0 view .LVU111
+ 327              	.LBE51:
+ 328              	.LBE77:
+ 329              		.loc 1 39 3 is_stmt 1 view .LVU112
+ 330              		.loc 1 39 3 view .LVU113
+ 331              		.loc 1 82 2 is_stmt 0 view .LVU114
+ 332 00f0 080013E3 		tst	r3, #8
+ 333 00f4 D0FFFF0A 		beq	.L5
+ 334              	.L27:
+ 335              		.loc 1 83 3 is_stmt 1 view .LVU115
+ 336              	.LBB78:
+ 337              	.LBB79:
+ 338              		.loc 1 51 30 is_stmt 0 view .LVU116
+ 339 00f8 6C309FE5 		ldr	r3, .L29+8
+ 340 00fc 98109FE5 		ldr	r1, .L29+56
+ 341              	.LBE79:
+ 342              	.LBE78:
+ 343              		.loc 1 83 11 view .LVU117
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3nrBGc.s 			page 7
+
+
+ 344 0100 98209FE5 		ldr	r2, .L29+60
+ 345              	.LVL25:
+ 346              	.LBB81:
+ 347              	.LBI78:
+ 348              		.loc 1 49 7 is_stmt 1 view .LVU118
+ 349              	.LBB80:
+ 350              		.loc 1 51 3 view .LVU119
+ 351              		.loc 1 51 30 is_stmt 0 view .LVU120
+ 352 0104 B21CC3E1 		strh	r1, [r3, #194]	@ movhi
+ 353              		.loc 1 52 3 is_stmt 1 view .LVU121
+ 354              		.loc 1 52 26 is_stmt 0 view .LVU122
+ 355 0108 133C83E2 		add	r3, r3, #4864
+ 356 010c 142B83E5 		str	r2, [r3, #2836]
+ 357              	.LVL26:
+ 358              		.loc 1 52 26 view .LVU123
+ 359              	.LBE80:
+ 360              	.LBE81:
+ 361              		.loc 1 84 3 is_stmt 1 view .LVU124
+ 362              		.loc 1 84 44 is_stmt 0 view .LVU125
+ 363 0110 0610A0E3 		mov	r1, #6
+ 364 0114 88009FE5 		ldr	r0, .L29+64
+ 365 0118 FEFFFFEB 		bl	_ZN13SharedFilePtr9ConstructEj
+ 366              	.LVL27:
+ 367              		.loc 1 85 3 is_stmt 1 view .LVU126
+ 368              		.loc 1 85 48 is_stmt 0 view .LVU127
+ 369 011c 0710A0E3 		mov	r1, #7
+ 370 0120 80009FE5 		ldr	r0, .L29+68
+ 371 0124 FEFFFFEB 		bl	_ZN13SharedFilePtr9ConstructEj
+ 372              	.LVL28:
+ 373              	.LBB82:
+ 374              	.LBB54:
+ 375              		.loc 1 45 40 view .LVU128
+ 376 0128 0532D4E7 		ldrb	r3, [r4, r5, lsl #4]	@ zero_extendqisi2
+ 377              	.LBE54:
+ 378              	.LBE82:
+ 379              		.loc 1 87 2 is_stmt 1 view .LVU129
+ 380              	.LVL29:
+ 381              	.LBB83:
+ 382              		.loc 1 43 7 view .LVU130
+ 383              	.LBB55:
+ 384              		.loc 1 45 3 view .LVU131
+ 385              		.loc 1 45 3 is_stmt 0 view .LVU132
+ 386              	.LBE55:
+ 387              	.LBE83:
+ 388              		.loc 1 39 3 is_stmt 1 view .LVU133
+ 389              		.loc 1 39 3 view .LVU134
+ 390              		.loc 1 87 2 is_stmt 0 view .LVU135
+ 391 012c 100013E3 		tst	r3, #16
+ 392 0130 C3FFFF0A 		beq	.L6
+ 393              	.L28:
+ 394              		.loc 1 88 3 is_stmt 1 view .LVU136
+ 395              		.loc 1 88 11 is_stmt 0 view .LVU137
+ 396 0134 70209FE5 		ldr	r2, .L29+72
+ 397              	.LVL30:
+ 398              	.LBB84:
+ 399              	.LBI84:
+ 400              		.loc 1 49 7 is_stmt 1 view .LVU138
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3nrBGc.s 			page 8
+
+
+ 401              	.LBB85:
+ 402              		.loc 1 51 3 view .LVU139
+ 403              		.loc 1 51 30 is_stmt 0 view .LVU140
+ 404 0138 2C109FE5 		ldr	r1, .L29+8
+ 405 013c 6C009FE5 		ldr	r0, .L29+76
+ 406              		.loc 1 52 26 view .LVU141
+ 407 0140 48309FE5 		ldr	r3, .L29+44
+ 408              		.loc 1 51 30 view .LVU142
+ 409 0144 B40CC1E1 		strh	r0, [r1, #196]	@ movhi
+ 410              		.loc 1 52 3 is_stmt 1 view .LVU143
+ 411              	.LBE85:
+ 412              	.LBE84:
+ 413              		.loc 1 89 53 is_stmt 0 view .LVU144
+ 414 0148 0810A0E3 		mov	r1, #8
+ 415 014c 60009FE5 		ldr	r0, .L29+80
+ 416              	.LBB87:
+ 417              	.LBB86:
+ 418              		.loc 1 52 26 view .LVU145
+ 419 0150 182B83E5 		str	r2, [r3, #2840]
+ 420              	.LVL31:
+ 421              		.loc 1 52 26 view .LVU146
+ 422              	.LBE86:
+ 423              	.LBE87:
+ 424              		.loc 1 89 3 is_stmt 1 view .LVU147
+ 425              		.loc 1 89 53 is_stmt 0 view .LVU148
+ 426 0154 FEFFFFEB 		bl	_ZN13SharedFilePtr9ConstructEj
+ 427              	.LVL32:
+ 428              		.loc 1 93 2 is_stmt 1 view .LVU149
+ 429              		.loc 1 93 8 is_stmt 0 view .LVU150
+ 430 0158 0400A0E1 		mov	r0, r4
+ 431              		.loc 1 96 1 view .LVU151
+ 432 015c 7040BDE8 		pop	{r4, r5, r6, lr}
+ 433              		.cfi_restore 14
+ 434              		.cfi_restore 6
+ 435              		.cfi_restore 5
+ 436              		.cfi_restore 4
+ 437              		.cfi_def_cfa_offset 0
+ 438              	.LVL33:
+ 439              		.loc 1 93 8 view .LVU152
+ 440 0160 FEFFFFEA 		b	_ZdlPv
+ 441              	.LVL34:
+ 442              	.L30:
+ 443              		.loc 1 93 8 view .LVU153
+ 444              		.align	2
+ 445              	.L29:
+ 446 0164 0C080000 		.word	2060
+ 447 0168 00000000 		.word	LEVEL_ID
+ 448 016c 004D0002 		.word	33574144
+ 449 0170 5E010000 		.word	350
+ 450 0174 00000000 		.word	_ZN23GalaxyShrinkingPlatform9spawnDataE
+ 451 0178 00000000 		.word	_ZN23GalaxyShrinkingPlatform9modelFileE
+ 452 017c 00000000 		.word	_ZN23GalaxyShrinkingPlatform8clsnFileE
+ 453 0180 00000000 		.word	_ZN23GalaxyShrinkingPlatform14frameModelFileE
+ 454 0184 5F010000 		.word	351
+ 455 0188 00000000 		.word	_ZN10SilverCoin9spawnDataE
+ 456 018c 00000000 		.word	_ZN10SilverCoin9modelFileE
+ 457 0190 00600002 		.word	33579008
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3nrBGc.s 			page 9
+
+
+ 458 0194 00000000 		.word	_ZN13InvisibleWall9spawnDataE
+ 459 0198 00000000 		.word	_ZN13InvisibleWall8clsnFileE
+ 460 019c 61010000 		.word	353
+ 461 01a0 00000000 		.word	_ZN5Berry9spawnDataE
+ 462 01a4 00000000 		.word	_ZN5Berry9modelFileE
+ 463 01a8 00000000 		.word	_ZN5Berry8stemFileE
+ 464 01ac 00000000 		.word	_ZN9YoshiRide9spawnDataE
+ 465 01b0 62010000 		.word	354
+ 466 01b4 00000000 		.word	_ZN9YoshiRide10ridingAnimE
+ 467              		.cfi_endproc
+ 468              	.LFE1152:
+ 470              		.align	2
+ 471              		.global	_Z7cleanupv
+ 472              		.syntax unified
+ 473              		.arm
+ 474              		.fpu softvfp
+ 476              	_Z7cleanupv:
+ 477              	.LFB1153:
+ 478              		.loc 1 100 1 is_stmt 1 view -0
+ 479              		.cfi_startproc
+ 480              		@ args = 0, pretend = 0, frame = 0
+ 481              		@ frame_needed = 0, uses_anonymous_args = 0
+ 482              		@ link register save eliminated.
+ 483              		.loc 1 103 1 is_stmt 0 view .LVU155
+ 484 01b8 1EFF2FE1 		bx	lr
+ 485              		.cfi_endproc
+ 486              	.LFE1153:
+ 488              	.Letext0:
+ 489              		.file 2 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\cstdint"
+ 490              		.file 3 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\type_traits"
+ 491              		.file 4 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\debug\\debug.h"
+ 492              		.file 5 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\bits\\std_abs.h"
+ 493              		.file 6 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\cstdlib"
+ 494              		.file 7 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\arm-none-eabi\\bits\\c++co
+ 495              		.file 8 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\bits\\algorithmfwd.h"
+ 496              		.file 9 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\bits\\stl_pair.h"
+ 497              		.file 10 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\bits\\exception_ptr.h"
+ 498              		.file 11 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\bits\\predefined_ops.h"
+ 499              		.file 12 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 500              		.file 13 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 501              		.file 14 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdint.h"
+ 502              		.file 15 "c:\\devkitpro\\devkitarm\\lib\\gcc\\arm-none-eabi\\10.1.0\\include\\stddef.h"
+ 503              		.file 16 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\stdlib.h"
+ 504              		.file 17 "C:/devkitPro/libnds/include/nds/ndstypes.h"
+ 505              		.file 18 "c:\\devkitpro\\devkitarm\\arm-none-eabi\\include\\c++\\10.1.0\\stdlib.h"
+ 506              		.file 19 "C:/devkitPro/libnds/include/nds/arm9/dynamicArray.h"
+ 507              		.file 20 "C:/devkitPro/libnds/include/nds/arm9/videoGL.h"
+ 508              		.file 21 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SM64DS_Common.h"
+ 509              		.file 22 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Level.h"
+ 510              		.file 23 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Particle.h"
+ 511              		.file 24 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Sound.h"
+ 512              		.file 25 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SM64DS_2.h"
+ 513              		.file 26 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/DeleteFile.h"
+ 514              		.file 27 "<built-in>"

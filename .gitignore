@@ -1,0 +1,17 @@
+*.nds
+*.lnk
+*.sav
+*SM64DSe/Templates
+*SM64DSe/̓
+*SM64DSe/*.xml
+*SM64DSe/*.kpl
+*SM64DSe/*.dll
+*SM64DSe/*.exe
+*SM64DSe/*.config
+*SM64DSe/*.mdb
+*SM64DSe/*.pdb
+*SM64DSe/*.manifest
+*SM64DSe/basic_eur_us_chars.txt
+*SM64DSe/extended_ascii.txt
+*SM64DSe/jap_chars.txt
+*SM64DSe/License.SharpDX.txt

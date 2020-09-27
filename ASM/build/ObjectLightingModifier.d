@@ -1,6 +1,6 @@
-MOMLoader.o: \
- C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/MOMLoader.cpp \
- C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/DeleteFile.h \
+ObjectLightingModifier.o: \
+ C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/ObjectLightingModifier.cpp \
+ C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/ObjectLightingModifier.h \
  C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SM64DS_2.h \
  C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SM64DS_Common.h \
  C\:/devkitPro/libnds/include/nds.h \
@@ -68,14 +68,8 @@ MOMLoader.o: \
  C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Level.h \
  C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Message.h \
  C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Particle.h \
- C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Sound.h \
- C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/GalaxyShrinkingPlatform.h \
- C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.h \
- C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/InvisibleWall.h \
- C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Berry.h \
- C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/YoshiRide.h \
- C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/ObjectLightingModifier.h
-C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/DeleteFile.h:
+ C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Sound.h
+C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/ObjectLightingModifier.h:
 C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SM64DS_2.h:
 C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SM64DS_Common.h:
 C\:/devkitPro/libnds/include/nds.h:
@@ -144,9 +138,3 @@ C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Level.h:
 C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Message.h:
 C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Particle.h:
 C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Sound.h:
-C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/GalaxyShrinkingPlatform.h:
-C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.h:
-C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/InvisibleWall.h:
-C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/Berry.h:
-C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/YoshiRide.h:
-C\:/Users/samsp/Documents/MoreObjectsMod/ASM/source/ObjectLightingModifier.h:

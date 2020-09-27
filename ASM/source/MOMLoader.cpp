@@ -5,6 +5,7 @@
 #include "InvisibleWall.h"
 #include "Berry.h"
 #include "YoshiRide.h"
+#include "ObjectLightingModifier.h"
 
 namespace {
 
@@ -18,6 +19,8 @@ namespace {
 	constexpr short int INVISIBLE_WALL_ID = 0x0160;
 	constexpr short int BERRY_ID = 0x0161;
 	constexpr short int YOSHI_RIDE_ID = 0x0162;
+	constexpr short int OBJECT_LIGHTING_MODIFIER_ID = 0x0163;
+	constexpr short int CONDITIONAL_CUTSCENE_LOADER_ID = 0x0164;
 
 	//Assets.
 	constexpr short int GALAXY_SHRINKING_PLATFORM_FRAME_MODEL_ID = 0x0000;
@@ -87,6 +90,9 @@ void init()
 	if (shouldLoadAssets(banks, offset, YOSHI_RIDE_ID)) {
 		modTable(YOSHI_RIDE_ID, (unsigned)&YoshiRide::spawnData);
 		YoshiRide::ridingAnim.Construct(YOSHI_RIDE_ANIM_ID);
+	}
+	if (shouldLoadAssets(banks, offset, OBJECT_LIGHTING_MODIFIER_ID)) {
+		modTable(OBJECT_LIGHTING_MODIFIER_ID, (unsigned)&ObjectLightingModifier::spawnData);
 	}
 
 	//Unload the MOM banks file.

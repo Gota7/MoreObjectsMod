@@ -76,10 +76,10 @@ TODO!!! EXPLAIN SDAT MANAGEMENT!!!
 ##### Files
 TODO!!! EXPLAIN FILE MANAGEMENT!!!
 
-### Upgrading MOM
+## Upgrading MOM
 Of course, if you were building your mod with an original version of MOM and wish to upgrade, it would be annoying to have to start from a new XDELTA. Luckily, you can use a newly patched ROM from the XDELTA to help you upgrade.
 
-#### Upgrading MOM Overlay
+### Upgrading MOM Overlay
 1. Open the newly patched ROM in SM64DSe.
 2. In the ARM 9 Overlays tab, extract the last overlay.
 3. Go to Tools->Overlay Editor, click the last overlay, and note the static init start and end table addresses.
@@ -88,14 +88,14 @@ Of course, if you were building your mod with an original version of MOM and wis
 6. Go to Tools-Overlay Editor, click the last overlay, and replace the static init start and end table addresses from the ones noted earlier.
 7. Click "Update" then "Save Changes".
 
-#### Upgrading MOM House Keeper
+### Upgrading MOM House Keeper
 1. Replace the files in ASM_HouseKeeper's source files with the new source files. Mananage the code afterwards so your custom ARM9 code will work.
 2. Follow the instructions above for compiling MOM's house keeper.
 
-#### Upgrading Assets
+### Upgrading Assets
 1. Follow the instructions above for managing assets.
 
-### Adding More
+## Adding More
 So, you want to add more content to MOM? Unfortunately, this section is TODO!!!!!!!!!!!!!!!!
 
 ## Credits

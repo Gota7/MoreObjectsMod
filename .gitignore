@@ -3,7 +3,7 @@
 *.sav
 *SM64DSe/Templates
 *SM64DSe/̓
-*SM64DSe/*.xml
+*SM64DSe/*.php
 *SM64DSe/*.kpl
 *SM64DSe/*.dll
 *SM64DSe/*.exe
@@ -15,6 +15,8 @@
 *SM64DSe/extended_ascii.txt
 *SM64DSe/jap_chars.txt
 *SM64DSe/License.SharpDX.txt
+*SM64DSe/AdditionalPatches.xml
+*SM64DSe/ScintillaNET.xml
 *ASM/build/*.*
 *ASM_HouseKeeper/build/*.*
 *ASM/newcode.bin

@@ -500,264 +500,363 @@ Linker script and memory map
                 0x000000000200e798                EndKuppaScript = 0x200e798
                 0x000000000209f2c4                PAUSE = 0x209f2c4
 
-.text           0x0000000002400000     0x1ff8
+.text           0x00000000023ec400     0x42a0
  FILL mask 0x1234
-                0x0000000002400000                __text_start = .
+                0x00000000023ec400                __text_start = .
  *(.init)
  *(.text)
- .text          0x0000000002400000      0x394 GalaxyShrinkingPlatform.o
-                0x0000000002400000                GalaxyShrinkingPlatform::OnFloorAfterClsn(MeshCollider&, Actor*, Actor*)
-                0x000000000240000c                GalaxyShrinkingPlatform::Spawn()
-                0x0000000002400050                GalaxyShrinkingPlatform::CleanupResources()
-                0x0000000002400084                GalaxyShrinkingPlatform::Shrink()
-                0x00000000024000e8                GalaxyShrinkingPlatform::UnShrink()
-                0x0000000002400114                GalaxyShrinkingPlatform::UpdateModelTransform()
-                0x0000000002400178                GalaxyShrinkingPlatform::Behavior()
-                0x0000000002400248                GalaxyShrinkingPlatform::InitResources()
-                0x00000000024002f8                GalaxyShrinkingPlatform::Render()
-                0x0000000002400330                GalaxyShrinkingPlatform::~GalaxyShrinkingPlatform()
-                0x0000000002400330                GalaxyShrinkingPlatform::~GalaxyShrinkingPlatform()
-                0x0000000002400358                GalaxyShrinkingPlatform::~GalaxyShrinkingPlatform()
- .text          0x0000000002400394      0x3bc SilverCoin.o
-                0x0000000002400394                SilverCoin::OnYoshiTryEat()
-                0x000000000240039c                SilverCoin::Spawn()
-                0x00000000024003dc                SilverCoin::CleanupResources()
-                0x00000000024003f4                SilverCoin::Kill()
-                0x0000000002400438                SilverCoin::OnTurnIntoEgg(Player&)
-                0x00000000024004ac                SilverCoin::UpdateModelTransform()
-                0x0000000002400518                SilverCoin::InitResources()
-                0x00000000024005e0                SilverCoin::HandleClsn()
-                0x0000000002400688                SilverCoin::Behavior()
-                0x00000000024006c4                SilverCoin::Render()
-                0x00000000024006dc                SilverCoin::~SilverCoin()
-                0x00000000024006dc                SilverCoin::~SilverCoin()
-                0x000000000240070c                SilverCoin::~SilverCoin()
- .text          0x0000000002400750      0x1e0 MOMLoader.o
-                0x0000000002400750                init()
-                0x000000000240092c                cleanup()
- .text          0x0000000002400930      0x17c InvisibleWall.o
-                0x0000000002400930                InvisibleWall::Render()
-                0x0000000002400938                InvisibleWall::Spawn()
-                0x0000000002400960                InvisibleWall::CleanupResources()
-                0x0000000002400980                InvisibleWall::Behavior()
-                0x0000000002400998                InvisibleWall::~InvisibleWall()
-                0x0000000002400998                InvisibleWall::~InvisibleWall()
-                0x00000000024009b8                InvisibleWall::~InvisibleWall()
-                0x00000000024009ec                InvisibleWall::InitResources()
-                0x0000000002400a74                InvisibleWall::UpdateModelTransform()
- .text          0x0000000002400aac      0x694 Berry.o
-                0x0000000002400aac                Berry::OnYoshiTryEat()
-                0x0000000002400ab4                Berry::Spawn()
-                0x0000000002400afc                Berry::CleanupResources()
-                0x0000000002400b20                Berry::InitResources()
-                0x0000000002400e7c                Berry::Behavior()
-                0x0000000002400ea0                Berry::UpdateModelTransform()
-                0x0000000002400ef4                Berry::Kill()
-                0x0000000002401048                Berry::OnTurnIntoEgg(Player&)
-                0x0000000002401068                Berry::Render()
-                0x00000000024010ac                Berry::~Berry()
-                0x00000000024010ac                Berry::~Berry()
-                0x00000000024010ec                Berry::~Berry()
- .text          0x0000000002401140      0xa0c YoshiRide.o
-                0x0000000002401140                YoshiRide::Spawn()
-                0x0000000002401188                YoshiRide::StWait_Init()
-                0x00000000024011cc                YoshiRide::StRun_Init()
-                0x0000000002401224                YoshiRide::CleanupResources()
-                0x0000000002401300                YoshiRide::Behavior()
-                0x00000000024013a0                YoshiRide::StWait_Main()
-                0x0000000002401454                YoshiRide::StRun_Main()
-                0x0000000002401500                YoshiRide::UpdateModelTransform()
-                0x00000000024015d8                YoshiRide::InitResources()
-                0x000000000240174c                YoshiRide::ChangeState(unsigned char)
-                0x000000000240177c                YoshiRide::StartRide(int)
-                0x0000000002401864                YoshiRide::StRide_Init()
-                0x0000000002401870                YoshiRide::EndRide(bool)
-                0x00000000024019a0                YoshiRide::StRide_Main()
-                0x0000000002401a84                YoshiRide::Render()
-                0x0000000002401ab8                YoshiRide::~YoshiRide()
-                0x0000000002401ab8                YoshiRide::~YoshiRide()
-                0x0000000002401af8                YoshiRide::~YoshiRide()
- .text          0x0000000002401b4c       0xe8 ObjectLightingModifier.o
-                0x0000000002401b4c                ObjectLightingModifier::InitResources()
-                0x0000000002401b94                ObjectLightingModifier::CleanupResources()
-                0x0000000002401bb0                ObjectLightingModifier::Behavior()
-                0x0000000002401bb0                ObjectLightingModifier::Render()
-                0x0000000002401bb8                ObjectLightingModifier::Spawn()
-                0x0000000002401be0                ObjectLightingModifier::~ObjectLightingModifier()
-                0x0000000002401be0                ObjectLightingModifier::~ObjectLightingModifier()
-                0x0000000002401c00                ObjectLightingModifier::~ObjectLightingModifier()
+ .text          0x00000000023ec400      0x394 GalaxyShrinkingPlatform.o
+                0x00000000023ec400                GalaxyShrinkingPlatform::OnFloorAfterClsn(MeshCollider&, Actor*, Actor*)
+                0x00000000023ec40c                GalaxyShrinkingPlatform::Spawn()
+                0x00000000023ec450                GalaxyShrinkingPlatform::CleanupResources()
+                0x00000000023ec484                GalaxyShrinkingPlatform::Shrink()
+                0x00000000023ec4e8                GalaxyShrinkingPlatform::UnShrink()
+                0x00000000023ec514                GalaxyShrinkingPlatform::UpdateModelTransform()
+                0x00000000023ec578                GalaxyShrinkingPlatform::Behavior()
+                0x00000000023ec648                GalaxyShrinkingPlatform::InitResources()
+                0x00000000023ec6f8                GalaxyShrinkingPlatform::Render()
+                0x00000000023ec730                GalaxyShrinkingPlatform::~GalaxyShrinkingPlatform()
+                0x00000000023ec730                GalaxyShrinkingPlatform::~GalaxyShrinkingPlatform()
+                0x00000000023ec758                GalaxyShrinkingPlatform::~GalaxyShrinkingPlatform()
+ .text          0x00000000023ec794      0x3bc SilverCoin.o
+                0x00000000023ec794                SilverCoin::OnYoshiTryEat()
+                0x00000000023ec79c                SilverCoin::Spawn()
+                0x00000000023ec7dc                SilverCoin::CleanupResources()
+                0x00000000023ec7f4                SilverCoin::Kill()
+                0x00000000023ec838                SilverCoin::OnTurnIntoEgg(Player&)
+                0x00000000023ec8ac                SilverCoin::UpdateModelTransform()
+                0x00000000023ec918                SilverCoin::InitResources()
+                0x00000000023ec9e0                SilverCoin::HandleClsn()
+                0x00000000023eca88                SilverCoin::Behavior()
+                0x00000000023ecac4                SilverCoin::Render()
+                0x00000000023ecadc                SilverCoin::~SilverCoin()
+                0x00000000023ecadc                SilverCoin::~SilverCoin()
+                0x00000000023ecb0c                SilverCoin::~SilverCoin()
+ .text          0x00000000023ecb50      0x208 MOM.o
+                0x00000000023ecb50                init()
+ .text          0x00000000023ecd58      0x17c InvisibleWall.o
+                0x00000000023ecd58                InvisibleWall::Render()
+                0x00000000023ecd60                InvisibleWall::Spawn()
+                0x00000000023ecd88                InvisibleWall::CleanupResources()
+                0x00000000023ecda8                InvisibleWall::Behavior()
+                0x00000000023ecdc0                InvisibleWall::~InvisibleWall()
+                0x00000000023ecdc0                InvisibleWall::~InvisibleWall()
+                0x00000000023ecde0                InvisibleWall::~InvisibleWall()
+                0x00000000023ece14                InvisibleWall::InitResources()
+                0x00000000023ece9c                InvisibleWall::UpdateModelTransform()
+ .text          0x00000000023eced4      0x694 Berry.o
+                0x00000000023eced4                Berry::OnYoshiTryEat()
+                0x00000000023ecedc                Berry::Spawn()
+                0x00000000023ecf24                Berry::CleanupResources()
+                0x00000000023ecf48                Berry::InitResources()
+                0x00000000023ed2a4                Berry::Behavior()
+                0x00000000023ed2c8                Berry::UpdateModelTransform()
+                0x00000000023ed31c                Berry::Kill()
+                0x00000000023ed470                Berry::OnTurnIntoEgg(Player&)
+                0x00000000023ed490                Berry::Render()
+                0x00000000023ed4d4                Berry::~Berry()
+                0x00000000023ed4d4                Berry::~Berry()
+                0x00000000023ed514                Berry::~Berry()
+ .text          0x00000000023ed568       0x84 BlankObject.o
+                0x00000000023ed568                BlankObject::Behavior()
+                0x00000000023ed568                BlankObject::CleanupResources()
+                0x00000000023ed568                BlankObject::Render()
+                0x00000000023ed568                BlankObject::InitResources()
+                0x00000000023ed570                BlankObject::Spawn()
+                0x00000000023ed598                BlankObject::~BlankObject()
+                0x00000000023ed598                BlankObject::~BlankObject()
+                0x00000000023ed5b8                BlankObject::~BlankObject()
+ .text          0x00000000023ed5ec      0x15c KuppaFuncs.o
+                0x00000000023ed5ec                RunKuppaScriptIfNotRanYet(char*)
+                0x00000000023ed644                UpdateScriptFiles(char**, unsigned int)
+                0x00000000023ed68c                LoadAndRunKuppaScript(int)
+                0x00000000023ed6bc                LoadKuppaScriptAndRunIfNotRanYet(int)
+ .text          0x00000000023ed748      0xa0c YoshiRide.o
+                0x00000000023ed748                YoshiRide::Spawn()
+                0x00000000023ed790                YoshiRide::StWait_Init()
+                0x00000000023ed7d4                YoshiRide::StRun_Init()
+                0x00000000023ed82c                YoshiRide::CleanupResources()
+                0x00000000023ed908                YoshiRide::Behavior()
+                0x00000000023ed9a8                YoshiRide::StWait_Main()
+                0x00000000023eda5c                YoshiRide::StRun_Main()
+                0x00000000023edb08                YoshiRide::UpdateModelTransform()
+                0x00000000023edbe0                YoshiRide::InitResources()
+                0x00000000023edd54                YoshiRide::ChangeState(unsigned char)
+                0x00000000023edd84                YoshiRide::StartRide(int)
+                0x00000000023ede6c                YoshiRide::StRide_Init()
+                0x00000000023ede78                YoshiRide::EndRide(bool)
+                0x00000000023edfa8                YoshiRide::StRide_Main()
+                0x00000000023ee08c                YoshiRide::Render()
+                0x00000000023ee0c0                YoshiRide::~YoshiRide()
+                0x00000000023ee0c0                YoshiRide::~YoshiRide()
+                0x00000000023ee100                YoshiRide::~YoshiRide()
+ .text          0x00000000023ee154       0xe8 ObjectLightingModifier.o
+                0x00000000023ee154                ObjectLightingModifier::InitResources()
+                0x00000000023ee19c                ObjectLightingModifier::CleanupResources()
+                0x00000000023ee1b8                ObjectLightingModifier::Behavior()
+                0x00000000023ee1b8                ObjectLightingModifier::Render()
+                0x00000000023ee1c0                ObjectLightingModifier::Spawn()
+                0x00000000023ee1e8                ObjectLightingModifier::~ObjectLightingModifier()
+                0x00000000023ee1e8                ObjectLightingModifier::~ObjectLightingModifier()
+                0x00000000023ee208                ObjectLightingModifier::~ObjectLightingModifier()
+ .text          0x00000000023ee23c     0x1ebc GoombaColored.o
+                0x00000000023ee23c                Goomba::Virtual30()
+                0x00000000023ee240                Goomba::OnYoshiTryEat()
+                0x00000000023ee264                Goomba::OnAimedAtWithEgg()
+                0x00000000023ee288                Goomba::Spawn()
+                0x00000000023ee2e4                Goomba::CleanupResources()
+                0x00000000023ee35c                Goomba::State4()
+                0x00000000023ee3a4                Goomba::State2()
+                0x00000000023ee4d8                Goomba::OnTurnIntoEgg(Player&)
+                0x00000000023ee55c                Goomba::State1()
+                0x00000000023ee600                Goomba::InitResources()
+                0x00000000023ee91c                Goomba::UpdateMaxDist()
+                0x00000000023ee980                Goomba::Kill()
+                0x00000000023eedf4                Goomba::SpawnSilverStarIfNecessary()
+                0x00000000023eee04                Goomba::KillAndSpawnCap()
+                0x00000000023eef04                Goomba::State3()
+                0x00000000023ef0fc                Goomba::KillAndSpawnSilverStar()
+                0x00000000023ef12c                Goomba::UpdateIfDying()
+                0x00000000023ef1e0                Goomba::RenderRegurgGoombaHelpless(Player*)
+                0x00000000023ef2ac                Goomba::KillIfTouchedBadSurface()
+                0x00000000023ef350                Goomba::UpdateModel()
+                0x00000000023ef434                Goomba::UpdateIfEaten()
+                0x00000000023ef654                Goomba::PlayMovingSound()
+                0x00000000023ef700                Goomba::Behavior()
+                0x00000000023efa5c                Goomba::GetHurtOrHurtPlayer()
+                0x00000000023efa6c                Goomba::KillIfIntoxicated()
+                0x00000000023efa90                Goomba::Jump()
+                0x00000000023efae4                Goomba::UpdateTargetDirAndDist(Fix12<int>)
+                0x00000000023efbb8                Goomba::State5()
+                0x00000000023efc00                Goomba::State0HelperFunc()
+                0x00000000023eff38                Goomba::State0()
+                0x00000000023eff50                Goomba::Render()
+                0x00000000023f0044                Goomba::~Goomba()
+                0x00000000023f0044                Goomba::~Goomba()
+                0x00000000023f0094                Goomba::~Goomba()
  *(.ctors)
  *(.dtors)
  *(.rodata)
- .rodata        0x0000000002401c34       0x94 GalaxyShrinkingPlatform.o
-                0x0000000002401c34                vtable for GalaxyShrinkingPlatform
- .rodata        0x0000000002401cc8       0x8c SilverCoin.o
-                0x0000000002401cc8                vtable for SilverCoin
- .rodata        0x0000000002401d54       0x88 InvisibleWall.o
-                0x0000000002401d54                vtable for InvisibleWall
- .rodata        0x0000000002401ddc       0x94 Berry.o
-                0x0000000002401ddc                vtable for Berry
- .rodata        0x0000000002401e70       0xbc YoshiRide.o
-                0x0000000002401e70                vtable for YoshiRide
- .rodata        0x0000000002401f2c       0x84 ObjectLightingModifier.o
-                0x0000000002401f2c                vtable for ObjectLightingModifier
+ .rodata        0x00000000023f00f8       0x94 GalaxyShrinkingPlatform.o
+                0x00000000023f00f8                vtable for GalaxyShrinkingPlatform
+ .rodata        0x00000000023f018c       0x8c SilverCoin.o
+                0x00000000023f018c                vtable for SilverCoin
+ .rodata        0x00000000023f0218       0x88 InvisibleWall.o
+                0x00000000023f0218                vtable for InvisibleWall
+ .rodata        0x00000000023f02a0       0x94 Berry.o
+                0x00000000023f02a0                vtable for Berry
+ .rodata        0x00000000023f0334       0x84 BlankObject.o
+                0x00000000023f0334                vtable for BlankObject
+ .rodata        0x00000000023f03b8       0xbc YoshiRide.o
+                0x00000000023f03b8                vtable for YoshiRide
+ .rodata        0x00000000023f0474       0x84 ObjectLightingModifier.o
+                0x00000000023f0474                vtable for ObjectLightingModifier
+ .rodata        0x00000000023f04f8      0x11f GoombaColored.o
+                0x00000000023f04f8                vtable for Goomba
  *(.fini)
  *(COMMON)
-                0x0000000002401fb0                __text_end = .
-                0x0000000002401fb0                __bss_start__ = .
+                0x00000000023f0617                __text_end = .
+                0x00000000023f0617                __bss_start__ = .
  *(.bss)
- .bss           0x0000000002401fb0       0x18 GalaxyShrinkingPlatform.o
-                0x0000000002401fb0                GalaxyShrinkingPlatform::modelFile
-                0x0000000002401fb8                GalaxyShrinkingPlatform::clsnFile
-                0x0000000002401fc0                GalaxyShrinkingPlatform::frameModelFile
- .bss           0x0000000002401fc8        0x8 SilverCoin.o
-                0x0000000002401fc8                SilverCoin::modelFile
- .bss           0x0000000002401fd0        0x0 MOMLoader.o
- .bss           0x0000000002401fd0        0x8 InvisibleWall.o
-                0x0000000002401fd0                InvisibleWall::clsnFile
- .bss           0x0000000002401fd8       0x18 Berry.o
-                0x0000000002401fd8                Berry::stemFile
-                0x0000000002401fe0                Berry::modelFile
- .bss           0x0000000002401ff0        0x8 YoshiRide.o
-                0x0000000002401ff0                YoshiRide::ridingAnim
- .bss           0x0000000002401ff8        0x0 ObjectLightingModifier.o
-                0x0000000002401ff8                __bss_end__ = .
-                0x0000000002401ff8                _end = __bss_end__
-                0x0000000002401ff8                __end__ = __bss_end__
-Address of section .text set to 0x2400000
+ *fill*         0x00000000023f0617        0x1 1234
+ .bss           0x00000000023f0618       0x18 GalaxyShrinkingPlatform.o
+                0x00000000023f0618                GalaxyShrinkingPlatform::modelFile
+                0x00000000023f0620                GalaxyShrinkingPlatform::clsnFile
+                0x00000000023f0628                GalaxyShrinkingPlatform::frameModelFile
+ .bss           0x00000000023f0630        0x8 SilverCoin.o
+                0x00000000023f0630                SilverCoin::modelFile
+ .bss           0x00000000023f0638        0x0 MOM.o
+ .bss           0x00000000023f0638        0x8 InvisibleWall.o
+                0x00000000023f0638                InvisibleWall::clsnFile
+ .bss           0x00000000023f0640       0x18 Berry.o
+                0x00000000023f0640                Berry::stemFile
+                0x00000000023f0648                Berry::modelFile
+ .bss           0x00000000023f0658        0x0 BlankObject.o
+ .bss           0x00000000023f0658        0x0 KuppaFuncs.o
+ .bss           0x00000000023f0658        0x8 YoshiRide.o
+                0x00000000023f0658                YoshiRide::ridingAnim
+ .bss           0x00000000023f0660        0x0 ObjectLightingModifier.o
+ .bss           0x00000000023f0660       0x40 GoombaColored.o
+                0x00000000023f0660                Goomba::modelFile
+                0x00000000023f0668                Goomba::texSeqFile
+                0x00000000023f0670                Goomba::animFiles
+                0x00000000023f06a0                __bss_end__ = .
+                0x00000000023f06a0                _end = __bss_end__
+                0x00000000023f06a0                __end__ = __bss_end__
+Address of section .text set to 0x23ec400
 LOAD GalaxyShrinkingPlatform.o
 LOAD SilverCoin.o
-LOAD MOMLoader.o
+LOAD MOM.o
 LOAD InvisibleWall.o
 LOAD Berry.o
+LOAD BlankObject.o
+LOAD KuppaFuncs.o
 LOAD YoshiRide.o
 LOAD ObjectLightingModifier.o
+LOAD GoombaColored.o
 LOAD C:/devkitPro/libnds/lib\libnds9.a
 LOAD C:/devkitPro/devkitARM/arm-none-eabi/lib\libc.a
 OUTPUT(C:/Users/samsp/Documents/MoreObjectsMod/ASM/newcode.elf elf32-littlearm)
 
-.data           0x0000000002401ff8       0xc8
- .data          0x0000000002401ff8       0x2c GalaxyShrinkingPlatform.o
-                0x0000000002402008                GalaxyShrinkingPlatform::spawnData
- .data          0x0000000002402024       0x1c SilverCoin.o
-                0x0000000002402024                SilverCoin::spawnData
- .data          0x0000000002402040        0x0 MOMLoader.o
- .data          0x0000000002402040       0x2c InvisibleWall.o
-                0x0000000002402050                InvisibleWall::spawnData
- .data          0x000000000240206c       0x1c Berry.o
-                0x000000000240206c                Berry::spawnData
- .data          0x0000000002402088       0x1c YoshiRide.o
-                0x0000000002402088                YoshiRide::spawnData
- .data          0x00000000024020a4       0x1c ObjectLightingModifier.o
-                0x00000000024020a4                ObjectLightingModifier::spawnData
+.data           0x00000000023f06a0      0x1e8
+ .data          0x00000000023f06a0       0x2c GalaxyShrinkingPlatform.o
+                0x00000000023f06b0                GalaxyShrinkingPlatform::spawnData
+ .data          0x00000000023f06cc       0x1c SilverCoin.o
+                0x00000000023f06cc                SilverCoin::spawnData
+ .data          0x00000000023f06e8        0x0 MOM.o
+ .data          0x00000000023f06e8       0x2c InvisibleWall.o
+                0x00000000023f06f8                InvisibleWall::spawnData
+ .data          0x00000000023f0714       0x1c Berry.o
+                0x00000000023f0714                Berry::spawnData
+ .data          0x00000000023f0730       0x1c BlankObject.o
+                0x00000000023f0730                BlankObject::spawnData
+ .data          0x00000000023f074c        0x0 KuppaFuncs.o
+ .data          0x00000000023f074c       0x1c YoshiRide.o
+                0x00000000023f074c                YoshiRide::spawnData
+ .data          0x00000000023f0768       0x1c ObjectLightingModifier.o
+                0x00000000023f0768                ObjectLightingModifier::spawnData
+ .data          0x00000000023f0784      0x104 GoombaColored.o
+                0x00000000023f07a4                Goomba::spawnDataBig
+                0x00000000023f07c0                Goomba::spawnDataSmall
+                0x00000000023f07dc                Goomba::spawnDataNormal
 
-.igot.plt       0x00000000024020c0        0x0
- .igot.plt      0x00000000024020c0        0x0 GalaxyShrinkingPlatform.o
+.igot.plt       0x00000000023f0888        0x0
+ .igot.plt      0x00000000023f0888        0x0 GalaxyShrinkingPlatform.o
 
-.glue_7         0x00000000024020c0        0x0
- .glue_7        0x00000000024020c0        0x0 linker stubs
+.glue_7         0x00000000023f0888        0x0
+ .glue_7        0x00000000023f0888        0x0 linker stubs
 
-.glue_7t        0x00000000024020c0        0x0
- .glue_7t       0x00000000024020c0        0x0 linker stubs
+.glue_7t        0x00000000023f0888        0x0
+ .glue_7t       0x00000000023f0888        0x0 linker stubs
 
-.vfp11_veneer   0x00000000024020c0        0x0
- .vfp11_veneer  0x00000000024020c0        0x0 linker stubs
+.vfp11_veneer   0x00000000023f0888        0x0
+ .vfp11_veneer  0x00000000023f0888        0x0 linker stubs
 
-.v4_bx          0x00000000024020c0        0x0
- .v4_bx         0x00000000024020c0        0x0 linker stubs
+.v4_bx          0x00000000023f0888        0x0
+ .v4_bx         0x00000000023f0888        0x0 linker stubs
 
-.iplt           0x00000000024020c0        0x0
- .iplt          0x00000000024020c0        0x0 GalaxyShrinkingPlatform.o
+.iplt           0x00000000023f0888        0x0
+ .iplt          0x00000000023f0888        0x0 GalaxyShrinkingPlatform.o
 
-.rel.dyn        0x00000000024020c0        0x0
- .rel.iplt      0x00000000024020c0        0x0 GalaxyShrinkingPlatform.o
+.rel.dyn        0x00000000023f0888        0x0
+ .rel.iplt      0x00000000023f0888        0x0 GalaxyShrinkingPlatform.o
 
-.debug_info     0x0000000000000000    0x16a23
+.debug_info     0x0000000000000000    0x21697
  .debug_info    0x0000000000000000     0x327a GalaxyShrinkingPlatform.o
  .debug_info    0x000000000000327a     0x424b SilverCoin.o
- .debug_info    0x00000000000074c5     0x182a MOMLoader.o
- .debug_info    0x0000000000008cef     0x2634 InvisibleWall.o
- .debug_info    0x000000000000b323     0x4b1b Berry.o
- .debug_info    0x000000000000fe3e     0x5099 YoshiRide.o
- .debug_info    0x0000000000014ed7     0x1b4c ObjectLightingModifier.o
+ .debug_info    0x00000000000074c5     0x17b7 MOM.o
+ .debug_info    0x0000000000008c7c     0x2634 InvisibleWall.o
+ .debug_info    0x000000000000b2b0     0x4b1b Berry.o
+ .debug_info    0x000000000000fdcb     0x1a28 BlankObject.o
+ .debug_info    0x00000000000117f3     0x1545 KuppaFuncs.o
+ .debug_info    0x0000000000012d38     0x5099 YoshiRide.o
+ .debug_info    0x0000000000017dd1     0x1b4c ObjectLightingModifier.o
+ .debug_info    0x000000000001991d     0x7d7a GoombaColored.o
 
-.debug_abbrev   0x0000000000000000     0x35c6
+.debug_abbrev   0x0000000000000000     0x4b0f
  .debug_abbrev  0x0000000000000000      0x791 GalaxyShrinkingPlatform.o
  .debug_abbrev  0x0000000000000791      0x8ad SilverCoin.o
- .debug_abbrev  0x000000000000103e      0x56d MOMLoader.o
- .debug_abbrev  0x00000000000015ab      0x6f4 InvisibleWall.o
- .debug_abbrev  0x0000000000001c9f      0x8f3 Berry.o
- .debug_abbrev  0x0000000000002592      0x9fb YoshiRide.o
- .debug_abbrev  0x0000000000002f8d      0x639 ObjectLightingModifier.o
+ .debug_abbrev  0x000000000000103e      0x4cb MOM.o
+ .debug_abbrev  0x0000000000001509      0x6f4 InvisibleWall.o
+ .debug_abbrev  0x0000000000001bfd      0x8f3 Berry.o
+ .debug_abbrev  0x00000000000024f0      0x5e9 BlankObject.o
+ .debug_abbrev  0x0000000000002ad9      0x556 KuppaFuncs.o
+ .debug_abbrev  0x000000000000302f      0x9fb YoshiRide.o
+ .debug_abbrev  0x0000000000003a2a      0x639 ObjectLightingModifier.o
+ .debug_abbrev  0x0000000000004063      0xaac GoombaColored.o
 
-.debug_loc      0x0000000000000000     0x3984
+.debug_loc      0x0000000000000000     0x5d5b
  .debug_loc     0x0000000000000000      0x78c GalaxyShrinkingPlatform.o
  .debug_loc     0x000000000000078c      0x8e0 SilverCoin.o
- .debug_loc     0x000000000000106c      0x387 MOMLoader.o
- .debug_loc     0x00000000000013f3      0x4a4 InvisibleWall.o
- .debug_loc     0x0000000000001897     0x10c3 Berry.o
- .debug_loc     0x000000000000295a      0xdee YoshiRide.o
- .debug_loc     0x0000000000003748      0x23c ObjectLightingModifier.o
+ .debug_loc     0x000000000000106c      0x108 MOM.o
+ .debug_loc     0x0000000000001174      0x4a4 InvisibleWall.o
+ .debug_loc     0x0000000000001618     0x10c3 Berry.o
+ .debug_loc     0x00000000000026db       0xc2 BlankObject.o
+ .debug_loc     0x000000000000279d      0x207 KuppaFuncs.o
+ .debug_loc     0x00000000000029a4      0xdee YoshiRide.o
+ .debug_loc     0x0000000000003792      0x23c ObjectLightingModifier.o
+ .debug_loc     0x00000000000039ce     0x238d GoombaColored.o
 
-.debug_aranges  0x0000000000000000       0xe0
+.debug_aranges  0x0000000000000000      0x140
  .debug_aranges
                 0x0000000000000000       0x20 GalaxyShrinkingPlatform.o
  .debug_aranges
                 0x0000000000000020       0x20 SilverCoin.o
  .debug_aranges
-                0x0000000000000040       0x20 MOMLoader.o
+                0x0000000000000040       0x20 MOM.o
  .debug_aranges
                 0x0000000000000060       0x20 InvisibleWall.o
  .debug_aranges
                 0x0000000000000080       0x20 Berry.o
  .debug_aranges
-                0x00000000000000a0       0x20 YoshiRide.o
+                0x00000000000000a0       0x20 BlankObject.o
  .debug_aranges
-                0x00000000000000c0       0x20 ObjectLightingModifier.o
+                0x00000000000000c0       0x20 KuppaFuncs.o
+ .debug_aranges
+                0x00000000000000e0       0x20 YoshiRide.o
+ .debug_aranges
+                0x0000000000000100       0x20 ObjectLightingModifier.o
+ .debug_aranges
+                0x0000000000000120       0x20 GoombaColored.o
 
-.debug_ranges   0x0000000000000000      0x968
+.debug_ranges   0x0000000000000000     0x1150
  .debug_ranges  0x0000000000000000      0x188 GalaxyShrinkingPlatform.o
  .debug_ranges  0x0000000000000188       0xe8 SilverCoin.o
- .debug_ranges  0x0000000000000270      0x138 MOMLoader.o
- .debug_ranges  0x00000000000003a8       0xe8 InvisibleWall.o
- .debug_ranges  0x0000000000000490      0x2e8 Berry.o
- .debug_ranges  0x0000000000000778      0x1a0 YoshiRide.o
- .debug_ranges  0x0000000000000918       0x50 ObjectLightingModifier.o
+ .debug_ranges  0x0000000000000270      0x150 MOM.o
+ .debug_ranges  0x00000000000003c0       0xe8 InvisibleWall.o
+ .debug_ranges  0x00000000000004a8      0x2e8 Berry.o
+ .debug_ranges  0x0000000000000790       0x18 BlankObject.o
+ .debug_ranges  0x00000000000007a8       0x20 KuppaFuncs.o
+ .debug_ranges  0x00000000000007c8      0x1a0 YoshiRide.o
+ .debug_ranges  0x0000000000000968       0x50 ObjectLightingModifier.o
+ .debug_ranges  0x00000000000009b8      0x798 GoombaColored.o
 
-.debug_line     0x0000000000000000     0x3c36
+.debug_line     0x0000000000000000     0x67b6
  .debug_line    0x0000000000000000      0x881 GalaxyShrinkingPlatform.o
  .debug_line    0x0000000000000881      0x83e SilverCoin.o
- .debug_line    0x00000000000010bf      0x688 MOMLoader.o
- .debug_line    0x0000000000001747      0x5fc InvisibleWall.o
- .debug_line    0x0000000000001d43      0xc75 Berry.o
- .debug_line    0x00000000000029b8      0xd50 YoshiRide.o
- .debug_line    0x0000000000003708      0x52e ObjectLightingModifier.o
+ .debug_line    0x00000000000010bf      0x643 MOM.o
+ .debug_line    0x0000000000001702      0x5fc InvisibleWall.o
+ .debug_line    0x0000000000001cfe      0xc75 Berry.o
+ .debug_line    0x0000000000002973      0x479 BlankObject.o
+ .debug_line    0x0000000000002dec      0x536 KuppaFuncs.o
+ .debug_line    0x0000000000003322      0xd50 YoshiRide.o
+ .debug_line    0x0000000000004072      0x52e ObjectLightingModifier.o
+ .debug_line    0x00000000000045a0     0x2216 GoombaColored.o
 
-.debug_str      0x0000000000000000     0x4775
- .debug_str     0x0000000000000000     0x1e3f GalaxyShrinkingPlatform.o
+.debug_str      0x0000000000000000     0x606f
+ .debug_str     0x0000000000000000     0x1e24 GalaxyShrinkingPlatform.o
                                        0x20ea (size before relaxing)
- .debug_str     0x0000000000001e3f      0xdd3 SilverCoin.o
+ .debug_str     0x0000000000001e24      0xdc8 SilverCoin.o
                                        0x277f (size before relaxing)
- .debug_str     0x0000000000002c12      0x214 MOMLoader.o
-                                        0xe6e (size before relaxing)
- .debug_str     0x0000000000002e26      0x200 InvisibleWall.o
+ .debug_str     0x0000000000002bec      0x244 MOM.o
+                                        0xe95 (size before relaxing)
+ .debug_str     0x0000000000002e30      0x200 InvisibleWall.o
                                        0x19d7 (size before relaxing)
- .debug_str     0x0000000000003026      0x5fc Berry.o
+ .debug_str     0x0000000000003030      0x5fc Berry.o
                                        0x2547 (size before relaxing)
- .debug_str     0x0000000000003622      0xe91 YoshiRide.o
+ .debug_str     0x000000000000362c      0x1c3 BlankObject.o
+                                       0x11b9 (size before relaxing)
+ .debug_str     0x00000000000037ef      0x1a1 KuppaFuncs.o
+                                        0xd9b (size before relaxing)
+ .debug_str     0x0000000000003990      0xe67 YoshiRide.o
                                        0x2ffb (size before relaxing)
- .debug_str     0x00000000000044b3      0x2c2 ObjectLightingModifier.o
+ .debug_str     0x00000000000047f7      0x2c2 ObjectLightingModifier.o
                                        0x12c3 (size before relaxing)
+ .debug_str     0x0000000000004ab9     0x15b6 GoombaColored.o
+                                       0x402b (size before relaxing)
 
 .comment        0x0000000000000000       0x23
  .comment       0x0000000000000000       0x23 GalaxyShrinkingPlatform.o
                                          0x24 (size before relaxing)
  .comment       0x0000000000000023       0x24 SilverCoin.o
- .comment       0x0000000000000023       0x24 MOMLoader.o
+ .comment       0x0000000000000023       0x24 MOM.o
  .comment       0x0000000000000023       0x24 InvisibleWall.o
  .comment       0x0000000000000023       0x24 Berry.o
+ .comment       0x0000000000000023       0x24 BlankObject.o
+ .comment       0x0000000000000023       0x24 KuppaFuncs.o
  .comment       0x0000000000000023       0x24 YoshiRide.o
  .comment       0x0000000000000023       0x24 ObjectLightingModifier.o
+ .comment       0x0000000000000023       0x24 GoombaColored.o
 
 .ARM.attributes
                 0x0000000000000000       0x27
@@ -766,21 +865,30 @@ OUTPUT(C:/Users/samsp/Documents/MoreObjectsMod/ASM/newcode.elf elf32-littlearm)
  .ARM.attributes
                 0x0000000000000027       0x27 SilverCoin.o
  .ARM.attributes
-                0x000000000000004e       0x27 MOMLoader.o
+                0x000000000000004e       0x27 MOM.o
  .ARM.attributes
                 0x0000000000000075       0x27 InvisibleWall.o
  .ARM.attributes
                 0x000000000000009c       0x27 Berry.o
  .ARM.attributes
-                0x00000000000000c3       0x27 YoshiRide.o
+                0x00000000000000c3       0x27 BlankObject.o
  .ARM.attributes
-                0x00000000000000ea       0x27 ObjectLightingModifier.o
+                0x00000000000000ea       0x27 KuppaFuncs.o
+ .ARM.attributes
+                0x0000000000000111       0x27 YoshiRide.o
+ .ARM.attributes
+                0x0000000000000138       0x27 ObjectLightingModifier.o
+ .ARM.attributes
+                0x000000000000015f       0x27 GoombaColored.o
 
-.debug_frame    0x0000000000000000      0x8f4
+.debug_frame    0x0000000000000000      0xf7c
  .debug_frame   0x0000000000000000      0x14c GalaxyShrinkingPlatform.o
  .debug_frame   0x000000000000014c      0x184 SilverCoin.o
- .debug_frame   0x00000000000002d0       0x50 MOMLoader.o
- .debug_frame   0x0000000000000320       0xe8 InvisibleWall.o
- .debug_frame   0x0000000000000408      0x1a4 Berry.o
- .debug_frame   0x00000000000005ac      0x2b4 YoshiRide.o
- .debug_frame   0x0000000000000860       0x94 ObjectLightingModifier.o
+ .debug_frame   0x00000000000002d0       0x30 MOM.o
+ .debug_frame   0x0000000000000300       0xe8 InvisibleWall.o
+ .debug_frame   0x00000000000003e8      0x1a4 Berry.o
+ .debug_frame   0x000000000000058c       0x74 BlankObject.o
+ .debug_frame   0x0000000000000600       0x84 KuppaFuncs.o
+ .debug_frame   0x0000000000000684      0x2b4 YoshiRide.o
+ .debug_frame   0x0000000000000938       0x94 ObjectLightingModifier.o
+ .debug_frame   0x00000000000009cc      0x5b0 GoombaColored.o

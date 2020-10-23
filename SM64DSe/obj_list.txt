@@ -348,9 +348,173 @@
 
 
 
-0x15E == GALAXY_SHRINKING_PLATFORM (0x15E)
-0x15F == SILVER_COIN (0x15F)
-0x160 == INVISIBLE_WALL (0x160)
-0x161 == BERRY (0x161)
-0x162 == YOSHI_RIDE (0x162)
-0x163 == OBJECT_LIGHTING_MODIFIER (0x163)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0x200 == GALAXY_SHRINKING_PLATFORM (0x200)
+0x201 == SILVER_COIN (0x201)
+0x202 == INVISIBLE_WALL (0x202)
+0x203 == BERRY (0x203)
+0x204 == YOSHI_RIDE (0x204)
+0x205 == OBJECT_LIGHTING_MODIFIER (0x205)
+0x206 == 2D_LEVEL (0x206)
+0x207 == 2D_CAMERA_LIMITER (0x207)

@@ -20,6 +20,9 @@ The custom overlay contains all the code for custom objects in an unused section
 
 The housekeeper hacks the original game's code to allow for loading the MOM overlay, and for using hooks and replacements to allow for cool game mechanics such as 2D levels.
 
+## Notes
+The complete guide is still a bit unorganized and uncomplete. Expect a video tutorial going through this as well in the future. Mostly the section about contributing and managing SFX needs to be done.
+
 ## Installation
 How to install and use MOM!
 
@@ -29,17 +32,31 @@ In order for the editor to use custom objects, the editor first must have them i
 ### Installing MOM (Patch)
 TODO: XDELTA PATCH INSTRUCTIONS!!!
 
+### Installing MOM (Install Scripts)
+Want to install MOM to an existing ROM without having to build it or do a lot of work yourself? Luckily, you came to the right place!
+
+#### Tools Required:
+* Latest version of SM64DSe Ultimate: https://github.com/Gota7/SM64DSe-Ultimate
+* EUR version of SM64DS with NSMBe5 insertion and DLs enabled, NOT OPTIONAL!!! If using SM64DSe to enable them, please make a backup and be sure the ROM still works on your R4 afterwards!!! Patch here: http://www.mediafire.com/file/5fyes6urszhatlh/ASM+Patches.rar/file
+* Nitro Studio 2: https://gota7.github.io/NitroStudio2/
+
+#### Using Scripts
+1. In SM64DSe, go to More->Import Patch.
+2. Select AddOverlay.sp in the Install_Scripts folder. NEVER DO THIS MORE THAN ONCE, UNLESS IT FAILS THE FIRST TIME!
+3. To be sure it worked, go to Tools->Edit Overlays, and you should now see Overlay 155. Hit "Close" and move onto Upgrading MOM.
+
 ### Installing MOM (Manually)
 So you want to make changes to MOM or just install it yourself for the fun of it? Then welcome to the build process!
 
 #### Tools Required
-* Latest version of SM64DSe Ultimate: 
-* DevKitPro with NDS Development: 
-* Nitro Studio 2: 
+* Latest version of SM64DSe Ultimate: https://github.com/Gota7/SM64DSe-Ultimate
+* DevKitPro with NDS Development: https://devkitpro.org/wiki/Getting_Started
+* Nitro Studio 2: https://gota7.github.io/NitroStudio2/
 * EUR version of SM64DS.
 
 #### Enabling Required Patches
-MOM requires insertion with NSMBe5 to be enabled, which can be done either in SM64DSe Ultimate (ASM Hacking->Toggle Suitability...) or a with a patch found here: 
+MOM requires insertion with NSMBe5 to be enabled and the DL patch, which can be done either in SM64DSe Ultimate (ASM Hacking->Toggle Suitability...) and (ASM Hacking->DL Patch) or a with a patch found here:
+http://www.mediafire.com/file/5fyes6urszhatlh/ASM+Patches.rar/file
 
 #### Adding The Overlay
 The first step is to add a new overlay to SM64DS. This is where MOM will be stored. You only need to do this once.
@@ -79,7 +96,16 @@ TODO!!! EXPLAIN FILE MANAGEMENT!!!
 ## Upgrading MOM
 Of course, if you were building your mod with an original version of MOM and wish to upgrade, it would be annoying to have to start from a new XDELTA. Luckily, you can use a newly patched ROM from the XDELTA to help you upgrade.
 
-### Upgrading MOM Overlay
+### Using Scripts
+1. In SM64DSe, go to More->Import Patch.
+2. Select InstallUpgradeMOM.sp in the Install_Scripts folder.
+3. Optionally, you can also install ImportTestLevels.sp for test levels as well.
+4. If you do not wish to compile the house keeper yourself (although highly recommended), install ReplaceMOMHouseKeeper.sp. If you wish to inject ASM afterwards, YOU MUST USE THE ASM_HOUSEKEEPER FOLDER AS YOUR WORKING DIRECTORY WITH THE BAK FOLDER INTACT!
+
+### Manually Upgrading
+How to manually upgrade MOM without building anything.
+
+#### Upgrading MOM Overlay
 1. Open the newly patched ROM in SM64DSe.
 2. In the ARM 9 Overlays tab, extract the last overlay.
 3. Go to Tools->Overlay Editor, click the last overlay, and note the static init start and end table addresses.
@@ -88,11 +114,11 @@ Of course, if you were building your mod with an original version of MOM and wis
 6. Go to Tools-Overlay Editor, click the last overlay, and replace the static init start and end table addresses from the ones noted earlier.
 7. Click "Update" then "Save Changes".
 
-### Upgrading MOM House Keeper
+#### Upgrading MOM House Keeper
 1. Replace the files in ASM_HouseKeeper's source files with the new source files. Mananage the code afterwards so your custom ARM9 code will work.
 2. Follow the instructions above for compiling MOM's house keeper.
 
-### Upgrading Assets
+#### Upgrading Assets
 1. Follow the instructions above for managing assets.
 
 ## Adding More

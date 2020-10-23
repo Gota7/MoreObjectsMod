@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 1
 
 
    1              		.arch armv5te
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
   58              	.LVL2:
   59 0014 0040A0E1 		mov	r4, r0
   60              	.LVL3:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 2
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 2
 
 
   61              	.LBB493:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  116              		.global	_ZN5Berry16CleanupResourcesEv
  117              		.syntax unified
  118              		.arm
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 3
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 3
 
 
  119              		.fpu softvfp
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  176              		.cfi_offset 6, -8
  177              		.cfi_offset 14, -4
  178              		.loc 1 80 14 view .LVU30
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 4
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 4
 
 
  179 0078 40319FE5 		ldr	r3, .L21
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  233 00ec D8309FE5 		ldr	r3, .L21+12
  234              		.loc 1 89 14 view .LVU48
  235 00f0 0410A0E1 		mov	r1, r4
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 5
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 5
 
 
  236              		.loc 1 87 53 view .LVU49
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  290              	.LBB524:
  291              		.loc 3 54 68 view .LVU68
  292 0138 C331A0E1 		asr	r3, r3, #3
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 6
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 6
 
 
  293              	.LBE524:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  347              		.loc 3 54 68 view .LVU85
  348 015c CCC1A0E1 		asr	ip, ip, #3
  349              	.LBE537:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 7
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 7
 
 
  350              	.LBE538:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  404 018c FF3943E2 		sub	r3, r3, #4177920
  405 0190 0A3B43E2 		sub	r3, r3, #10240
  406              	.LBE542:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 8
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 8
 
 
  407              	.LBE544:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  463              		@ frame_needed = 0, uses_anonymous_args = 0
  464              		.loc 1 110 2 view .LVU113
  465              		.loc 1 105 5 is_stmt 0 view .LVU114
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 9
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 9
 
 
  466 01d4 F04F2DE9 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  520              		.loc 3 35 28 view .LVU129
  521              		.loc 3 35 28 is_stmt 0 view .LVU130
  522              	.LBE828:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 10
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 10
 
 
  523              	.LBE827:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  577              		.loc 1 41 2 is_stmt 1 view .LVU140
  578              	.LVL36:
  579              	.LBB846:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 11
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 11
 
 
  580              	.LBI839:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  634 0268 8C208DE5 		str	r2, [sp, #140]
  635              	.LVL40:
  636              	.LBB704:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 12
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 12
 
 
  637              	.LBI704:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  691              		.loc 3 242 8 is_stmt 1 view .LVU179
  692              	.LBB714:
  693              	.LBI714:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 13
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 13
 
 
  694              		.loc 3 34 9 view .LVU180
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  748 02d4 0C308DE5 		str	r3, [sp, #12]
  749              	.LBE746:
  750              	.LBE745:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 14
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 14
 
 
  751              		.loc 1 129 11 view .LVU200
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  805              	.LBE757:
  806              	.LBB773:
  807              	.LBB754:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 15
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 15
 
 
  808              		.loc 3 266 71 view .LVU215
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  862              	.LBB768:
  863              	.LBI768:
  864              		.loc 3 34 9 is_stmt 1 view .LVU236
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 16
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 16
 
 
  865              		.loc 3 34 9 is_stmt 0 view .LVU237
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  919              		.loc 3 34 9 is_stmt 0 view .LVU258
  920              	.LBE781:
  921              	.LBB782:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 17
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 17
 
 
  922              	.LBI782:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  976              		.loc 3 235 56 view .LVU280
  977              	.LBB792:
  978              	.LBI792:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 18
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 18
 
 
  979              		.loc 3 205 8 view .LVU281
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1033              		.loc 3 34 9 is_stmt 0 view .LVU303
  1034              	.LBE803:
  1035              	.LBB804:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 19
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 19
 
 
  1036              	.LBI804:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1090              	.LBB807:
  1091              	.LBI807:
  1092              		.loc 3 35 28 view .LVU318
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 20
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 20
 
 
  1093              		.loc 3 35 28 is_stmt 0 view .LVU319
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1147              		.loc 3 247 54 view .LVU336
  1148              	.LBB721:
  1149              	.LBI721:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 21
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 21
 
 
  1150              		.loc 3 242 8 view .LVU337
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1204              	.LBB730:
  1205              	.LBI730:
  1206              		.loc 3 34 9 is_stmt 1 view .LVU356
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 22
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 22
 
 
  1207              		.loc 3 34 9 is_stmt 0 view .LVU357
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1261              		.loc 3 249 75 is_stmt 0 view .LVU375
  1262 03a4 0510A0E1 		mov	r1, r5
  1263 03a8 0A00A0E1 		mov	r0, r10
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 23
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 23
 
 
  1264 03ac 8C208DE2 		add	r2, sp, #140
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1320              	.LVL70:
  1321              	.L33:
  1322              		.cfi_def_cfa_offset 0
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 24
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 24
 
 
  1323              		.cfi_restore 4
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1379              	.LBB859:
  1380              	.LBB860:
  1381              		.loc 3 54 68 view .LVU398
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 25
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 25
 
 
  1382 041c 642090E5 		ldr	r2, [r0, #100]
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1436              	.LBE863:
  1437              	.LBE868:
  1438              		.loc 1 43 2 is_stmt 1 view .LVU413
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 26
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 26
 
 
  1439              		.loc 1 43 21 is_stmt 0 view .LVU414
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1495              	.LBE870:
  1496              	.LBE869:
  1497              		.loc 1 48 2 view .LVU426
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 27
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 27
 
 
  1498 046c 101096E5 		ldr	r1, [r6, #16]
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1552 04b0 2E00001A 		bne	.L52
  1553              	.LBB877:
  1554              		.loc 1 53 3 view .LVU446
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 28
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 28
 
 
  1555 04b4 142096E5 		ldr	r2, [r6, #20]
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1609              		.loc 1 65 23 view .LVU464
  1610 0514 0B3AA013 		movne	r3, #45056
  1611              	.LBE882:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 29
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 29
 
 
  1612              		.loc 1 59 5 view .LVU465
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1666 0560 0C208DE2 		add	r2, sp, #12
  1667 0564 450FA0E3 		mov	r0, #276
  1668              		.loc 1 70 28 view .LVU485
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 30
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 30
 
 
  1669 0568 0CC08DE5 		str	ip, [sp, #12]
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1724              		.arm
  1725              		.fpu softvfp
  1727              	_ZN5Berry13OnTurnIntoEggER6Player:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 31
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 31
 
 
  1728              	.LVL87:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1784              		.cfi_offset 14, -4
  1785              		.loc 1 144 1 view .LVU514
  1786 05c0 0040A0E1 		mov	r4, r0
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 32
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 32
 
 
  1787              		.loc 1 145 13 view .LVU515
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1843              	.LVL100:
  1844              	.LFB1163:
  1845              		.loc 1 151 1 is_stmt 1 view -0
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 33
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 33
 
 
  1846              		.cfi_startproc
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1902              		.loc 1 151 1 is_stmt 0 view .LVU536
  1903 0640 10402DE9 		push	{r4, lr}
  1904              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 34
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 34
 
 
  1905              		.cfi_offset 4, -8
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  1959              		.cfi_endproc
  1960              	.LFE1165:
  1962              		.global	_ZTV5Berry
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 35
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 35
 
 
  1963              		.global	_ZN5Berry9spawnDataE
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 1
  2023 0010 00000600 		.word	393216
  2024 0014 00000001 		.word	16777216
  2025 0018 00000001 		.word	16777216
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccHSXT1H.s 			page 36
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\ccAqLEqv.s 			page 36
 
 
  2026              		.bss

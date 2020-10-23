@@ -15,3 +15,11 @@
 *SM64DSe/extended_ascii.txt
 *SM64DSe/jap_chars.txt
 *SM64DSe/License.SharpDX.txt
+*ASM/build/*.*
+*ASM_HouseKeeper/build/*.*
+*ASM/newcode.bin
+*ASM/newcode.elf
+*ASM/newcode.sym
+*ASM_HouseKeeper/newcode.bin
+*ASM_HouseKeeper/newcode.elf
+*ASM_HouseKeeper/newcode.sym

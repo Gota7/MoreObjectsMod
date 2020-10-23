@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 1
 
 
    1              		.arch armv5te
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
   58              	.LVL2:
   59 0014 0040A0E1 		mov	r4, r0
   60              	.LVL3:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 2
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 2
 
 
   61              	.LBB159:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  115              	.LBE168:
  116              	.LBB169:
  117              	.LBI169:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 3
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 3
 
 
  118              		.loc 3 34 9 is_stmt 1 view .LVU25
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  174              		.loc 1 71 1 is_stmt 1 view -0
  175              		.cfi_startproc
  176              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 4
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 4
 
 
  177              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  233              	.LVL12:
  234              	.LBB183:
  235              	.LBI179:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 5
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 5
 
 
  236              		.loc 3 40 28 is_stmt 1 view .LVU53
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  292              		.loc 1 108 2 view .LVU66
  293              		.loc 1 108 7 is_stmt 0 view .LVU67
  294 00a4 003090E5 		ldr	r3, [r0]
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 6
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 6
 
 
  295 00a8 64209FE5 		ldr	r2, .L17
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  349              	@ 122 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp" 1
  350 00ec 0000A0E3 		mov r0, #0
  351              	@ 0 "" 2
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 7
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 7
 
 
  352              		.loc 1 123 2 view .LVU84
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  407              		.arm
  408              		.fpu softvfp
  410              	_ZN10SilverCoin20UpdateModelTransformEv:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 8
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 8
 
 
  411              	.LVL29:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  465 0138 5C2094E5 		ldr	r2, [r4, #92]
  466              	.LBE201:
  467              	.LBE203:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 9
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 9
 
 
  468              	.LBB204:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  522              	.LBE216:
  523              		.loc 1 45 31 view .LVU125
  524 015c 1C2184E5 		str	r2, [r4, #284]
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 10
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 10
 
 
  525              		.loc 1 46 2 is_stmt 1 view .LVU126
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  581 0198 0289A0E3 		mov	r8, #32768
  582              		.loc 1 52 32 view .LVU136
  583 019c 0010A0E1 		mov	r1, r0
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 11
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 11
 
 
  584              	.LVL40:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  638              	.LBB224:
  639              	.LBI224:
  640              		.loc 3 34 9 is_stmt 1 view .LVU158
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 12
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 12
 
 
  641              		.loc 3 34 9 is_stmt 0 view .LVU159
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  695 01e0 0F00BCE8 		ldmia	ip!, {r0, r1, r2, r3}
  696 01e4 0F00AEE8 		stmia	lr!, {r0, r1, r2, r3}
  697 01e8 0F00BCE8 		ldmia	ip!, {r0, r1, r2, r3}
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 13
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 13
 
 
  698 01ec 0F00AEE8 		stmia	lr!, {r0, r1, r2, r3}
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  752              		.loc 1 68 1 view .LVU193
  753              		.align	2
  754              	.L25:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 14
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 14
 
 
  755 0238 00000000 		.word	.LANCHOR1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  811              	.LBB246:
  812              	.LBI246:
  813              		.loc 1 92 6 is_stmt 1 view .LVU208
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 15
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 15
 
 
  814              	.LBB247:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  868 02cc 0110A0E3 		mov r1, #1
  869              	@ 0 "" 2
  870              		.loc 1 124 2 view .LVU225
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 16
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 16
 
 
  871              	@ 124 "C:/Users/samsp/Documents/MoreObjectsMod/ASM/source/SilverCoin.cpp" 1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  926              		.fpu softvfp
  928              	_ZN10SilverCoin8BehaviorEv:
  929              	.LVL67:
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 17
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 17
 
 
  930              	.LFB1157:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  986              	.LFB1158:
  987              		.loc 1 87 1 is_stmt 1 view -0
  988              		.cfi_startproc
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 18
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 18
 
 
  989              		@ args = 0, pretend = 0, frame = 0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  1045              	.LVL79:
  1046              	.LBE258:
  1047              		.loc 1 127 28 view .LVU266
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 19
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 19
 
 
  1048 036c 0400A0E1 		mov	r0, r4
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  1104              	.LBB267:
  1105              		.loc 4 91 42 view .LVU275
  1106              		.loc 4 91 60 is_stmt 0 view .LVU276
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 20
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 20
 
 
  1107 039c 14309FE5 		ldr	r3, .L50+4
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 1
  1164 0070 00000000 		.word	_ZN5Actor24OnHitByCannonBlastedCharERS_
  1165 0074 00000000 		.word	_ZN5Actor15OnHitByMegaCharER6Player
  1166 0078 00000000 		.word	_ZN5Actor9Virtual70ERS_
-ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc3GHUdD.s 			page 21
+ARM GAS  C:\Users\samsp\AppData\Local\Temp\cc2ZZ4Ah.s 			page 21
 
 
  1167 007c 00000000 		.word	_ZN5Actor16OnAimedAtWithEggEv

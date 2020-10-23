@@ -6,11 +6,9 @@ Toolkit and resources for SM64DS for some custom objects.
 * Silver Coins
 * Rideable Yoshis
 * Berries
-* Colored Goombas
-* Shy Guys
+* Invisible Walls
 * 2D Level (With Camera Limiter)
 * Object Lighting Modifier
-* Conditional Cutscene Loader
 * And More To Come!
 
 ## How It Works
@@ -23,6 +21,8 @@ The housekeeper hacks the original game's code to allow for loading the MOM over
 ## Notes
 The complete guide is still a bit unorganized and uncomplete. Expect a video tutorial going through this as well in the future. Mostly the section about contributing and managing SFX needs to be done.
 
+ALWAYS, ALWAYS, ALWAYS MAKE BACKUPS OF YOUR ROM BEFORE AND AFTER ATTEMPTING ANY INSTALL OR UPGRADE OF MOM!!!
+
 ## Installation
 How to install and use MOM!
 
@@ -30,7 +30,13 @@ How to install and use MOM!
 In order for the editor to use custom objects, the editor first must have them in its listing. Copy the two files from the SM64DSe folder and replace them for your version of SM64DSe. You will now be able to place the custom objects. Please realize though that they will only work as long as MOM is inserted into the ROM.
 
 ### Installing MOM (Patch)
-TODO: XDELTA PATCH INSTRUCTIONS!!!
+1. Have a CLEAN, UNOPENED EUR ROM of SM64DS.
+2. Open xdeltaUI in the XDelta folder.
+3. For the patch, open MOM.xdelta.
+4. For the source file, select your clean ROM.
+5. For the output file, name a file whatever you want with the NDS extension.
+6. Click patch.
+7. If it doesn't work, your ROM is either not clean, or not the EUR version.
 
 ### Installing MOM (Install Scripts)
 Want to install MOM to an existing ROM without having to build it or do a lot of work yourself? Luckily, you came to the right place!
@@ -89,12 +95,16 @@ The last step is to import the assets needed by the custom objects.
 
 ##### The SDAT
 TODO!!! EXPLAIN SDAT MANAGEMENT!!!
+So far, just replace your current SDAT with the one in the root folder of this repo. Don't worry, I'll create some clever method of importing SDAT assets later.s
 
 ##### Files
 TODO!!! EXPLAIN FILE MANAGEMENT!!!
 
 ## Upgrading MOM
 Of course, if you were building your mod with an original version of MOM and wish to upgrade, it would be annoying to have to start from a new XDELTA. Luckily, you can use a newly patched ROM from the XDELTA to help you upgrade.
+
+### Upgrading SM64DSe Object DB
+Follow the instructions above for installing the MOM object list.
 
 ### Using Scripts
 1. In SM64DSe, go to More->Import Patch.

@@ -2071,6 +2071,36 @@
 					<Parameter id="2">0</Parameter>
 				</Parameters>
 			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--TOXIC_LEVEL-->
+				<ObjectID>523</ObjectID>
+				<Position>
+					<X>-1.02</X>
+					<Y>0.905</Y>
+					<Z>-2.71</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">48</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--OBJECT_LIGHTING_MODIFIER-->
+				<ObjectID>517</ObjectID>
+				<Position>
+					<X>-1.435</X>
+					<Y>0.771</Y>
+					<Z>-3.061</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">80</Parameter>
+					<Parameter id="1">20480</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
 		</Objects>
 		<TextureAnimationData>
 			<TextureAnimationArea area="0">

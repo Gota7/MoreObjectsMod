@@ -8,13 +8,14 @@ namespace
 	const uint8_t coinPrizeTypes[] = {0, 0, 0, 0,
 									  0, 0, 0, 2,
 									  0, 2, 2, 2};
-	
-	unsigned berryCount = 0;
-	unsigned berryMaxCount = 0;
+
 };
 
 SharedFilePtr Berry::modelFile;
 SharedFilePtr Berry::stemFile;
+
+unsigned Berry::berryCount;
+unsigned Berry::berryMaxCount;
 
 SpawnInfo<Berry> Berry::spawnData =
 {
@@ -67,7 +68,9 @@ void Berry::Kill()
 				}
 				break;
 			default:
-				Actor::Spawn(0x114, 0, Vector3{pos.x, pos.y + 0x5000_f, pos.z}, nullptr, areaID, -1); break;
+				Actor::Spawn(0x114, 0, Vector3{pos.x, pos.y + 0x5000_f, pos.z}, nullptr, areaID, -1);
+				berryMaxCount = 0;
+				break;
 		}
 	}
 	pos = origPos;
@@ -76,10 +79,7 @@ void Berry::Kill()
 
 int Berry::InitResources()
 {
-	//hack to make sure berries in the garden don't appear until after star 2
-	if(LEVEL_ID == 8 && STAR_ID < 3 && (pos.y - 0x3fe800_f).Abs() < 0xa0000_f && pos.HorzLen() < 0x600000_f)
-		return 0;
-	
+
 	Model::LoadFile(modelFile);
 	model.SetFile(modelFile.filePtr, 1, -1);
 	Model::LoadFile(stemFile);

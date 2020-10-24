@@ -8,6 +8,7 @@
 #include "ObjectLightingModifier.h"
 #include "BlankObject.h"
 #include "GoombaColored.h"
+#include "ToxicLevel.h"
 
 namespace {
 
@@ -24,6 +25,7 @@ namespace {
 	constexpr short int COLORED_GOOMBA_SMALL = 							BASE_OBJECT_ID + 8;
 	constexpr short int COLORED_GOOMBA =	 							BASE_OBJECT_ID + 9;
 	constexpr short int COLORED_GOOMBA_LARGE = 							BASE_OBJECT_ID + 10;
+	constexpr short int TOXIC_LEVEL = 									BASE_OBJECT_ID + 11;
 	//constexpr short int CONDITIONAL_CUTSCENE_LOADER_ID = 0x0165;
 
 	//Assets.
@@ -98,5 +100,8 @@ void init()
 	Goomba::animFiles[3].Construct(0x038b);
 	Goomba::animFiles[4].Construct(0x038c);
 	Goomba::animFiles[5].Construct(0x038d);
+
+	//Toxic level.
+	modTable(TOXIC_LEVEL, (unsigned)&ToxicLevel::spawnData);
 
 }

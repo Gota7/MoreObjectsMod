@@ -4426,10 +4426,10 @@ IIRR
 Parameter 2:
 GGBB
 
-II: Light ID (0 if unsure)
-RR: Red Component
-GG: Green Component
-BB: Blue Component
+II - Light ID (0 if unsure)
+RR - Red Component
+GG - Green Component
+BB - Blue Component
 
 		</description>
 		<bankreq>none</bankreq>
@@ -4451,9 +4451,9 @@ FF
 Parameter 3:
 DD:
 
-ZZ: Distance in hex FXU * 10000 (2400 if 0).
-FF: FOV (30 if 0).
-DD: Direction (0 for camera in positive Z, 1 for camera in negative Z).
+ZZ - Distance in hex FXU * 10000 (2400 if 0).
+FF - FOV (30 if 0).
+DD - Direction (0 for camera in positive Z, 1 for camera in negative Z).
 
 		</description>
 		<bankreq>none</bankreq>
@@ -4470,6 +4470,21 @@ Parameter 1:
 XXXT
 
 T - 0 for upper bound, 1 for lower bound, 2 for left bound, 3 for right bound.
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='523'>
+		<category>1</category>
+		<name>Toxic Level</name>
+		<internalname>TOXIC_LEVEL</internalname>
+		<actorid>523</actorid>
+		<description>Make the entire level toxic.
+
+Parameter 1:
+RRRR
+
+R - Number of frames to let pass before hurting the player.
 		</description>
 		<bankreq>none</bankreq>
 	</object>

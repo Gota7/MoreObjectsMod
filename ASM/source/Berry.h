@@ -29,6 +29,10 @@ struct Berry : public Actor
 
 	static SharedFilePtr modelFile;
 	static SharedFilePtr stemFile;
+
+	static unsigned berryCount;
+	static unsigned berryMaxCount;
+
 };
 
 #endif

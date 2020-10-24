@@ -12,6 +12,7 @@ Toolkit and resources for SM64DS for some custom objects.
 * Toxic Levels
 * Colored Goombas
 * Noteblocks
+* Shy Guys
 * And More To Come!
 
 ## How It Works

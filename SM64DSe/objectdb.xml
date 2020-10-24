@@ -4606,5 +4606,29 @@ V - Velocity to launch the player at.
 		<bankreq>none</bankreq>
 	</object>
 
+	<object id='525'>
+		<category>1</category>
+		<name>Shy Guy</name>
+		<internalname>@CUSTOM%MG/013_shyGuy.bmd</internalname>
+		<actorid>525</actorid>
+		<description>The shy guy enemy from SMB2, but in 3d.
+
+Parameter 1:
+PPPP
+
+Parameter 2:
+BB
+
+P: Path ID
+FFFF - None (Blue)
+Other - Follow Path (Red)
+
+B: Behavior Along Path
+0 - Normal
+1 - Back And Forth
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
 </database>
 

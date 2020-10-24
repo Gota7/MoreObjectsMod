@@ -1,0 +1,15 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;  Sequence.mus
+;     Made by Gota7
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+@SEQ_TABLE
+NCS_SE_NOTEBLOCK:	NCS_SE_NOTEBLOCK,	NCS_BANK_CUSTOM_SE,	127,	120,	64,	NCS_PLAYER_SE_SCENE_TRG
+
+@SEQ_DATA
+NCS_SE_NOTEBLOCK:
+	prg 1
+	cn4 85, 0
+	fin

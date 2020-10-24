@@ -130,7 +130,7 @@ int Noteblock::Behavior()
 
 		if (isLaunching) {
 			launch();
-			//Sound::Play(5, 0, camSpacePos);
+			Sound::Play(4, 2, camSpacePos);
 		}
 
 		if (PLAYER_ARR[0]->pos.y >= pos.y && INPUT_1_FRAME & Input::B && (unsigned)PLAYER_ARR[0]->currState == Player::ST_FALL && PLAYER_ARR[0]->pos.y <= pos.y + 0x3E8000_f && PLAYER_ARR[0]->speed.y < 0_f) {

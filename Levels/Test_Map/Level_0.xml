@@ -417,6 +417,70 @@
 					</PathPointObject>
 				</Nodes>
 			</PathObject>
+			<PathObject>
+				<StartNodeIndex>6</StartNodeIndex>
+				<Length>2</Length>
+				<Parameters count="3">
+					<Parameter id="0">0</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+				<Nodes>
+					<PathPointObject index="6">
+						<Position>
+							<X>4.8</X>
+							<Y>0</Y>
+							<Z>5.3</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="7">
+						<Position>
+							<X>3.6</X>
+							<Y>0</Y>
+							<Z>5.3</Z>
+						</Position>
+					</PathPointObject>
+				</Nodes>
+			</PathObject>
+			<PathObject>
+				<StartNodeIndex>8</StartNodeIndex>
+				<Length>4</Length>
+				<Parameters count="3">
+					<Parameter id="0">255</Parameter>
+					<Parameter id="1">255</Parameter>
+					<Parameter id="2">255</Parameter>
+				</Parameters>
+				<Nodes>
+					<PathPointObject index="8">
+						<Position>
+							<X>4.8</X>
+							<Y>0</Y>
+							<Z>5.9</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="9">
+						<Position>
+							<X>3.6</X>
+							<Y>0</Y>
+							<Z>5.9</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="10">
+						<Position>
+							<X>3.6</X>
+							<Y>0</Y>
+							<Z>6.5</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="11">
+						<Position>
+							<X>4.8</X>
+							<Y>0</Y>
+							<Z>6.5</Z>
+						</Position>
+					</PathPointObject>
+				</Nodes>
+			</PathObject>
 			<ViewObject>
 				<Position>
 					<X>1.85</X>
@@ -3408,6 +3472,96 @@
 					<Parameter id="2">0</Parameter>
 				</Parameters>
 			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/011_noteblock.bmd-->
+				<ObjectID>524</ObjectID>
+				<Position>
+					<X>-0.652</X>
+					<Y>0.136</Y>
+					<Z>5.757</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">48</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/011_noteblock.bmd-->
+				<ObjectID>524</ObjectID>
+				<Position>
+					<X>-0.648</X>
+					<Y>0.131</Y>
+					<Z>5.468</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">80</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/011_noteblock.bmd-->
+				<ObjectID>524</ObjectID>
+				<Position>
+					<X>-0.65</X>
+					<Y>0.12</Y>
+					<Z>5.182</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">112</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/013_shyGuy.bmd-->
+				<ObjectID>525</ObjectID>
+				<Position>
+					<X>4.06</X>
+					<Y>0</Y>
+					<Z>4.608</Z>
+				</Position>
+				<YRotation>-176.9952</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">65535</Parameter>
+					<Parameter id="1">1</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/013_shyGuy.bmd-->
+				<ObjectID>525</ObjectID>
+				<Position>
+					<X>4.8</X>
+					<Y>0</Y>
+					<Z>5.3</Z>
+				</Position>
+				<YRotation>-90</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">3</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/013_shyGuy.bmd-->
+				<ObjectID>525</ObjectID>
+				<Position>
+					<X>4.8</X>
+					<Y>0</Y>
+					<Z>5.9</Z>
+				</Position>
+				<YRotation>-90</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">4</Parameter>
+					<Parameter id="1">1</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
 			<StandardObject area="0" star="1">
 				<!--KURIBO-->
 				<ObjectID>15</ObjectID>
@@ -3524,51 +3678,6 @@
 				<YRotation>0</YRotation>
 				<Parameters count="3">
 					<Parameter id="0">65311</Parameter>
-					<Parameter id="1">0</Parameter>
-					<Parameter id="2">0</Parameter>
-				</Parameters>
-			</StandardObject>
-			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/011_noteblock.bmd-->
-				<ObjectID>524</ObjectID>
-				<Position>
-					<X>-0.65275</X>
-					<Y>0.1368321</Y>
-					<Z>5.757687</Z>
-				</Position>
-				<YRotation>0</YRotation>
-				<Parameters count="3">
-					<Parameter id="0">48</Parameter>
-					<Parameter id="1">0</Parameter>
-					<Parameter id="2">0</Parameter>
-				</Parameters>
-			</StandardObject>
-			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/011_noteblock.bmd-->
-				<ObjectID>524</ObjectID>
-				<Position>
-					<X>-0.6485449</X>
-					<Y>0.1314913</Y>
-					<Z>5.468785</Z>
-				</Position>
-				<YRotation>0</YRotation>
-				<Parameters count="3">
-					<Parameter id="0">80</Parameter>
-					<Parameter id="1">0</Parameter>
-					<Parameter id="2">0</Parameter>
-				</Parameters>
-			</StandardObject>
-			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/011_noteblock.bmd-->
-				<ObjectID>524</ObjectID>
-				<Position>
-					<X>-0.6502222</X>
-					<Y>0.1209854</Y>
-					<Z>5.182655</Z>
-				</Position>
-				<YRotation>0</YRotation>
-				<Parameters count="3">
-					<Parameter id="0">112</Parameter>
 					<Parameter id="1">0</Parameter>
 					<Parameter id="2">0</Parameter>
 				</Parameters>

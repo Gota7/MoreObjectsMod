@@ -10,6 +10,7 @@
 #include "GoombaColored.h"
 #include "ToxicLevel.h"
 #include "Noteblock.h"
+#include "ShyGuy.h"
 
 namespace {
 
@@ -28,6 +29,7 @@ namespace {
 	constexpr short int COLORED_GOOMBA_LARGE = 							BASE_OBJECT_ID + 10;
 	constexpr short int TOXIC_LEVEL = 									BASE_OBJECT_ID + 11;
 	constexpr short int NOTEBLOCK = 									BASE_OBJECT_ID + 12;
+	constexpr short int SHY_GUY = 										BASE_OBJECT_ID + 13;
 	//constexpr short int CONDITIONAL_CUTSCENE_LOADER_ID = 0x0165;
 
 	//Assets.
@@ -49,6 +51,12 @@ namespace {
 
 	constexpr short int NOTEBLOCK_MODEL_ID = 							0x000B;
 	constexpr short int NOTEBLOCK_COLLISION_ID = 						0x000C;
+
+	constexpr short int SHY_GUY_MODEL_ID = 								0x000D;
+	constexpr short int SHY_GUY_WAIT_ANIM_ID = 							0x000E;
+	constexpr short int SHY_GUY_WALK_ANIM_ID = 							0x000F;
+	constexpr short int SHY_GUY_RUN_ANIM_ID = 							0x0010;
+	constexpr short int SHY_GUY_FREEZE_ANIM_ID = 						0x0011;
 
 	//Modify the object and actor tables.
 	void modTable(short int val, unsigned newFunc)
@@ -113,5 +121,13 @@ void init()
 	modTable(NOTEBLOCK, (unsigned)&Noteblock::spawnData);
 	Noteblock::modelFile.Construct(NOTEBLOCK_MODEL_ID);
 	Noteblock::clsnFile.Construct(NOTEBLOCK_COLLISION_ID);
+
+	//Shy guys.
+	modTable(SHY_GUY, (unsigned)&ShyGuy::spawnData);
+	ShyGuy::modelFile.Construct(SHY_GUY_MODEL_ID);
+	ShyGuy::animFiles[0].Construct(SHY_GUY_WAIT_ANIM_ID);
+	ShyGuy::animFiles[1].Construct(SHY_GUY_WALK_ANIM_ID);
+	ShyGuy::animFiles[2].Construct(SHY_GUY_RUN_ANIM_ID);
+	ShyGuy::animFiles[3].Construct(SHY_GUY_FREEZE_ANIM_ID);
 
 }

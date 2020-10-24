@@ -56,6 +56,7 @@ void hook_0200da0c()
 	//Initialize if needed.
 	if (!init) {
 		Initialize();
+		init = true;
 	}
 
 	//2D code.

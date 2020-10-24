@@ -9,6 +9,7 @@
 #include "BlankObject.h"
 #include "GoombaColored.h"
 #include "ToxicLevel.h"
+//#include "Noteblock.h"
 
 namespace {
 
@@ -26,6 +27,7 @@ namespace {
 	constexpr short int COLORED_GOOMBA =	 							BASE_OBJECT_ID + 9;
 	constexpr short int COLORED_GOOMBA_LARGE = 							BASE_OBJECT_ID + 10;
 	constexpr short int TOXIC_LEVEL = 									BASE_OBJECT_ID + 11;
+	//constexpr short int NOTEBLOCK = 									BASE_OBJECT_ID + 12;
 	//constexpr short int CONDITIONAL_CUTSCENE_LOADER_ID = 0x0165;
 
 	//Assets.
@@ -44,6 +46,9 @@ namespace {
 
 	constexpr short int COLORED_GOOMBA_MODEL_ID = 						0x0009;
 	constexpr short int COLORED_GOOMBA_ANIM_ID = 						0x000A;
+
+	//constexpr short int NOTEBLOCK_MODEL_ID = 							0x000B;
+	//constexpr short int NOTEBLOCK_COLLISION_ID = 						0x000C;
 
 	//Modify the object and actor tables.
 	void modTable(short int val, unsigned newFunc)
@@ -103,5 +108,10 @@ void init()
 
 	//Toxic level.
 	modTable(TOXIC_LEVEL, (unsigned)&ToxicLevel::spawnData);
+
+	//Noteblocks.
+	//modTable(NOTEBLOCK, (unsigned)&Noteblock::spawnInfo);
+	//Noteblock::modelFile.Construct(NOTEBLOCK_MODEL_ID);
+	//Noteblock::clsnFile.Construct(NOTEBLOCK_COLLISION_ID);
 
 }

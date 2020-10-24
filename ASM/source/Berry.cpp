@@ -99,6 +99,8 @@ int Berry::CleanupResources()
 {
 	stemFile.Release();
 	modelFile.Release();
+	berryCount = 0;
+	berryMaxCount = 0;
 	return 1;
 }
 

@@ -10,6 +10,8 @@ Toolkit and resources for SM64DS for some custom objects.
 * 2D Level (With Camera Limiter)
 * Object Lighting Modifier
 * Toxic Levels
+* Colored Goombas
+* Noteblocks
 * And More To Come!
 
 ## How It Works

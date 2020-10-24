@@ -1,5 +1,5 @@
 # Modify the MOM overlay.
-edit_overlay 155 23EC400 23F0A48 23F0A4C 0 0
+edit_overlay 155 23EC400 23F0F94 23F0F98 0 0
 replace_overlay 155 ../ASM/Overlay_155.bin
 
 # Edit filenames.
@@ -13,7 +13,9 @@ rename 6 006_berry.bmd
 rename 7 007_berryStem.bmd
 rename 8 008_riding.bca
 rename 9 009_coloredGoomba.bmd
-rename 10 010_coloredGoomba.btp
+rename A 010_coloredGoomba.btp
+rename B 011_noteblock.bmd
+rename C 012_noteblock.kcl
 
 # Replace assets.
 replace 0 ../Objects/GalaxyShrinkPlatform/ModelCollision/galaxyShrinkPlatformFrame.bmd
@@ -26,4 +28,6 @@ replace 6 ../Objects/Berry/Model/berry.bmd
 replace 7 ../Objects/Berry/Model/berryStem.bmd
 replace 8 ../Objects/YoshiRide/Anim/riding.bca
 replace 9 ../Objects/ColoredGoombas/Model/kuribo_model.bmd
-replace 10 ../Objects/ColoredGoombas/TexAnim/kuribo_colorsw.btp
+replace A ../Objects/ColoredGoombas/TexAnim/kuribo_colorsw.btp
+replace B ../Objects/Noteblock/ModelCollision/noteblock.bmd
+replace C ../Objects/Noteblock/ModelCollision/noteblock.kcl

@@ -423,7 +423,7 @@
 					<Y>0.6</Y>
 					<Z>5.95</Z>
 				</Position>
-				<YRotation>-169.9969</YRotation>
+				<YRotation>-169.9915</YRotation>
 				<Parameters count="3">
 					<Parameter id="0">65282</Parameter>
 					<Parameter id="1">0</Parameter>
@@ -3348,6 +3348,66 @@
 					<Parameter id="2">0</Parameter>
 				</Parameters>
 			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/009_coloredGoomba.bmd-->
+				<ObjectID>522</ObjectID>
+				<Position>
+					<X>0.531</X>
+					<Y>0</Y>
+					<Z>6.328</Z>
+				</Position>
+				<YRotation>175.9955</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">8192</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/009_coloredGoomba.bmd-->
+				<ObjectID>520</ObjectID>
+				<Position>
+					<X>1.114</X>
+					<Y>0</Y>
+					<Z>6.326</Z>
+				</Position>
+				<YRotation>175.9955</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">0</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/009_coloredGoomba.bmd-->
+				<ObjectID>521</ObjectID>
+				<Position>
+					<X>0.803</X>
+					<Y>0</Y>
+					<Z>6.33</Z>
+				</Position>
+				<YRotation>175.9955</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">4096</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/009_coloredGoomba.bmd-->
+				<ObjectID>521</ObjectID>
+				<Position>
+					<X>0.803</X>
+					<Y>0</Y>
+					<Z>7.23</Z>
+				</Position>
+				<YRotation>175.9955</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">12288</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
 			<StandardObject area="0" star="1">
 				<!--KURIBO-->
 				<ObjectID>15</ObjectID>
@@ -3464,6 +3524,51 @@
 				<YRotation>0</YRotation>
 				<Parameters count="3">
 					<Parameter id="0">65311</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/011_noteblock.bmd-->
+				<ObjectID>524</ObjectID>
+				<Position>
+					<X>-0.65275</X>
+					<Y>0.1368321</Y>
+					<Z>5.757687</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">48</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/011_noteblock.bmd-->
+				<ObjectID>524</ObjectID>
+				<Position>
+					<X>-0.6485449</X>
+					<Y>0.1314913</Y>
+					<Z>5.468785</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">80</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/011_noteblock.bmd-->
+				<ObjectID>524</ObjectID>
+				<Position>
+					<X>-0.6502222</X>
+					<Y>0.1209854</Y>
+					<Z>5.182655</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">112</Parameter>
 					<Parameter id="1">0</Parameter>
 					<Parameter id="2">0</Parameter>
 				</Parameters>

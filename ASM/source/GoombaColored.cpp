@@ -151,7 +151,6 @@ Goomba* Goomba::Spawn()
 
 int Goomba::InitResources()
 {
-	
 	spawnSilverStar = param1 >> 4 & 0xf;
 	silverStarID = 0xff;
 	
@@ -169,7 +168,7 @@ int Goomba::InitResources()
 	TextureSequence::LoadFile(texSeqFile);
 	for(int i = 0; i < NUM_ANIMS; ++i)
 		BoneAnimation::LoadFile(animFiles[i]);
-		
+	
 	AddCap((uint8_t)(param1 & 0xf));
 	if(capID < 6)
 	{

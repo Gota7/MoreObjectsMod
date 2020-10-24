@@ -4474,6 +4474,108 @@ T - 0 for upper bound, 1 for lower bound, 2 for left bound, 3 for right bound.
 		<bankreq>none</bankreq>
 	</object>
 
+	<object id='520'>
+		<category>1</category>
+		<name>Small Colored Goomba</name>
+		<internalname>@CUSTOM%MG/009_coloredGoomba.bmd</internalname>
+		<actorid>520</actorid>
+		<description>A goomba that has different colors and behaviors.
+
+Parameter 1: 
+TWEC
+
+T: Goomba type.
+0 - Jump (Red)
+1 - Jump And Spin (Green)
+2 - Double Damage (Yellow)
+3+ - Normal (Brown)
+
+W: Determines [w]hen the cap should be spawned
+0, F - Never
+1 - If the character already unlocked
+2 - Even if character not unlocked 
+
+E: Extra contents
+0, 2+ - None
+1 - A Silver Star.
+
+C: Cap to spawn.
+0 - Mario
+1 - Luigi
+2 - Wario
+F - None 
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='521'>
+		<category>1</category>
+		<name>Colored Goomba</name>
+		<internalname>@CUSTOM%MG/009_coloredGoomba.bmd</internalname>
+		<actorid>521</actorid>
+		<description>A goomba that has different colors and behaviors.
+
+Parameter 1: 
+TWEC
+
+T: Goomba type.
+0 - Jump (Red)
+1 - Jump And Spin (Green)
+2 - Double Damage (Yellow)
+3+ - Normal (Brown)
+
+W: Determines [w]hen the cap should be spawned
+0, F - Never
+1 - If the character already unlocked
+2 - Even if character not unlocked 
+
+E: Extra contents
+0, 2+ - None
+1 - A Silver Star.
+
+C: Cap to spawn.
+0 - Mario
+1 - Luigi
+2 - Wario
+F - None 
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='522'>
+		<category>1</category>
+		<name>Large Colored Goomba</name>
+		<internalname>@CUSTOM%MG/009_coloredGoomba.bmd</internalname>
+		<actorid>522</actorid>
+		<description>A goomba that has different colors and behaviors.
+
+Parameter 1: 
+TWEC
+
+T: Goomba type.
+0 - Jump (Red)
+1 - Jump And Spin (Green)
+2 - Double Damage (Yellow)
+3+ - Normal (Brown)
+
+W: Determines [w]hen the cap should be spawned
+0, F - Never
+1 - If the character already unlocked
+2 - Even if character not unlocked 
+
+E: Extra contents
+0, 2+ - None
+1 - A Silver Star.
+
+C: Cap to spawn.
+0 - Mario
+1 - Luigi
+2 - Wario
+F - None 
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
 	<object id='523'>
 		<category>1</category>
 		<name>Toxic Level</name>
@@ -4485,6 +4587,21 @@ Parameter 1:
 RRRR
 
 R - Number of frames to let pass before hurting the player.
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='524'>
+		<category>1</category>
+		<name>Noteblock</name>
+		<internalname>@CUSTOM%MG/011_noteblock.bmd</internalname>
+		<actorid>524</actorid>
+		<description>Noteblock that bounces the player up when they jump.
+
+Parameter 1:
+VVVV
+
+V - Velocity to launch the player at.
 		</description>
 		<bankreq>none</bankreq>
 	</object>

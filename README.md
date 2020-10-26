@@ -146,6 +146,8 @@ Gota7 - Mod, custom objects, sound and resource management.
 
 Josh - Custom objects.
 
-Starpants - Misc. ASM, General Help.
+Starpants - Misc. ASM, General help.
+
+Overblade - RE help.
 
 0reo - Idea.

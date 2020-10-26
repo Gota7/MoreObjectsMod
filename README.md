@@ -13,6 +13,9 @@ Toolkit and resources for SM64DS for some custom objects.
 * Colored Goombas
 * Noteblocks
 * Shy Guys
+* Launch Stars
+* Skybox Rotator
+* Gravity Modifier
 * And More To Come!
 
 ## How It Works

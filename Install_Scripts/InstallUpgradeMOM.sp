@@ -1,5 +1,5 @@
 # Modify the MOM overlay.
-edit_overlay 155 23EC400 23F24F8 23F24FC 0 0
+edit_overlay 155 23EC400 23F5AFC 23F5B00 0 0
 replace_overlay 155 ../ASM/Overlay_155.bin
 
 # Edit filenames.
@@ -21,6 +21,20 @@ rename E 014_shyGuyWait.bca
 rename F 015_shyGuyWalk.bca
 rename 10 016_shyGuyRun.bca
 rename 11 017_shyGuyFreeze.bca
+rename 12 018_lstar.bmd
+rename 13 019_lsWait.bca
+rename 14 020_lsLaunch.bca
+rename 15 021_magikoopa.bmd
+rename 16 022_kamella.bmd
+rename 17 023_magikoopaAppear.bca
+rename 18 024_magikoopaWave.bca
+rename 19 025_magikoopaShoot.bca
+rename 1A 026_magikoopaPoof.bca
+rename 1B 027_magikoopaWait.bca
+rename 1C 028_magikoopaHurt.bca
+rename 1D 029_magikoopaDefeat.bca
+rename 1E 030_magikoopaMagic.tps
+rename 1F 031_icicle.bmd
 
 # Replace assets.
 replace 0 ../Objects/GalaxyShrinkPlatform/ModelCollision/galaxyShrinkPlatformFrame.bmd
@@ -41,3 +55,17 @@ replace E ../Objects/ShyGuy/Anim/shyGuyWait.bca
 replace F ../Objects/ShyGuy/Anim/shyGuyWalk.bca
 replace 10 ../Objects/ShyGuy/Anim/shyGuyRun.bca
 replace 11 ../Objects/ShyGuy/Anim/shyGuyFreeze.bca
+replace 12 ../Objects/LaunchStar/Model/lstar.bmd
+replace 13 ../Objects/LaunchStar/Anim/lsWait.bca
+replace 14 ../Objects/LaunchStar/Anim/lsLaunch.bca
+replace 15 ../Objects/Magikoopa/Model/magikoopa.bmd
+replace 16 ../Objects/Magikoopa/Model/kamella.bmd
+replace 17 ../Objects/Magikoopa/Anim/magikoopaAppear.bca
+replace 18 ../Objects/Magikoopa/Anim/magikoopaWave.bca
+replace 19 ../Objects/Magikoopa/Anim/magikoopaShoot.bca
+replace 1A ../Objects/Magikoopa/Anim/magikoopaPoof.bca
+replace 1B ../Objects/Magikoopa/Anim/magikoopaWait.bca
+replace 1C ../Objects/Magikoopa/Anim/magikoopaHurt.bca
+replace 1D ../Objects/Magikoopa/Anim/magikoopaDefeat.bca
+replace 1E ../Objects/Magikoopa/Particle/magikoopaMagic.tps
+replace 1F ../Objects/FallingIcicle/Model/icicle.bmd

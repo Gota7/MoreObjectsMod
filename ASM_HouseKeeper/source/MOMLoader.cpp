@@ -1,8 +1,10 @@
 #include "SM64DS_2.h"
 #include "twoDee.h"
+#include "GravityModifier.h"
 
 //Actor IDs.
 constexpr short int TWO_DEE_LEVEL_ID = 0x0206;
+constexpr short int GRAVITY_MODIFIER = 0x0214;
 
 //If MOM has been initialized.
 static bool init = false;
@@ -16,18 +18,26 @@ void Initialize()
 
 }
 
-//Manage 2D mode.
-void Manage2D() 
+//Manage modes.
+void ManageModes() 
 {
 
 	Actor* actor = nullptr;
-	bool found = false;
-	while (!found) {
+	bool found2D = false;
+	bool foundGM = false;
+	while (true) {
 		actor = actor->Next();
 		if (!actor) break;
 
+		//Gravity modifier object.
+		if (!foundGM && actor->actorID == GRAVITY_MODIFIER) {
+			ChangeGravity(actor->param1, actor->ang.x == 1);
+			foundGM = true;
+			continue;
+		}
+
 		//2D object.
-		if (actor->actorID == TWO_DEE_LEVEL_ID) {
+		if (!found2D && actor->actorID == TWO_DEE_LEVEL_ID) {
 			twoDee::dist = actor->param1 * 0x10000_f;
 			twoDee::fov = actor->ang.x;
 			twoDee::isFront = actor->ang.z == 0;
@@ -37,14 +47,18 @@ void Manage2D()
 			if (actor->param1 == 0) {
 				twoDee::dist = 0x24000000_f;
 			}
-			found = true;
+			found2D = true;
+			continue;
 		}
 
 	}
-	if (found) {
+	if (found2D) {
 		twoDee::Enable();
 	} else {
 		twoDee::Disable();
+	}
+	if (!foundGM) {
+		ChangeGravity(0x1000, false);
 	}
 
 }
@@ -68,7 +82,7 @@ void hook_0200da0c()
 void hook_0202D494()
 {
 	
-	//Manage 2D.
-	Manage2D();
+	//Manage modes.
+	ManageModes();
 
 }

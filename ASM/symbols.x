@@ -494,11 +494,11 @@ MultiCopy_Int																	  = 0x0205a490;
                                                         
 String_Compare 						                                              = 0x02070508;
                                                         
-Vec3_InterpCubic					                                              = 0x0208f670;
-_ZN14BezierPathIter7AdvanceEv					                                  = 0x0208f840;
-_ZN8Particle7Manager7LoadTexEjj                                                   = 0x0208f9d0;
-_ZN8Particle7Manager13UnloadNewTexsEv                                             = 0x0208fb1c;
-Vec3_Interp							                                              = 0x02090dd0;
+/* Vec3_InterpCubic					                                              = 0x0208f670; */
+/* _ZN14BezierPathIter7AdvanceEv					                              = 0x0208f840; */
+/* _ZN8Particle7Manager7LoadTexEjj                                                = 0x0208f9d0; */
+/* _ZN8Particle7Manager13UnloadNewTexsEv                                          = 0x0208fb1c; */
+/* Vec3_Interp							                                          = 0x02090dd0; */
                                                         
 _ZN5Enemy26UpdateKillByInvincibleCharER12WithMeshClsnR9ModelAnimj 				  = 0x020ad838;
 _ZN5Enemy20KillByInvincibleCharERK10Vector3_16R6Player 			                  = 0x020ada40;

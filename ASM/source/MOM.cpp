@@ -11,25 +11,36 @@
 #include "ToxicLevel.h"
 #include "Noteblock.h"
 #include "ShyGuy.h"
+#include "LaunchStar.h"
+#include "Magikoopa.h"
+#include "SkyboxRotator.h"
+#include "FallingIcicle.h"
 
 namespace {
 
 	//Object IDs.
 	constexpr short int BASE_OBJECT_ID = 								0x0200;
 	constexpr short int GALAXY_SHRINKING_PLATFORM_ID = 					BASE_OBJECT_ID;
-	constexpr short int SILVER_COIN_ID = 								BASE_OBJECT_ID + 1;
-	constexpr short int INVISIBLE_WALL_ID = 							BASE_OBJECT_ID + 2;
-	constexpr short int BERRY_ID = 										BASE_OBJECT_ID + 3;
-	constexpr short int YOSHI_RIDE_ID = 								BASE_OBJECT_ID + 4;
-	constexpr short int OBJECT_LIGHTING_MODIFIER_ID = 					BASE_OBJECT_ID + 5;
-	constexpr short int TWO_DEE_LEVEL_ID = 								BASE_OBJECT_ID + 6;
-	constexpr short int TWO_DEE_CAMERA_LIMITER = 						BASE_OBJECT_ID + 7;
-	constexpr short int COLORED_GOOMBA_SMALL = 							BASE_OBJECT_ID + 8;
-	constexpr short int COLORED_GOOMBA =	 							BASE_OBJECT_ID + 9;
-	constexpr short int COLORED_GOOMBA_LARGE = 							BASE_OBJECT_ID + 10;
-	constexpr short int TOXIC_LEVEL = 									BASE_OBJECT_ID + 11;
-	constexpr short int NOTEBLOCK = 									BASE_OBJECT_ID + 12;
-	constexpr short int SHY_GUY = 										BASE_OBJECT_ID + 13;
+	constexpr short int SILVER_COIN_ID = 								BASE_OBJECT_ID + 0x1;
+	constexpr short int INVISIBLE_WALL_ID = 							BASE_OBJECT_ID + 0x2;
+	constexpr short int BERRY_ID = 										BASE_OBJECT_ID + 0x3;
+	constexpr short int YOSHI_RIDE_ID = 								BASE_OBJECT_ID + 0x4;
+	constexpr short int OBJECT_LIGHTING_MODIFIER_ID = 					BASE_OBJECT_ID + 0x5;
+	constexpr short int TWO_DEE_LEVEL_ID = 								BASE_OBJECT_ID + 0x6;
+	constexpr short int TWO_DEE_CAMERA_LIMITER = 						BASE_OBJECT_ID + 0x7;
+	constexpr short int COLORED_GOOMBA_SMALL = 							BASE_OBJECT_ID + 0x8;
+	constexpr short int COLORED_GOOMBA =	 							BASE_OBJECT_ID + 0x9;
+	constexpr short int COLORED_GOOMBA_LARGE = 							BASE_OBJECT_ID + 0xA;
+	constexpr short int TOXIC_LEVEL = 									BASE_OBJECT_ID + 0xB;
+	constexpr short int NOTEBLOCK = 									BASE_OBJECT_ID + 0xC;
+	constexpr short int SHY_GUY = 										BASE_OBJECT_ID + 0xD;
+	constexpr short int LAUNCH_STAR = 									BASE_OBJECT_ID + 0xE;
+	constexpr short int KAMEK_SHOT = 									BASE_OBJECT_ID + 0xF;
+	constexpr short int KAMEK = 										BASE_OBJECT_ID + 0x10;
+	constexpr short int KAMELLA = 										BASE_OBJECT_ID + 0x11;
+	constexpr short int SKYBOX_ROTATOR = 								BASE_OBJECT_ID + 0x12;
+	constexpr short int FALLING_ICICLE = 								BASE_OBJECT_ID + 0x13;
+	constexpr short int GRAVITY_MODIFIER = 								BASE_OBJECT_ID + 0x14;
 	//constexpr short int CONDITIONAL_CUTSCENE_LOADER_ID = 0x0165;
 
 	//Assets.
@@ -57,6 +68,23 @@ namespace {
 	constexpr short int SHY_GUY_WALK_ANIM_ID = 							0x000F;
 	constexpr short int SHY_GUY_RUN_ANIM_ID = 							0x0010;
 	constexpr short int SHY_GUY_FREEZE_ANIM_ID = 						0x0011;
+
+	constexpr short int LAUNCH_STAR_MODEL_ID =							0x0012;
+	constexpr short int LAUNCH_STAR_WAIT_ANIM_ID =						0x0013;
+	constexpr short int LAUNCH_STAR_LAUNCH_ANIM_ID =					0x0014;
+
+	constexpr short int KAMEK_MODEL_ID = 								0x0015;
+	constexpr short int KAMELLA_MODEL_ID = 								0x0016;
+	constexpr short int KAMEK_APPEAR_ANIM_ID = 							0x0017;
+	constexpr short int KAMEK_WAVE_ANIM_ID = 							0x0018;
+	constexpr short int KAMEK_SHOOT_ANIM_ID = 							0x0019;
+	constexpr short int KAMEK_POOF_ANIM_ID = 							0x001A;
+	constexpr short int KAMEK_WAIT_ANIM_ID = 							0x001B;
+	constexpr short int KAMEK_HURT_ANIM_ID = 							0x001C;
+	constexpr short int KAMEK_DEFEAT_ANIM_ID = 							0x001D;
+	constexpr short int KAMEK_MAGIC_PARTICLE_ID = 						0x001E;
+
+	constexpr short int ICICLE_MODEL_ID = 								0x001F;
 
 	//Modify the object and actor tables.
 	void modTable(short int val, unsigned newFunc)
@@ -129,5 +157,35 @@ void init()
 	ShyGuy::animFiles[1].Construct(SHY_GUY_WALK_ANIM_ID);
 	ShyGuy::animFiles[2].Construct(SHY_GUY_RUN_ANIM_ID);
 	ShyGuy::animFiles[3].Construct(SHY_GUY_FREEZE_ANIM_ID);
+
+	//Launch stars.
+	modTable(LAUNCH_STAR, (unsigned)&LaunchStar::spawnData);
+	LaunchStar::modelFile.Construct(LAUNCH_STAR_MODEL_ID);
+	LaunchStar::animFiles[0].Construct(LAUNCH_STAR_WAIT_ANIM_ID);
+	LaunchStar::animFiles[1].Construct(LAUNCH_STAR_LAUNCH_ANIM_ID);
+
+	//Kamek.
+	modTable(KAMEK_SHOT, (unsigned)&Magikoopa::Shot::spawnData);
+	modTable(KAMEK, (unsigned)&Magikoopa::spawnData);
+	modTable(KAMELLA, (unsigned)&Magikoopa::bossSpawnData);
+	Magikoopa::modelFiles[0].Construct(KAMEK_MODEL_ID);
+	Magikoopa::modelFiles[1].Construct(KAMELLA_MODEL_ID);
+	Magikoopa::animFiles[0].Construct(KAMEK_APPEAR_ANIM_ID);
+	Magikoopa::animFiles[1].Construct(KAMEK_WAVE_ANIM_ID);
+	Magikoopa::animFiles[2].Construct(KAMEK_SHOOT_ANIM_ID);
+	Magikoopa::animFiles[3].Construct(KAMEK_POOF_ANIM_ID);
+	Magikoopa::animFiles[4].Construct(KAMEK_WAIT_ANIM_ID);
+	Magikoopa::animFiles[5].Construct(KAMEK_HURT_ANIM_ID);
+	Magikoopa::animFiles[6].Construct(KAMEK_DEFEAT_ANIM_ID);
+
+	//Skybox rotator.
+	modTable(SKYBOX_ROTATOR, (unsigned)&SkyboxRotator::spawnData);
+
+	//Falling icicle.
+	modTable(FALLING_ICICLE, (unsigned)&FallingIcicle::spawnData);
+	FallingIcicle::modelFile.Construct(ICICLE_MODEL_ID);
+
+	//Gravity modifer.
+	modTable(GRAVITY_MODIFIER, (unsigned)&BlankObject::spawnData);
 
 }

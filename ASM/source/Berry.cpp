@@ -69,7 +69,6 @@ void Berry::Kill()
 				break;
 			default:
 				Actor::Spawn(0x114, 0, Vector3{pos.x, pos.y + 0x5000_f, pos.z}, nullptr, areaID, -1);
-				berryMaxCount = 0;
 				break;
 		}
 	}

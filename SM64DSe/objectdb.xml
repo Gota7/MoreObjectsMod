@@ -4426,10 +4426,10 @@ IIRR
 Parameter 2:
 GGBB
 
-II - Light ID (0 if unsure)
-RR - Red Component
-GG - Green Component
-BB - Blue Component
+I - Light ID (0 if unsure)
+R - Red Component
+G - Green Component
+B - Blue Component
 
 		</description>
 		<bankreq>none</bankreq>
@@ -4446,14 +4446,14 @@ Parameter 1:
 ZZZZ
 
 Parameter 2:
-FF
+FFFF
 
 Parameter 3:
-DD:
+DDDD:
 
-ZZ - Distance in hex FXU * 10000 (2400 if 0).
-FF - FOV (30 if 0).
-DD - Direction (0 for camera in positive Z, 1 for camera in negative Z).
+Z - Distance in hex FXU * 10000 (2400 if 0).
+F - FOV (30 if 0).
+D - Direction (0 for camera in positive Z, 1 for camera in negative Z).
 
 		</description>
 		<bankreq>none</bankreq>
@@ -4617,7 +4617,7 @@ Parameter 1:
 PPPP
 
 Parameter 2:
-BB
+BBBB
 
 P: Path ID
 FFFF - None (Blue)
@@ -4626,6 +4626,144 @@ Other - Follow Path (Red)
 B: Behavior Along Path
 0 - Normal
 1 - Back And Forth
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='526'>
+		<category>1</category>
+		<name>Launch Star</name>
+		<internalname>@CUSTOM%MG/018_lstar.bmd</internalname>
+		<actorid>526</actorid>
+		<description>Launch star from Mario Galaxy.
+
+Parameter 1:
+EEPP
+
+Parameter 2:
+SSSS
+
+E: Event ID
+P: Path ID
+S: Launch Speed
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='527'>
+		<category>1</category>
+		<name>Kamek Shot</name>
+		<internalname>KAMEK_SHOT</internalname>
+		<actorid>527</actorid>
+		<description>Shot Kamek and Kamella fire.
+
+Parameter 1:
+IIII
+
+Parameter 2:
+XXXX
+
+Parameter 3:
+ZZZZ
+
+I: Unique ID
+X: X Angle
+Z: Z Angle
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='528'>
+		<category>1</category>
+		<name>Kamek</name>
+		<internalname>@CUSTOM%MG/021_magikoopa.bmd</internalname>
+		<actorid>528</actorid>
+		<description>A magikoopa that teleports and fires magic at you.
+
+Parameter 1:
+EEPP
+
+Parameter 2:
+OOOO
+
+Parameter 3:
+XXXX
+
+E: Event To Trigger
+P: Path ID
+O: Actor ID To Spawn From Shot
+X: Spawned Object Parameters
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='529'>
+		<category>1</category>
+		<name>Kamella</name>
+		<internalname>@CUSTOM%MG/022_kamella.bmd</internalname>
+		<actorid>529</actorid>
+		<description>A boss magikoopa.
+
+Parameter 1:
+EEPP
+
+E: Event To Trigger
+P: Path ID
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='530'>
+		<category>1</category>
+		<name>Skybox Rotator</name>
+		<internalname>SKYBOX_ROTATOR</internalname>
+		<actorid>530</actorid>
+		<description>Rotate the skybox.
+
+Parameter 1:
+XXXX
+
+Parameter 2:
+YYYY
+
+Parameter 3:
+ZZZZ
+
+X: Speed to move along X axis.
+Y: Speed to move along Y axis.
+Z: Speed to move along Z axis.
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='531'>
+		<category>1</category>
+		<name>Falling Icicle</name>
+		<internalname>@CUSTOM%MG/031_icicle.bmd</internalname>
+		<actorid>531</actorid>
+		<description>An icicle that falls and can hurt the player.
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='532'>
+		<category>1</category>
+		<name>Gravity Modifier</name>
+		<internalname>GRAVITY_MODIFIER</internalname>
+		<actorid>532</actorid>
+		<description>Change gravity!
+
+Parameter 1:
+MMMM
+
+Parameter 2:
+DDDD
+
+M: Gravity Multiplier (0x1000 Is Game's Default)
+
+D: Direction Of Gravity
+0 - Downwards
+1 - Upwards (REALLY GLITCHY!)
 		</description>
 		<bankreq>none</bankreq>
 	</object>

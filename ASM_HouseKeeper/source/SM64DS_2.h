@@ -1032,7 +1032,7 @@ struct Player : public Actor
 	LaunchStar* lsPtr; //0x764
 	union
 	{
-		BezierPathIter lsPathIt;
+		BezierPathIter lsPathIt; //DONT USE!!!
 		struct
 		{
 			Vector3_16 lsDiffAng; //0x768

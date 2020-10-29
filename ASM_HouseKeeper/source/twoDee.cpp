@@ -17,6 +17,19 @@ namespace twoDee
 	bool isFront;
 }
 
+void twoDee::Setup(Actor* actor) {
+	dist = actor->param1 * 0x10000_f;
+	fov = actor->ang.x;
+	isFront = actor->ang.z == 0;
+	if (fov == 0) {
+		fov = 0x30;
+	}
+	if (actor->param1 == 0) {
+		dist = 0x24000000_f;
+	}
+	Enable();
+}
+
 void twoDee::Update()
 {
 	if (twoDeeOff) {return;}

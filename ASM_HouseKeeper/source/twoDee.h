@@ -8,6 +8,9 @@ extern bool twoDeeOn;
 
 namespace twoDee
 {
+
+	void Setup(Actor* actor);
+
 	void Update();
 
 	void Enable();

@@ -569,3 +569,5 @@ RunKuppaScript = 0x0200ef04;
 EndKuppaScript = 0x0200e798;
 PAUSE = 0x0209F2C4;
 FS_LoadOverlay = 0x02018ad0;
+FALL_DAMAGE_BIG = 0x020e2e88;
+FALL_DAMAGE_SMALL = 0x020e2e9c;

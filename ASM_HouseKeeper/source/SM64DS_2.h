@@ -1215,6 +1215,9 @@ extern "C"
 	extern char* KuppaPointer;
 	extern uint8_t PLAYER_HEALTH;
 	extern uint8_t PAUSE;
+	
+	extern Fix12i FALL_DAMAGE_BIG;
+	extern Fix12i FALL_DAMAGE_SMALL;
 
 	extern bool FS_LoadOverlay(bool isArm7, unsigned ovID);
 	

@@ -27,6 +27,8 @@ struct LaunchStar : public Actor
 
 	static LaunchStar* ls_ptr;
 	static BezierPathIter bzIt;
+	static Vector3_16 lsDiffAng;
+	static Vector3_16 lsInitAng;
 
 	static SpawnInfo<LaunchStar> spawnData;
 };

@@ -1028,7 +1028,9 @@ struct Player : public Actor
 	uint8_t lsState0Timer; //0x762
 	uint8_t launchState; //0x763
 	LaunchStar* lsPtr; //0x764
-	union
+
+	//Illegal, the player struct is only 0x768 big.
+	/*union
 	{
 		BezierPathIter lsPathIt;
 		struct
@@ -1036,7 +1038,7 @@ struct Player : public Actor
 			Vector3_16 lsDiffAng; //0x768
 			Vector3_16 lsInitAng; //0x76e
 		};
-	};
+	};*/
 	
 	static SharedFilePtr* ANIM_PTRS[0x308];
 	
@@ -1213,6 +1215,9 @@ extern "C"
 	extern char* KuppaPointer;
 	extern uint8_t PLAYER_HEALTH;
 	extern uint8_t PAUSE;
+
+	extern Fix12i FALL_DAMAGE_BIG;
+	extern Fix12i FALL_DAMAGE_SMALL;
 	
 	bool LoadArchive(int archiveID);
 	

@@ -139,7 +139,51 @@ How to manually upgrade MOM without building anything.
 1. Follow the instructions above for managing assets.
 
 ## Adding More
-So, you want to add more content to MOM? Unfortunately, this section is TODO!!!!!!!!!!!!!!!!
+So, you want to add more content to MOM? First, you need to decide on what kind of object you want. Regular objects use assets and behave like normal game objects. House Keeper objects change existing game code with their own. It is recommended to use regular objects over House Keeper ones as the code does not take up any space in the game heap.
+
+### Adding A Regular Object
+TODO!!!
+
+### Adding A House Keeper Object
+So you want to do some code changes? This is the right place! This is where code for objects such as 2d levels and gravity modifications reside. While these objects do absolutely nothing by themselves, they signal for the House Keeper to do something based on the parameters of the object, and the object's actor ID.
+
+#### Overlay Code
+Of course if you were to try and spawn an object that does not exist, the game will crash. Therefore, you have to define the object in the MOM overlay even though the code will do nothing! This barely impacts the size of the overlay though, don't worry. In MOM.cpp in the ASM folder, add your object ID to the list. Then, at the bottom of the init function, add a mod table command for your new object ID pointing to the blank object's spawn data. Look at gravity modifier object for a good example of this in the file.
+
+#### House Keeper Code
+Your code will lie in the source folder in the ASM_HouseKeeper folder in the repo.
+1. Add your source files to the folder.
+2. Create a function to run the setup that takes an actor as a parameter. You use this actor's parameters as static parameters for your code replacement/hook/whatever.
+3. Create a function to restore default behavior that takes no parameters. Look at GravityModifier.h for a good example of how to do this, as GravityModifier.s is what does all the code based off the given parameters.
+4. In MOMHouseKeeper.cpp, increment the object count, and set up your object like the others in the Initialize function. You can also add a function call to the hook that updates every frame if needed.
+
+### Updating MOM's Repo
+Once your changes are done, it's time to make it so that upgrading MOM works!
+
+#### SM64DSe Changes
+1. Append your actor name and IDs to obj_list.txt in the SM64DSe folder.
+2. Add your object description and info to objectdb.xml. Make sure the IDs are correct. To have the editor display a custom model, put "@CUSTOM%" for the internal name followed by the path in the ROM to the BMD file.
+
+#### Test Level
+Put your object in a test level to show case it's proper usage so people can use it. After this, export your level XML to the proper folder in the levels folder.
+
+#### The Upgrade Patch
+1. Open InstallUpgradeMOM.sp in the Install_Scripts folder.
+2. In the overlay editor in SM64DSe (Tools-Edit Overlays), select the MOM overlay and replace the 2nd, 3rd, and 4th number for the edit_overlay command with the RAM Address, Static Init Start, and Static Init End respectively.
+3. In the edit filenames section of the patch, add a rename for the OV0 ID to any assets you added that need a name.
+4. In the replace assets section, replace asset OV0 IDs with the path to the asset relative to the Install_Script folder.
+
+#### XDelta Patch
+1. Have a CLEAN UNOPENED SM64DS EUR ROM.
+2. Open xDelta UI from the XDelta folder.
+3. Make sure your MOM ROM has all the test levels and all the necessary assets!
+4. Hit Create Patch, for the original file select the EUR ROM.
+5. Select the MOM ROM for the modified file.
+6. For the patch destination, select the MOM XDelta.
+7. Click Patch.
+
+#### Final Touch
+The final touch is to update this README to include the new object on the list of custom objects!
 
 ## Credits
 Gota7 - Mod, custom objects, sound and resource management.

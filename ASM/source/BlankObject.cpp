@@ -29,6 +29,7 @@ int BlankObject::CleanupResources()
 
 int BlankObject::Behavior()
 {
+	Destroy();
 	return 1;
 }
 

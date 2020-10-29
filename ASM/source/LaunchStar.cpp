@@ -16,6 +16,8 @@ SharedFilePtr LaunchStar::modelFile;
 SharedFilePtr LaunchStar::animFiles[2];
 LaunchStar* LaunchStar::ls_ptr;
 BezierPathIter LaunchStar::bzIt;
+Vector3_16 LaunchStar::lsDiffAng;
+Vector3_16 LaunchStar::lsInitAng;
 
 SpawnInfo<LaunchStar> LaunchStar::spawnData =
 {
@@ -36,10 +38,10 @@ bool Player::LS_Init()
 	lsPtr = LaunchStar::ls_ptr;
 	lsPos = LaunchStar::ls_ptr->pos; //launch star pos
 	lsPos.y += 0xa0000_f; //correct y-pos of target launch star
-	lsInitAng = ang;
-	lsDiffAng.x = LaunchStar::ls_ptr->ang.x - ang.x;
-	lsDiffAng.y = LaunchStar::ls_ptr->ang.y - ang.y;
-	lsDiffAng.z = LaunchStar::ls_ptr->ang.z - ang.z;
+	LaunchStar::lsInitAng = ang;
+	LaunchStar::lsDiffAng.x = LaunchStar::ls_ptr->ang.x - ang.x;
+	LaunchStar::lsDiffAng.y = LaunchStar::ls_ptr->ang.y - ang.y;
+	LaunchStar::lsDiffAng.z = LaunchStar::ls_ptr->ang.z - ang.z;
 	SetAnim(0x5f, Animation::NO_LOOP, 0x00001000_f, 0);
 	Sound::PlayBank3(0x61, camSpacePos);
 	return true;
@@ -77,9 +79,9 @@ bool Player::LS_Behavior()
 			pos *= t;
 			pos += lsInitPos;
 
-			ang.x = (Fix12s(lsDiffAng.x, true) * t).val + lsInitAng.x;
-			ang.y = (Fix12s(lsDiffAng.y, true) * t).val + lsInitAng.y;
-			ang.z = (Fix12s(lsDiffAng.z, true) * t).val + lsInitAng.z;
+			ang.x = (Fix12s(LaunchStar::lsDiffAng.x, true) * t).val + LaunchStar::lsInitAng.x;
+			ang.y = (Fix12s(LaunchStar::lsDiffAng.y, true) * t).val + LaunchStar::lsInitAng.y;
+			ang.z = (Fix12s(LaunchStar::lsDiffAng.z, true) * t).val + LaunchStar::lsInitAng.z;
 
 			++lsState0Timer; //increment state timer
 			if(lsState0Timer > 4)

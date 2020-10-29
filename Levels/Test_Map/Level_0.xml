@@ -499,23 +499,23 @@
 					</PathPointObject>
 					<PathPointObject index="13">
 						<Position>
-							<X>-0.00222547</X>
-							<Y>1.639582</Y>
-							<Z>3.683593</Z>
+							<X>-0.002</X>
+							<Y>1.639</Y>
+							<Z>3.683</Z>
 						</Position>
 					</PathPointObject>
 					<PathPointObject index="14">
 						<Position>
-							<X>1.345344</X>
-							<Y>2.192172</Y>
-							<Z>2.694022</Z>
+							<X>1.345</X>
+							<Y>2.192</Y>
+							<Z>2.694</Z>
 						</Position>
 					</PathPointObject>
 					<PathPointObject index="15">
 						<Position>
-							<X>3.222343</X>
-							<Y>1.222989</Y>
-							<Z>3.287535</Z>
+							<X>3.222</X>
+							<Y>1.222</Y>
+							<Z>3.287</Z>
 						</Position>
 					</PathPointObject>
 				</Nodes>
@@ -555,6 +555,129 @@
 							<X>6</X>
 							<Y>0</Y>
 							<Z>4.5</Z>
+						</Position>
+					</PathPointObject>
+				</Nodes>
+			</PathObject>
+			<PathObject>
+				<StartNodeIndex>20</StartNodeIndex>
+				<Length>16</Length>
+				<Parameters count="3">
+					<Parameter id="0">255</Parameter>
+					<Parameter id="1">255</Parameter>
+					<Parameter id="2">255</Parameter>
+				</Parameters>
+				<Nodes>
+					<PathPointObject index="20">
+						<Position>
+							<X>3.522</X>
+							<Y>1.341</Y>
+							<Z>-0.73</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="21">
+						<Position>
+							<X>5.943</X>
+							<Y>2.291</Y>
+							<Z>-2.397</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="22">
+						<Position>
+							<X>6.883</X>
+							<Y>3.474</Y>
+							<Z>-4.328</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="23">
+						<Position>
+							<X>5.267</X>
+							<Y>4.335</Y>
+							<Z>-5.99</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="24">
+						<Position>
+							<X>1.213</X>
+							<Y>2.983</Y>
+							<Z>-6.822</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="25">
+						<Position>
+							<X>-5.275</X>
+							<Y>1.931</Y>
+							<Z>-7.08</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="26">
+						<Position>
+							<X>-6.933</X>
+							<Y>1.608</Y>
+							<Z>-6.309</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="27">
+						<Position>
+							<X>-7.395</X>
+							<Y>2.154</Y>
+							<Z>-4.056</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="28">
+						<Position>
+							<X>-5.623</X>
+							<Y>1.906</Y>
+							<Z>-2.467</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="29">
+						<Position>
+							<X>0.422</X>
+							<Y>0.367</Y>
+							<Z>-1.896</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="30">
+						<Position>
+							<X>2.305</X>
+							<Y>0.462</Y>
+							<Z>-1.615</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="31">
+						<Position>
+							<X>5.193</X>
+							<Y>0.772</Y>
+							<Z>-0.844</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="32">
+						<Position>
+							<X>6.989</X>
+							<Y>1.72</Y>
+							<Z>1.361</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="33">
+						<Position>
+							<X>6.336</X>
+							<Y>2.226</Y>
+							<Z>4.162</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="34">
+						<Position>
+							<X>5.536</X>
+							<Y>2.089</Y>
+							<Z>5.058</Z>
+						</Position>
+					</PathPointObject>
+					<PathPointObject index="35">
+						<Position>
+							<X>2.066</X>
+							<Y>0.469</Y>
+							<Z>5.687</Z>
 						</Position>
 					</PathPointObject>
 				</Nodes>
@@ -3696,8 +3819,8 @@
 				<YRotation>0</YRotation>
 				<Parameters count="3">
 					<Parameter id="0">2048</Parameter>
-					<Parameter id="1">0</Parameter>
-					<Parameter id="2">0</Parameter>
+					<Parameter id="1">1280</Parameter>
+					<Parameter id="2">4617</Parameter>
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
@@ -3787,6 +3910,21 @@
 				<Parameters count="3">
 					<Parameter id="0">0</Parameter>
 					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/018_lstar.bmd-->
+				<ObjectID>526</ObjectID>
+				<Position>
+					<X>3.522</X>
+					<Y>1.341</Y>
+					<Z>-0.73</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">65287</Parameter>
+					<Parameter id="1">176</Parameter>
 					<Parameter id="2">0</Parameter>
 				</Parameters>
 			</StandardObject>
@@ -3907,144 +4045,6 @@
 				<Parameters count="3">
 					<Parameter id="0">65311</Parameter>
 					<Parameter id="1">0</Parameter>
-					<Parameter id="2">0</Parameter>
-				</Parameters>
-			</StandardObject>
-			<PathObject>
-				<StartNodeIndex>20</StartNodeIndex>
-				<Length>16</Length>
-				<Parameters count="3">
-					<Parameter id="0">255</Parameter>
-					<Parameter id="1">255</Parameter>
-					<Parameter id="2">255</Parameter>
-				</Parameters>
-				<Nodes>
-					<PathPointObject index="20">
-						<Position>
-							<X>3.522222</X>
-							<Y>1.341747</Y>
-							<Z>-0.73017</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="21">
-						<Position>
-							<X>5.943705</X>
-							<Y>2.291726</Y>
-							<Z>-2.397589</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="22">
-						<Position>
-							<X>6.883662</X>
-							<Y>3.474744</Y>
-							<Z>-4.328353</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="23">
-						<Position>
-							<X>5.267005</X>
-							<Y>4.335541</Y>
-							<Z>-5.990418</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="24">
-						<Position>
-							<X>1.213242</X>
-							<Y>2.983538</Y>
-							<Z>-6.82291</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="25">
-						<Position>
-							<X>-5.275029</X>
-							<Y>1.931516</Y>
-							<Z>-7.080711</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="26">
-						<Position>
-							<X>-6.933019</X>
-							<Y>1.608452</Y>
-							<Z>-6.30937</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="27">
-						<Position>
-							<X>-7.395425</X>
-							<Y>2.154504</Y>
-							<Z>-4.056908</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="28">
-						<Position>
-							<X>-5.623494</X>
-							<Y>1.906608</Y>
-							<Z>-2.467099</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="29">
-						<Position>
-							<X>0.4225134</X>
-							<Y>0.3678498</Y>
-							<Z>-1.896268</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="30">
-						<Position>
-							<X>2.305713</X>
-							<Y>0.4623094</Y>
-							<Z>-1.615797</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="31">
-						<Position>
-							<X>5.193922</X>
-							<Y>0.7723306</Y>
-							<Z>-0.8448678</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="32">
-						<Position>
-							<X>6.989353</X>
-							<Y>1.720661</Y>
-							<Z>1.361998</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="33">
-						<Position>
-							<X>6.336485</X>
-							<Y>2.226934</Y>
-							<Z>4.162862</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="34">
-						<Position>
-							<X>5.536454</X>
-							<Y>2.089649</Y>
-							<Z>5.058326</Z>
-						</Position>
-					</PathPointObject>
-					<PathPointObject index="35">
-						<Position>
-							<X>2.066902</X>
-							<Y>0.469017</Y>
-							<Z>5.687315</Z>
-						</Position>
-					</PathPointObject>
-				</Nodes>
-			</PathObject>
-			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/018_lstar.bmd-->
-				<ObjectID>526</ObjectID>
-				<Position>
-					<X>3.522222</X>
-					<Y>1.341747</Y>
-					<Z>-0.73017</Z>
-				</Position>
-				<YRotation>0</YRotation>
-				<Parameters count="3">
-					<Parameter id="0">65287</Parameter>
-					<Parameter id="1">176</Parameter>
 					<Parameter id="2">0</Parameter>
 				</Parameters>
 			</StandardObject>

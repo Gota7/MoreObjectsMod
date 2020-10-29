@@ -1,5 +1,5 @@
 # Modify the MOM overlay.
-edit_overlay 155 23EC400 23F5AFC 23F5B00 0 0
+edit_overlay 155 23EC400 23F59F4 23F59F8 0 0
 replace_overlay 155 ../ASM/Overlay_155.bin
 
 # Edit filenames.

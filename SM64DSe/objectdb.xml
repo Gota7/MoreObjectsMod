@@ -4757,29 +4757,115 @@ Parameter 1:
 MMMM
 
 Parameter 2:
-FFDD
-
-Parameter 3:
-BBSS
+DDDD
 
 M: Gravity Multiplier (0x1000 Is Game's Default)
-
-F: What To Multiply Fall Damage Values By (0x10 Raised To Value Power)
 
 D: Direction Of Gravity
 0 - Downwards
 1 - Upwards (REALLY GLITCHY!)
+		</description>
+		<bankreq>none</bankreq>
+	</object>
 
-B: Fall Damage Big (Times Multiplier, 0xBB8000 Default)
-0 - Normal
-Other - Value Times Multiplier
-FF - None
+	<object id='533'>
+		<category>1</category>
+		<name>Small Colored Goomba 2</name>
+		<internalname>@CUSTOM%MG/032_coloredGoomba2.bmd</internalname>
+		<actorid>533</actorid>
+		<description>A goomba that has different colors and behaviors.
 
-S: Fall Damage Small (Times Multiplier, 0x47E000 Default)
-0 - Normal
-Other - Value Times Multiplier
-FF - None
+Parameter 1: 
+TWEC
 
+T: Goomba type.
+0 - Speed (Blue)
+1 - Fire And Spin (Orange)
+2 - Insta Kill (Purple)
+3+ - Normal (Brown)
+
+W: Determines [w]hen the cap should be spawned
+0, F - Never
+1 - If the character already unlocked
+2 - Even if character not unlocked 
+
+E: Extra contents
+0, 2+ - None
+1 - A Silver Star.
+
+C: Cap to spawn.
+0 - Mario
+1 - Luigi
+2 - Wario
+F - None 
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='534'>
+		<category>1</category>
+		<name>Colored Goomba 2</name>
+		<internalname>@CUSTOM%MG/032_coloredGoomba2.bmd</internalname>
+		<actorid>534</actorid>
+		<description>A goomba that has different colors and behaviors.
+
+Parameter 1: 
+TWEC
+
+T: Goomba type.
+0 - Speed (Blue)
+1 - Fire And Spin (Orange)
+2 - Insta Kill (Purple)
+3+ - Normal (Brown)
+
+W: Determines [w]hen the cap should be spawned
+0, F - Never
+1 - If the character already unlocked
+2 - Even if character not unlocked 
+
+E: Extra contents
+0, 2+ - None
+1 - A Silver Star.
+
+C: Cap to spawn.
+0 - Mario
+1 - Luigi
+2 - Wario
+F - None 
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='535'>
+		<category>1</category>
+		<name>Large Colored Goomba 2</name>
+		<internalname>@CUSTOM%MG/032_coloredGoomba2.bmd</internalname>
+		<actorid>535</actorid>
+		<description>A goomba that has different colors and behaviors.
+
+Parameter 1: 
+TWEC
+
+T: Goomba type.
+0 - Speed (Blue)
+1 - Fire And Spin (Orange)
+2 - Insta Kill (Purple)
+3+ - Normal (Brown)
+
+W: Determines [w]hen the cap should be spawned
+0, F - Never
+1 - If the character already unlocked
+2 - Even if character not unlocked 
+
+E: Extra contents
+0, 2+ - None
+1 - A Silver Star.
+
+C: Cap to spawn.
+0 - Mario
+1 - Luigi
+2 - Wario
+F - None 
 		</description>
 		<bankreq>none</bankreq>
 	</object>

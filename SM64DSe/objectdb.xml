@@ -4784,5 +4784,107 @@ FF - None
 		<bankreq>none</bankreq>
 	</object>
 
+	<object id='533'>
+		<category>1</category>
+		<name>Small Colored Goomba 2</name>
+		<internalname>@CUSTOM%MG/032_coloredGoomba2.bmd</internalname>
+		<actorid>533</actorid>
+		<description>A goomba that has different colors and behaviors.
+
+Parameter 1: 
+TWEC
+
+T: Goomba type.
+0 - Speed (Blue)
+1 - Fire And Spin (Orange)
+2 - Insta Kill (Purple)
+3+ - Normal (Brown)
+
+W: Determines [w]hen the cap should be spawned
+0, F - Never
+1 - If the character already unlocked
+2 - Even if character not unlocked 
+
+E: Extra contents
+0, 2+ - None
+1 - A Silver Star.
+
+C: Cap to spawn.
+0 - Mario
+1 - Luigi
+2 - Wario
+F - None 
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='534'>
+		<category>1</category>
+		<name>Colored Goomba 2</name>
+		<internalname>@CUSTOM%MG/032_coloredGoomba2.bmd</internalname>
+		<actorid>534</actorid>
+		<description>A goomba that has different colors and behaviors.
+
+Parameter 1: 
+TWEC
+
+T: Goomba type.
+0 - Speed (Blue)
+1 - Fire And Spin (Orange)
+2 - Insta Kill (Purple)
+3+ - Normal (Brown)
+
+W: Determines [w]hen the cap should be spawned
+0, F - Never
+1 - If the character already unlocked
+2 - Even if character not unlocked 
+
+E: Extra contents
+0, 2+ - None
+1 - A Silver Star.
+
+C: Cap to spawn.
+0 - Mario
+1 - Luigi
+2 - Wario
+F - None 
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='535'>
+		<category>1</category>
+		<name>Large Colored Goomba 2</name>
+		<internalname>@CUSTOM%MG/032_coloredGoomba2.bmd</internalname>
+		<actorid>535</actorid>
+		<description>A goomba that has different colors and behaviors.
+
+Parameter 1: 
+TWEC
+
+T: Goomba type.
+0 - Speed (Blue)
+1 - Spin And Fire (Orange)
+2 - Insta Kill (Purple)
+3+ - Normal (Brown)
+
+W: Determines [w]hen the cap should be spawned
+0, F - Never
+1 - If the character already unlocked
+2 - Even if character not unlocked 
+
+E: Extra contents
+0, 2+ - None
+1 - A Silver Star.
+
+C: Cap to spawn.
+0 - Mario
+1 - Luigi
+2 - Wario
+F - None 
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
 </database>
 

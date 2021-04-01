@@ -1,5 +1,5 @@
 # Modify the MOM overlay.
-edit_overlay 155 23EC400 23F59F4 23F59F8 0 0
+edit_overlay 155 23EC400 23F7D74 23F7D78 0 0
 replace_overlay 155 ../ASM/Overlay_155.bin
 
 # Edit filenames.
@@ -35,6 +35,8 @@ rename 1C 028_magikoopaHurt.bca
 rename 1D 029_magikoopaDefeat.bca
 rename 1E 030_magikoopaMagic.tps
 rename 1F 031_icicle.bmd
+rename 20 032_coloredGoomba2.bmd
+rename 21 033_coloredGoomba2.btp
 
 # Replace assets.
 replace 0 ../Objects/GalaxyShrinkPlatform/ModelCollision/galaxyShrinkPlatformFrame.bmd
@@ -69,3 +71,5 @@ replace 1C ../Objects/Magikoopa/Anim/magikoopaHurt.bca
 replace 1D ../Objects/Magikoopa/Anim/magikoopaDefeat.bca
 replace 1E ../Objects/Magikoopa/Particle/magikoopaMagic.tps
 replace 1F ../Objects/FallingIcicle/Model/icicle.bmd
+replace 20 ../Objects/ColoredGoombas2/Model/kuribo_model.bmd
+replace 21 ../Objects/ColoredGoombas2/TexAnim/kuribo_colorsw.btp

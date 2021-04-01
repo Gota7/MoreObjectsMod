@@ -15,6 +15,7 @@
 #include "Magikoopa.h"
 #include "SkyboxRotator.h"
 #include "FallingIcicle.h"
+#include "GoombaColored2.h"
 
 namespace {
 
@@ -41,6 +42,9 @@ namespace {
 	constexpr short int SKYBOX_ROTATOR = 								BASE_OBJECT_ID + 0x12;
 	constexpr short int FALLING_ICICLE = 								BASE_OBJECT_ID + 0x13;
 	constexpr short int GRAVITY_MODIFIER = 								BASE_OBJECT_ID + 0x14;
+	constexpr short int COLORED_GOOMBA_2_SMALL = 						BASE_OBJECT_ID + 0x15;
+	constexpr short int COLORED_GOOMBA_2 =	 							BASE_OBJECT_ID + 0x16;
+	constexpr short int COLORED_GOOMBA_2_LARGE = 						BASE_OBJECT_ID + 0x17;
 	//constexpr short int CONDITIONAL_CUTSCENE_LOADER_ID = 0x0165;
 
 	//Assets.
@@ -85,6 +89,9 @@ namespace {
 	constexpr short int KAMEK_MAGIC_PARTICLE_ID = 						0x001E;
 
 	constexpr short int ICICLE_MODEL_ID = 								0x001F;
+
+	constexpr short int COLORED_GOOMBA_2_MODEL_ID = 					0x0020;
+	constexpr short int COLORED_GOOMBA_2_ANIM_ID = 						0x0021;
 
 	//Modify the object and actor tables.
 	void modTable(short int val, unsigned newFunc)
@@ -188,4 +195,16 @@ void init()
 	//Gravity modifer.
 	modTable(GRAVITY_MODIFIER, (unsigned)&BlankObject::spawnData);
 
+	//Colored goombas 2.
+	modTable(COLORED_GOOMBA_2_SMALL, (unsigned)&Goomba2::spawnDataSmall);
+	modTable(COLORED_GOOMBA_2, (unsigned)&Goomba2::spawnDataNormal);
+	modTable(COLORED_GOOMBA_2_LARGE, (unsigned)&Goomba2::spawnDataBig);
+	Goomba2::modelFile.Construct(COLORED_GOOMBA_2_MODEL_ID);
+	Goomba2::texSeqFile.Construct(COLORED_GOOMBA_2_ANIM_ID);
+	Goomba2::animFiles[0].Construct(0x0388);
+	Goomba2::animFiles[1].Construct(0x0389);
+	Goomba2::animFiles[2].Construct(0x038a);
+	Goomba2::animFiles[3].Construct(0x038b);
+	Goomba2::animFiles[4].Construct(0x038c);
+	Goomba2::animFiles[5].Construct(0x038d);
 }

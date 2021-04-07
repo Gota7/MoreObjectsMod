@@ -4757,29 +4757,13 @@ Parameter 1:
 MMMM
 
 Parameter 2:
-FFDD
-
-Parameter 3:
-BBSS
+DDDD
 
 M: Gravity Multiplier (0x1000 Is Game's Default)
-
-F: What To Multiply Fall Damage Values By (0x10 Raised To Value Power)
 
 D: Direction Of Gravity
 0 - Downwards
 1 - Upwards (REALLY GLITCHY!)
-
-B: Fall Damage Big (Times Multiplier, 0xBB8000 Default)
-0 - Normal
-Other - Value Times Multiplier
-FF - None
-
-S: Fall Damage Small (Times Multiplier, 0x47E000 Default)
-0 - Normal
-Other - Value Times Multiplier
-FF - None
-
 		</description>
 		<bankreq>none</bankreq>
 	</object>
@@ -4864,7 +4848,7 @@ TWEC
 
 T: Goomba type.
 0 - Speed (Blue)
-1 - Spin And Fire (Orange)
+1 - Fire And Spin (Orange)
 2 - Insta Kill (Purple)
 3+ - Normal (Brown)
 
@@ -4882,6 +4866,31 @@ C: Cap to spawn.
 1 - Luigi
 2 - Wario
 F - None 
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='536'>
+		<category>1</category>
+		<name>Yoshi NPC</name>
+		<internalname>@CUSTOM%MG/034_yoshiNPC.bmd</internalname>
+		<actorid>536</actorid>
+		<description>AA Yoshi that stands around and can talk to the player.
+
+Parameter 1: EMMM
+
+E = Event ID mod 16
+M = Message ID of initial message
+
+Parameter 2: EMMM
+
+E = floor(Event ID / 16)
+M = Message ID of final message
+
+Parameter 3: TBBBBBGGGGGRRRRR (bits)
+
+T = 1 if this Yoshi should talk
+B,G,R = Color
 		</description>
 		<bankreq>none</bankreq>
 	</object>

@@ -4757,13 +4757,28 @@ Parameter 1:
 MMMM
 
 Parameter 2:
-DDDD
+FFDD
+
+Parameter 3:
+BBSS
 
 M: Gravity Multiplier (0x1000 Is Game's Default)
+
+F: What To Multiply Fall Damage Values By (0x10 Raised To Value Power)
 
 D: Direction Of Gravity
 0 - Downwards
 1 - Upwards (REALLY GLITCHY!)
+
+B: Fall Damage Big (Times Multiplier, 0xBB8000 Default)
+0 - Normal
+Other - Value Times Multiplier
+FF - None
+
+S: Fall Damage Small (Times Multiplier, 0x47E000 Default)
+0 - Normal
+Other - Value Times Multiplier
+FF - None
 		</description>
 		<bankreq>none</bankreq>
 	</object>

@@ -3284,7 +3284,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/000_galaxyShrinkPlatformFrame.bmd-->
+				<!---->
 				<ObjectID>512</ObjectID>
 				<Position>
 					<X>-0.171</X>
@@ -3299,7 +3299,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/000_galaxyShrinkPlatformFrame.bmd-->
+				<!---->
 				<ObjectID>512</ObjectID>
 				<Position>
 					<X>-0.501</X>
@@ -3314,7 +3314,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/000_galaxyShrinkPlatformFrame.bmd-->
+				<!---->
 				<ObjectID>512</ObjectID>
 				<Position>
 					<X>-0.209</X>
@@ -3359,7 +3359,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>1.413</X>
@@ -3374,7 +3374,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>1.317</X>
@@ -3389,7 +3389,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>1.062</X>
@@ -3404,7 +3404,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>0.727</X>
@@ -3419,7 +3419,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>0.42</X>
@@ -3434,7 +3434,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>0.237</X>
@@ -3449,7 +3449,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>0.237</X>
@@ -3464,7 +3464,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>0.42</X>
@@ -3479,7 +3479,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>0.727</X>
@@ -3494,7 +3494,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>1.062</X>
@@ -3509,7 +3509,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>1.317</X>
@@ -3524,7 +3524,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/004_invisibleWall.bmd-->
+				<!---->
 				<ObjectID>514</ObjectID>
 				<Position>
 					<X>2.363</X>
@@ -3539,7 +3539,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%data/player/yoshi_model.bmd-->
+				<!---->
 				<ObjectID>516</ObjectID>
 				<Position>
 					<X>0.25</X>
@@ -3554,7 +3554,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/003_silverCoin.bmd-->
+				<!---->
 				<ObjectID>513</ObjectID>
 				<Position>
 					<X>1.41</X>
@@ -3569,7 +3569,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/009_coloredGoomba.bmd-->
+				<!---->
 				<ObjectID>522</ObjectID>
 				<Position>
 					<X>0.531</X>
@@ -3584,7 +3584,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/009_coloredGoomba.bmd-->
+				<!---->
 				<ObjectID>520</ObjectID>
 				<Position>
 					<X>1.114</X>
@@ -3599,7 +3599,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/009_coloredGoomba.bmd-->
+				<!---->
 				<ObjectID>521</ObjectID>
 				<Position>
 					<X>0.803</X>
@@ -3614,14 +3614,14 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/032_coloredGoomba2.bmd-->
+				<!---->
 				<ObjectID>534</ObjectID>
 				<Position>
 					<X>1.666</X>
 					<Y>0</Y>
 					<Z>6.822</Z>
 				</Position>
-				<YRotation>-167.9974</YRotation>
+				<YRotation>-167.9919</YRotation>
 				<Parameters count="3">
 					<Parameter id="0">0</Parameter>
 					<Parameter id="1">0</Parameter>
@@ -3629,7 +3629,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/011_noteblock.bmd-->
+				<!---->
 				<ObjectID>524</ObjectID>
 				<Position>
 					<X>-0.652</X>
@@ -3644,7 +3644,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/011_noteblock.bmd-->
+				<!---->
 				<ObjectID>524</ObjectID>
 				<Position>
 					<X>-0.648</X>
@@ -3659,7 +3659,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/011_noteblock.bmd-->
+				<!---->
 				<ObjectID>524</ObjectID>
 				<Position>
 					<X>-0.65</X>
@@ -3674,7 +3674,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/013_shyGuy.bmd-->
+				<!---->
 				<ObjectID>525</ObjectID>
 				<Position>
 					<X>4.06</X>
@@ -3689,7 +3689,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/013_shyGuy.bmd-->
+				<!---->
 				<ObjectID>525</ObjectID>
 				<Position>
 					<X>4.8</X>
@@ -3704,7 +3704,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/013_shyGuy.bmd-->
+				<!---->
 				<ObjectID>525</ObjectID>
 				<Position>
 					<X>4.8</X>
@@ -3719,7 +3719,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/018_lstar.bmd-->
+				<!---->
 				<ObjectID>526</ObjectID>
 				<Position>
 					<X>-0.125</X>
@@ -3734,7 +3734,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/011_noteblock.bmd-->
+				<!---->
 				<ObjectID>524</ObjectID>
 				<Position>
 					<X>6</X>
@@ -3749,7 +3749,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--SKYBOX_ROTATOR-->
+				<!---->
 				<ObjectID>530</ObjectID>
 				<Position>
 					<X>3.183</X>
@@ -3764,7 +3764,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--GRAVITY_MODIFIER-->
+				<!---->
 				<ObjectID>532</ObjectID>
 				<Position>
 					<X>2.935</X>
@@ -3779,7 +3779,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/031_icicle.bmd-->
+				<!---->
 				<ObjectID>531</ObjectID>
 				<Position>
 					<X>3.653</X>
@@ -3794,7 +3794,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/031_icicle.bmd-->
+				<!---->
 				<ObjectID>531</ObjectID>
 				<Position>
 					<X>3.59</X>
@@ -3809,7 +3809,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/031_icicle.bmd-->
+				<!---->
 				<ObjectID>531</ObjectID>
 				<Position>
 					<X>3.59</X>
@@ -3824,7 +3824,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/031_icicle.bmd-->
+				<!---->
 				<ObjectID>531</ObjectID>
 				<Position>
 					<X>3.464</X>
@@ -3839,7 +3839,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/031_icicle.bmd-->
+				<!---->
 				<ObjectID>531</ObjectID>
 				<Position>
 					<X>3.437</X>
@@ -3854,7 +3854,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/031_icicle.bmd-->
+				<!---->
 				<ObjectID>531</ObjectID>
 				<Position>
 					<X>3.449</X>
@@ -3869,7 +3869,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/018_lstar.bmd-->
+				<!---->
 				<ObjectID>526</ObjectID>
 				<Position>
 					<X>3.522</X>
@@ -3884,7 +3884,7 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/032_coloredGoomba2.bmd-->
+				<!---->
 				<ObjectID>533</ObjectID>
 				<Position>
 					<X>1.601</X>
@@ -3899,18 +3899,108 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/032_coloredGoomba2.bmd-->
+				<!---->
 				<ObjectID>535</ObjectID>
 				<Position>
 					<X>-0.056</X>
 					<Y>0</Y>
 					<Z>7.234</Z>
 				</Position>
-				<YRotation>113.9996</YRotation>
+				<YRotation>113.9941</YRotation>
 				<Parameters count="3">
 					<Parameter id="0">4096</Parameter>
 					<Parameter id="1">0</Parameter>
 					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!---->
+				<ObjectID>515</ObjectID>
+				<Position>
+					<X>0.466</X>
+					<Y>0</Y>
+					<Z>2.675</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">4760</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!---->
+				<ObjectID>515</ObjectID>
+				<Position>
+					<X>0.033</X>
+					<Y>0</Y>
+					<Z>2.675</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">39457</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!---->
+				<ObjectID>515</ObjectID>
+				<Position>
+					<X>0.25</X>
+					<Y>0</Y>
+					<Z>2.3</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">16369</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!---->
+				<ObjectID>536</ObjectID>
+				<Position>
+					<X>-0.389</X>
+					<Y>0</Y>
+					<Z>4.707</Z>
+				</Position>
+				<YRotation>90</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">0</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">992</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!---->
+				<ObjectID>536</ObjectID>
+				<Position>
+					<X>-0.389</X>
+					<Y>0</Y>
+					<Z>4.407</Z>
+				</Position>
+				<YRotation>90</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">0</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!---->
+				<ObjectID>536</ObjectID>
+				<Position>
+					<X>-0.389</X>
+					<Y>0</Y>
+					<Z>4.107</Z>
+				</Position>
+				<YRotation>90</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">0</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">32480</Parameter>
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="1">
@@ -4029,51 +4119,6 @@
 				<YRotation>0</YRotation>
 				<Parameters count="3">
 					<Parameter id="0">65311</Parameter>
-					<Parameter id="1">0</Parameter>
-					<Parameter id="2">0</Parameter>
-				</Parameters>
-			</StandardObject>
-			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/007_berryStem.bmd-->
-				<ObjectID>515</ObjectID>
-				<Position>
-					<X>0.4665064</X>
-					<Y>0</Y>
-					<Z>2.675</Z>
-				</Position>
-				<YRotation>0</YRotation>
-				<Parameters count="3">
-					<Parameter id="0">4760</Parameter>
-					<Parameter id="1">0</Parameter>
-					<Parameter id="2">0</Parameter>
-				</Parameters>
-			</StandardObject>
-			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/007_berryStem.bmd-->
-				<ObjectID>515</ObjectID>
-				<Position>
-					<X>0.03349365</X>
-					<Y>0</Y>
-					<Z>2.675</Z>
-				</Position>
-				<YRotation>0</YRotation>
-				<Parameters count="3">
-					<Parameter id="0">39457</Parameter>
-					<Parameter id="1">0</Parameter>
-					<Parameter id="2">0</Parameter>
-				</Parameters>
-			</StandardObject>
-			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/007_berryStem.bmd-->
-				<ObjectID>515</ObjectID>
-				<Position>
-					<X>0.25</X>
-					<Y>0</Y>
-					<Z>2.3</Z>
-				</Position>
-				<YRotation>0</YRotation>
-				<Parameters count="3">
-					<Parameter id="0">16369</Parameter>
 					<Parameter id="1">0</Parameter>
 					<Parameter id="2">0</Parameter>
 				</Parameters>

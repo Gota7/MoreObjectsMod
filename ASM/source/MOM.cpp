@@ -16,6 +16,7 @@
 #include "SkyboxRotator.h"
 #include "FallingIcicle.h"
 #include "GoombaColored2.h"
+#include "YoshiNPC.h"
 
 namespace {
 
@@ -45,6 +46,7 @@ namespace {
 	constexpr short int COLORED_GOOMBA_2_SMALL = 						BASE_OBJECT_ID + 0x15;
 	constexpr short int COLORED_GOOMBA_2 =	 							BASE_OBJECT_ID + 0x16;
 	constexpr short int COLORED_GOOMBA_2_LARGE = 						BASE_OBJECT_ID + 0x17;
+	constexpr short int YOSHI_NPC = 									BASE_OBJECT_ID + 0x18;
 	//constexpr short int CONDITIONAL_CUTSCENE_LOADER_ID = 0x0165;
 
 	//Assets.
@@ -92,6 +94,9 @@ namespace {
 
 	constexpr short int COLORED_GOOMBA_2_MODEL_ID = 					0x0020;
 	constexpr short int COLORED_GOOMBA_2_ANIM_ID = 						0x0021;
+
+	constexpr short int YOSHI_NPC_MODEL_ID = 							0x0022;
+	constexpr short int YOSHI_NPC_ANIM_ID = 							0x0023;
 
 	//Modify the object and actor tables.
 	void modTable(short int val, unsigned newFunc)
@@ -207,4 +212,10 @@ void init()
 	Goomba2::animFiles[3].Construct(0x038b);
 	Goomba2::animFiles[4].Construct(0x038c);
 	Goomba2::animFiles[5].Construct(0x038d);
+	
+	//Yoshi NPC.
+	modTable(YOSHI_NPC, (unsigned)&YoshiNPC::spawnData);
+	YoshiNPC::modelFile.Construct(YOSHI_NPC_MODEL_ID);
+	YoshiNPC::animFiles[0].Construct(YOSHI_NPC_ANIM_ID);
+	YoshiNPC::animFiles[1].Construct(YOSHI_NPC_ANIM_ID);
 }

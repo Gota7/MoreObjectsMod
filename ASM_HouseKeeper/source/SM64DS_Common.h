@@ -70,6 +70,15 @@ using Fix12s = Fix12<short>;
 constexpr Fix12i operator""_f (unsigned long long val) {return Fix12i(val, true);}
 constexpr Fix12s operator""_fs(unsigned long long val) {return Fix12s(val, true);}
 
+constexpr Fix12i operator""_f (long double val) { return Fix12i(val); }
+constexpr Fix12s operator""_fs(long double val) { return Fix12s(val); }
+
+constexpr short operator""_deg(long double val) { return val * 32768.L / 180.L; }
+constexpr short operator""_deg(unsigned long long val) { return operator""_deg(static_cast<long double>(val)); }
+
+constexpr short operator""_rad(long double val) { return val * 32768.L / 3.141592653589793238462643383279502884L; }
+constexpr short operator""_rad(unsigned long long val) { return operator""_rad(static_cast<long double>(val)); }
+
 enum Input : uint16_t
 {
 	A = 1 << 0,

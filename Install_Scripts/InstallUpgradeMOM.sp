@@ -39,6 +39,8 @@ rename 20 032_coloredGoomba2.bmd
 rename 21 033_coloredGoomba2.btp
 rename 22 034_yoshiNPC.bmd
 rename 23 035_yoshiNPCWait.bca
+rename 24 036_coloredPipe.bmd
+rename 25 037_coloredPipe.bca
 
 # Replace assets.
 replace 0 ../Objects/GalaxyShrinkPlatform/ModelCollision/galaxyShrinkPlatformFrame.bmd
@@ -77,3 +79,5 @@ replace 20 ../Objects/ColoredGoombas2/Model/kuribo_model.bmd
 replace 21 ../Objects/ColoredGoombas2/TexAnim/kuribo_colorsw.btp
 replace 22 ../Objects/YoshiNPC/Model/yoshi_model.bmd
 replace 23 ../Objects/YoshiNPC/Anim/Y_wait.bca
+replace 24 ../Objects/ColoredPipe/obj_dokan.bmd
+replace 25 ../Objects/ColoredPipe/obj_dokan.kcl

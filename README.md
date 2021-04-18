@@ -10,12 +10,14 @@ Toolkit and resources for SM64DS for some custom objects.
 * 2D Level (With Camera Limiter)
 * Object Lighting Modifier
 * Toxic Levels
-* Colored Goombas
+* 2 Sets of Colored Goombas
 * Noteblocks
 * Shy Guys
 * Launch Stars
 * Skybox Rotator
 * Gravity Modifier
+* Yoshi NPC's
+* Colored Warp Pipes
 * And More To Come!
 
 ## How It Works
@@ -189,6 +191,8 @@ The final touch is to update this README to include the new object on the list o
 Gota7 - Mod, custom objects, sound and resource management.
 
 Josh - Custom objects.
+
+Splatterboy - Custom objects.
 
 Starpants - Misc. ASM, General help.
 

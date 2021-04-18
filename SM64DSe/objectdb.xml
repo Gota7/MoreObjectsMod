@@ -4910,5 +4910,33 @@ B,G,R = Color
 		<bankreq>none</bankreq>
 	</object>
 
+	<object id='537'>
+		<category>1</category>
+		<name>Colored Warp Pipe</name>
+		<internalname>@CUSTOM%MG/036_coloredPipe.bmd</internalname>
+		<actorid>537</actorid>
+		<description>The good old Warp Pipe with a customizable color.
+Does nothing if placed alone. For it to act as an entrance or an exit, the corresponding objects must be placed inside it.
+
+NOTE: using a warp with X rotation 0 will NOT play the Warp Pipe sound effect, use 359,995 instead.
+
+Parameter 1:
+XBBBBBGGGGGRRRRR (bits)
+
+B,G,R = Color
+
+Parameter,2:
+YYYY
+
+Y = X Rotation
+
+Parameter 3:
+ZZZZ
+
+Z = Z Rotation
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
 </database>
 

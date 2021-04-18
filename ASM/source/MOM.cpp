@@ -17,6 +17,7 @@
 #include "FallingIcicle.h"
 #include "GoombaColored2.h"
 #include "YoshiNPC.h"
+#include "ColoredPipe.h"
 
 namespace {
 
@@ -47,6 +48,7 @@ namespace {
 	constexpr short int COLORED_GOOMBA_2 =	 							BASE_OBJECT_ID + 0x16;
 	constexpr short int COLORED_GOOMBA_2_LARGE = 						BASE_OBJECT_ID + 0x17;
 	constexpr short int YOSHI_NPC = 									BASE_OBJECT_ID + 0x18;
+	constexpr short int COLORED_PIPE = 									BASE_OBJECT_ID + 0x19;
 	//constexpr short int CONDITIONAL_CUTSCENE_LOADER_ID = 0x0165;
 
 	//Assets.
@@ -97,6 +99,9 @@ namespace {
 
 	constexpr short int YOSHI_NPC_MODEL_ID = 							0x0022;
 	constexpr short int YOSHI_NPC_ANIM_ID = 							0x0023;
+
+	constexpr short int COLORED_PIPE_MODEL_ID = 						0x0024;
+	constexpr short int COLORED_PIPE_COLLISION_ID = 					0x0025;
 
 	//Modify the object and actor tables.
 	void modTable(short int val, unsigned newFunc)
@@ -218,4 +223,9 @@ void init()
 	YoshiNPC::modelFile.Construct(YOSHI_NPC_MODEL_ID);
 	YoshiNPC::animFiles[0].Construct(YOSHI_NPC_ANIM_ID);
 	YoshiNPC::animFiles[1].Construct(YOSHI_NPC_ANIM_ID);
+
+	//Colored Pipes.
+	modTable(COLORED_PIPE, (unsigned)&ColoredPipe::spawnData);
+	ColoredPipe::modelFile.Construct(COLORED_PIPE_MODEL_ID);
+	ColoredPipe::clsnFile.Construct(COLORED_PIPE_COLLISION_ID);
 }

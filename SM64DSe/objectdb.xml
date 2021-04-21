@@ -4601,13 +4601,7 @@ R - Number of frames to let pass before hurting the player.
 Parameter 1:
 VVVV
 
-Parameter 2:
-XXXR
-
 V - Velocity to launch the player at.
-R - Has rainbow animation?
-	0, 2-F: No
-	1: Yes
 		</description>
 		<bankreq>none</bankreq>
 	</object>

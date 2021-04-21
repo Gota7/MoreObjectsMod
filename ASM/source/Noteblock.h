@@ -29,7 +29,6 @@ struct Noteblock : public Platform
 
 	static SharedFilePtr modelFile;
 	static SharedFilePtr clsnFile;
-	static SharedFilePtr texSeqFile;
 };
 
 #endif

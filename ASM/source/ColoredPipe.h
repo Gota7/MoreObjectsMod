@@ -6,7 +6,7 @@
 struct ColoredPipe : public Platform
 {	
 	void UpdateModelTransform();
-
+	
 	static ColoredPipe* Spawn();
 	virtual int InitResources() override;
 	virtual int CleanupResources() override;

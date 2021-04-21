@@ -38,6 +38,7 @@ FIRST_ACTOR_LIST_NODE				                                              = 0x0209b
 _ZN5Sound7FileRef5PTR_0E														  = 0x0209b4a0;
 
 SAVE_DATA_0							                                              = 0x0209caa0;
+SAVE_DATA							                                              = 0x0209caa0;
                                                         
 MSG_LINE_HEIGHT																	  = 0x0209d6a8;
 CURR_MSG_ID							                                              = 0x0209d6d4;

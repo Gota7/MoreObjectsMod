@@ -3765,7 +3765,7 @@
 				<YRotation>0</YRotation>
 				<Parameters count="3">
 					<Parameter id="0">112</Parameter>
-					<Parameter id="1">0</Parameter>
+					<Parameter id="1">1</Parameter>
 					<Parameter id="2">0</Parameter>
 				</Parameters>
 			</StandardObject>
@@ -4094,9 +4094,9 @@
 				</Position>
 				<YRotation>90</YRotation>
 				<Parameters count="3">
-					<Parameter id="0">0</Parameter>
-					<Parameter id="1">0</Parameter>
-					<Parameter id="2">32480</Parameter>
+					<Parameter id="0">387</Parameter>
+					<Parameter id="1">387</Parameter>
+					<Parameter id="2">65248</Parameter>
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
@@ -4140,6 +4140,141 @@
 				<YRotation>0</YRotation>
 				<Parameters count="3">
 					<Parameter id="0">31</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/038_characterBlockMario.bmd-->
+				<ObjectID>538</ObjectID>
+				<Position>
+					<X>3.85</X>
+					<Y>1.35</Y>
+					<Z>3.35</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">4115</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/038_characterBlockMario.bmd-->
+				<ObjectID>538</ObjectID>
+				<Position>
+					<X>3.85</X>
+					<Y>1.35</Y>
+					<Z>3.05</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">259</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/038_characterBlockMario.bmd-->
+				<ObjectID>538</ObjectID>
+				<Position>
+					<X>3.85</X>
+					<Y>1.35</Y>
+					<Z>2.75</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">18</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/038_characterBlockMario.bmd-->
+				<ObjectID>538</ObjectID>
+				<Position>
+					<X>3.85</X>
+					<Y>1.35</Y>
+					<Z>2.45</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">2</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/038_characterBlockMario.bmd-->
+				<ObjectID>538</ObjectID>
+				<Position>
+					<X>3.85</X>
+					<Y>1.35</Y>
+					<Z>2.15</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">17</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/038_characterBlockMario.bmd-->
+				<ObjectID>538</ObjectID>
+				<Position>
+					<X>3.85</X>
+					<Y>1.35</Y>
+					<Z>1.85</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">1</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/038_characterBlockMario.bmd-->
+				<ObjectID>538</ObjectID>
+				<Position>
+					<X>3.85</X>
+					<Y>1.35</Y>
+					<Z>1.55</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">16</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/038_characterBlockMario.bmd-->
+				<ObjectID>538</ObjectID>
+				<Position>
+					<X>3.85</X>
+					<Y>1.35</Y>
+					<Z>1.25</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">0</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/049_saveBlock.bmd-->
+				<ObjectID>540</ObjectID>
+				<Position>
+					<X>3.15</X>
+					<Y>1.35</Y>
+					<Z>3.35</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">0</Parameter>
 					<Parameter id="1">0</Parameter>
 					<Parameter id="2">0</Parameter>
 				</Parameters>

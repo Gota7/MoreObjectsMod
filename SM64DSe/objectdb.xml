@@ -4894,18 +4894,18 @@ F - None
 
 Parameter 1: EMMM
 
-E = Event ID mod 16
-M = Message ID of initial message
+E: Event ID mod 16
+M: Message ID of initial message
 
 Parameter 2: EMMM
 
-E = floor(Event ID / 16)
-M = Message ID of final message
+E: floor(Event ID / 16)
+M: Message ID of final message
 
 Parameter 3: TBBBBBGGGGGRRRRR (bits)
 
-T = 1 if this Yoshi should talk
-B,G,R = Color
+T: 1 if this Yoshi should talk
+B,G,R: Color
 		</description>
 		<bankreq>none</bankreq>
 	</object>
@@ -4923,17 +4923,67 @@ NOTE: using a warp with X rotation 0 will NOT play the Warp Pipe sound effect, u
 Parameter 1:
 XBBBBBGGGGGRRRRR (bits)
 
-B,G,R = Color
-
-Parameter,2:
+Parameter 2:
 YYYY
-
-Y = X Rotation
 
 Parameter 3:
 ZZZZ
 
-Z = Z Rotation
+B,G,R: Color
+
+Y: X Rotation
+
+Z: Z Rotation
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='538'>
+		<category>1</category>
+		<name>Character Block</name>
+		<internalname>@CUSTOM%MG/038_characterBlockMario.bmd</internalname>
+		<actorid>538</actorid>
+		<description>Permanently switches character without having to go to the character door or having to use caps.
+
+Parameter 1:
+XSOC
+
+C: Character ID
+0 - Mario
+1 - Luigi
+2 - Wario
+3 - Yoshi
+
+O: Condition
+0 - Character needs to be unlocked
+1 - Character doesn't need to be unlocked
+
+S: Starting Character
+0 - Yoshi
+1 - Mario
+2 - Luigi
+3 - Wario
+
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='539'>
+		<category>1</category>
+		<name>Tree Shadow</name>
+		<internalname>TREE_SHADOW</internalname>
+		<actorid>539</actorid>
+		<description>A shadow for the Tree objects.
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='540'>
+		<category>1</category>
+		<name>Save Block</name>
+		<internalname>@CUSTOM%MG/049_saveBlock.bmd</internalname>
+		<actorid>540</actorid>
+		<description>Saves the game.
 		</description>
 		<bankreq>none</bankreq>
 	</object>

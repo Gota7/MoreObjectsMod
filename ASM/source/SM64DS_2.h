@@ -8,6 +8,7 @@
 #include "Message.h"
 #include "Particle.h"
 #include "Sound.h"
+#include "Save.h"
 
 #define NOINLINE __attribute__((noinline))
 #define NAKED __attribute__((naked))
@@ -1092,9 +1093,7 @@ struct ActorDeathTable
 	byte deadObjs[64]; //technically 512 booleans
 };
 
-const int NUM_LEVELS = 52;
 const int NUM_ACT_SELECTORS = 0x1e;
-const int NUM_MAIN_LEVELS = 0xf;
 struct Save0
 {
 	unsigned magic;

@@ -18,6 +18,9 @@ Toolkit and resources for SM64DS for some custom objects.
 * Gravity Modifier
 * Yoshi NPC's
 * Colored Warp Pipes
+* Character Blocks
+* Tree Shadows
+* Save Blocks
 * And More To Come!
 
 ## How It Works

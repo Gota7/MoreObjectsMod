@@ -18,6 +18,9 @@
 #include "GoombaColored2.h"
 #include "YoshiNPC.h"
 #include "ColoredPipe.h"
+#include "CharacterBlock.h"
+#include "TreeShadow.h"
+#include "SaveBlock.h"
 
 namespace {
 
@@ -49,6 +52,9 @@ namespace {
 	constexpr short int COLORED_GOOMBA_2_LARGE = 						BASE_OBJECT_ID + 0x17;
 	constexpr short int YOSHI_NPC = 									BASE_OBJECT_ID + 0x18;
 	constexpr short int COLORED_PIPE = 									BASE_OBJECT_ID + 0x19;
+	constexpr short int CHARACTER_BLOCK =	 							BASE_OBJECT_ID + 0x1A;
+	constexpr short int TREE_SHADOW =	 								BASE_OBJECT_ID + 0x1B;
+	constexpr short int SAVE_BLOCK =	 								BASE_OBJECT_ID + 0x1C;
 	//constexpr short int CONDITIONAL_CUTSCENE_LOADER_ID = 0x0165;
 
 	//Assets.
@@ -102,6 +108,22 @@ namespace {
 
 	constexpr short int COLORED_PIPE_MODEL_ID = 						0x0024;
 	constexpr short int COLORED_PIPE_COLLISION_ID = 					0x0025;
+
+	constexpr short int MARIO_BLOCK_MODEL_ID = 							0x0026;
+	constexpr short int LUIGI_BLOCK_MODEL_ID = 							0x0027;
+	constexpr short int WARIO_BLOCK_MODEL_ID = 							0x0028;
+	constexpr short int YOSHI_BLOCK_MODEL_ID = 							0x0029;
+	constexpr short int CHARACTER_BLOCK_COLLSION_ID = 					0x002A;
+	constexpr short int CHARACTER_BLOCK_ANIMATION_ID = 					0x002B;
+	constexpr short int MARIO_BLOCK_TRANSPARENT_MODEL_ID = 				0x002C;
+	constexpr short int LUIGI_BLOCK_TRANSPARENT_MODEL_ID = 				0x002D;
+	constexpr short int WARIO_BLOCK_TRANSPARENT_MODEL_ID = 				0x002E;
+	constexpr short int YOSHI_BLOCK_TRANSPARENT_MODEL_ID = 				0x002F;
+	constexpr short int CHARACTER_BLOCK_TRANSPARENT_ANIMATION_ID = 		0x0030;
+	
+	constexpr short int SAVE_BLOCK_MODEL_ID = 							0x0031;
+	constexpr short int SAVE_BLOCK_ANIM_ID = 							0x0032;
+	constexpr short int SAVE_BLOCK_COLLISION_ID = 						0x0033;
 
 	//Modify the object and actor tables.
 	void modTable(short int val, unsigned newFunc)
@@ -228,4 +250,28 @@ void init()
 	modTable(COLORED_PIPE, (unsigned)&ColoredPipe::spawnData);
 	ColoredPipe::modelFile.Construct(COLORED_PIPE_MODEL_ID);
 	ColoredPipe::clsnFile.Construct(COLORED_PIPE_COLLISION_ID);
+
+	//Character Blocks.
+	modTable(CHARACTER_BLOCK, (unsigned)&CharacterBlock::spawnData);
+	CharacterBlock::modelFiles[0].Construct(MARIO_BLOCK_MODEL_ID);
+	CharacterBlock::modelFiles[1].Construct(LUIGI_BLOCK_MODEL_ID);
+	CharacterBlock::modelFiles[2].Construct(WARIO_BLOCK_MODEL_ID);
+	CharacterBlock::modelFiles[3].Construct(YOSHI_BLOCK_MODEL_ID);
+	CharacterBlock::modelFilesTrans[0].Construct(MARIO_BLOCK_TRANSPARENT_MODEL_ID);
+	CharacterBlock::modelFilesTrans[1].Construct(LUIGI_BLOCK_TRANSPARENT_MODEL_ID);
+	CharacterBlock::modelFilesTrans[2].Construct(WARIO_BLOCK_TRANSPARENT_MODEL_ID);
+	CharacterBlock::modelFilesTrans[3].Construct(YOSHI_BLOCK_TRANSPARENT_MODEL_ID);
+	CharacterBlock::clsnFile.Construct(CHARACTER_BLOCK_COLLSION_ID);
+	CharacterBlock::animFiles[0].Construct(CHARACTER_BLOCK_ANIMATION_ID);
+	CharacterBlock::animFiles[1].Construct(CHARACTER_BLOCK_TRANSPARENT_ANIMATION_ID);
+
+	//Tree Shadows.
+	modTable(TREE_SHADOW, (unsigned)&TreeShadow::spawnData);
+	TreeShadow::modelFile.Construct(WARIO_BLOCK_TRANSPARENT_MODEL_ID);
+	
+	//Save Blocks.
+	modTable(SAVE_BLOCK, (unsigned)&SaveBlock::spawnData);
+	SaveBlock::modelFile.Construct(SAVE_BLOCK_MODEL_ID);
+	SaveBlock::texSeqFile.Construct(SAVE_BLOCK_ANIM_ID);
+	SaveBlock::clsnFile.Construct(SAVE_BLOCK_COLLISION_ID);
 }

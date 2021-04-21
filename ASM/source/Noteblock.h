@@ -21,12 +21,15 @@ struct Noteblock : public Platform
 	Vector3 oldPos;
 	bool isLaunching;
 	bool boost;
+	
+	ShadowVolume shadow;
+	Matrix4x3 shadowMat;
 
 	static SpawnInfo<Noteblock> spawnData;
 
 	static SharedFilePtr modelFile;
 	static SharedFilePtr clsnFile;
-
+	static SharedFilePtr texSeqFile;
 };
 
 #endif

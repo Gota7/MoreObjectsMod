@@ -48,6 +48,7 @@ void Noteblock::UpdateModelTransform()
 	model.mat4x3.r0c3 = pos.x >> 3;
 	model.mat4x3.r1c3 = pos.y >> 3;
 	model.mat4x3.r2c3 = pos.z >> 3;
+	DropShadowScaleXYZ(shadow, model.mat4x3, 0x60000_f, 0x150000_f, 0x60000_f, 0xc);
 }
 
 //Jiggles block down then up.
@@ -94,7 +95,6 @@ void Noteblock::launch() {
 
 int Noteblock::InitResources()
 {
-	
 	Model::LoadFile(modelFile);
 	model.SetFile(modelFile.filePtr, 1, -1);
 
@@ -103,9 +103,14 @@ int Noteblock::InitResources()
 	
 	clsn.beforeClsnCallback = (decltype(clsn.beforeClsnCallback))0x02039348;
 	clsn.afterClsnCallback = &OnFloorAfterClsn;
-
+	
+	shadow.InitCuboid();
+	
 	UpdateModelTransform();
 	UpdateClsnPosAndRot();
+	
+	shadowMat = model.mat4x3 * Matrix4x3::IDENTITY;
+	shadowMat.r1c3 -= 0x14000_f >> 3;
 	
 	return 1;
 }

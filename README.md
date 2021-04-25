@@ -13,7 +13,7 @@ Toolkit and resources for SM64DS for some custom objects.
 * 2 Sets of Colored Goombas
 * Noteblocks
 * Shy Guys
-* Launch Stars
+* Launch Stars & Star Chips
 * Skybox Rotator
 * Gravity Modifier
 * Yoshi NPC's
@@ -21,6 +21,8 @@ Toolkit and resources for SM64DS for some custom objects.
 * Character Blocks
 * Tree Shadows
 * Save Blocks
+* Door Blockers
+* Colored Coins
 * And More To Come!
 
 ## How It Works

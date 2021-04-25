@@ -4988,5 +4988,56 @@ S: Starting Character
 		<bankreq>none</bankreq>
 	</object>
 
+	<object id='541'>
+		<category>1</category>
+		<name>Star Chip</name>
+		<internalname>@CUSTOM%MG/052_starChip.bmd</internalname>
+		<actorid>541</actorid>
+		<description>The Star Chips from Super Mario Galaxy, collect 5 to spawn a Launch Star.
+
+Parameter 1:
+XXEE
+
+E: Event ID
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='542'>
+		<category>1</category>
+		<name>Door Blocker</name>
+		<internalname>@CUSTOM%MG/053_doorBlocker.bmd</internalname>
+		<actorid>542</actorid>
+		<description>A wooden blockage that can be used to block doors.
+
+Parameter 1:
+XXEE
+
+E: Event ID
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
+	<object id='543'>
+		<category>1</category>
+		<name>Colored Coin</name>
+		<internalname>@CUSTOM%MG/055_coloredCoin.bmd</internalname>
+		<actorid>543</actorid>
+		<description>A Coin that you can fully customize: you can change it's color, coin value and even it's heal value.
+
+Parameter 1:
+XBBBBBGGGGGRRRRR (bits)
+
+Parameter 2:
+OHVV
+
+B,G,R: Color
+0: Heal or Hurt (0: Heal, 1: Hurt)
+H: Heal/Hurt Value
+V: Coin Value
+		</description>
+		<bankreq>none</bankreq>
+	</object>
+
 </database>
 

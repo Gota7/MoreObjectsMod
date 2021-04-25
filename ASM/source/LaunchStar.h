@@ -12,6 +12,19 @@ struct LaunchStar : public Actor
 	PathPtr pathPtr;
 	uint8_t eventID;
 	unsigned particleID;
+	bool camSet;
+	int camFrames;
+	bool usesSave;
+	
+	Vector3 camOldPos;
+	Vector3 camOldTarget;
+	Vector3 camNewPos;
+	Vector3 playerOldPos;
+	Vector3 playerNewPos;
+	Vector3_16 playerOldAng;
+	Player::State* playerOldState;
+	Player::State* playerOldPrevState;
+	Player::State* playerOldNextState;
 	
 	void UpdateModelTransform();
 

@@ -21,18 +21,21 @@
 #include "CharacterBlock.h"
 #include "TreeShadow.h"
 #include "SaveBlock.h"
+#include "StarChip.h"
+#include "DoorBlocker.h"
+#include "ColoredCoin.h"
 
 namespace {
 
 	//Object IDs.
 	constexpr short int BASE_OBJECT_ID = 								0x0200;
-	constexpr short int GALAXY_SHRINKING_PLATFORM_ID = 					BASE_OBJECT_ID;
-	constexpr short int SILVER_COIN_ID = 								BASE_OBJECT_ID + 0x1;
-	constexpr short int INVISIBLE_WALL_ID = 							BASE_OBJECT_ID + 0x2;
-	constexpr short int BERRY_ID = 										BASE_OBJECT_ID + 0x3;
-	constexpr short int YOSHI_RIDE_ID = 								BASE_OBJECT_ID + 0x4;
-	constexpr short int OBJECT_LIGHTING_MODIFIER_ID = 					BASE_OBJECT_ID + 0x5;
-	constexpr short int TWO_DEE_LEVEL_ID = 								BASE_OBJECT_ID + 0x6;
+	constexpr short int GALAXY_SHRINKING_PLATFORM = 					BASE_OBJECT_ID;
+	constexpr short int SILVER_COIN = 									BASE_OBJECT_ID + 0x1;
+	constexpr short int INVISIBLE_WALL = 								BASE_OBJECT_ID + 0x2;
+	constexpr short int BERRY = 										BASE_OBJECT_ID + 0x3;
+	constexpr short int YOSHI_RIDE = 									BASE_OBJECT_ID + 0x4;
+	constexpr short int OBJECT_LIGHTING_MODIFIER = 						BASE_OBJECT_ID + 0x5;
+	constexpr short int TWO_DEE_LEVEL = 								BASE_OBJECT_ID + 0x6;
 	constexpr short int TWO_DEE_CAMERA_LIMITER = 						BASE_OBJECT_ID + 0x7;
 	constexpr short int COLORED_GOOMBA_SMALL = 							BASE_OBJECT_ID + 0x8;
 	constexpr short int COLORED_GOOMBA =	 							BASE_OBJECT_ID + 0x9;
@@ -55,6 +58,9 @@ namespace {
 	constexpr short int CHARACTER_BLOCK =	 							BASE_OBJECT_ID + 0x1A;
 	constexpr short int TREE_SHADOW =	 								BASE_OBJECT_ID + 0x1B;
 	constexpr short int SAVE_BLOCK =	 								BASE_OBJECT_ID + 0x1C;
+	constexpr short int STAR_CHIP =	 									BASE_OBJECT_ID + 0x1D;
+	constexpr short int DOOR_BLOCKER =	 								BASE_OBJECT_ID + 0x1E;
+	constexpr short int COLORED_COIN =	 								BASE_OBJECT_ID + 0x1F;
 	//constexpr short int CONDITIONAL_CUTSCENE_LOADER_ID = 0x0165;
 
 	//Assets.
@@ -124,6 +130,13 @@ namespace {
 	constexpr short int SAVE_BLOCK_MODEL_ID = 							0x0031;
 	constexpr short int SAVE_BLOCK_ANIM_ID = 							0x0032;
 	constexpr short int SAVE_BLOCK_COLLISION_ID = 						0x0033;
+	
+	constexpr short int STAR_CHIP_MODEL_ID =							0x0034;
+	
+	constexpr short int DOOR_BLOCKER_MODEL_ID = 						0x0035;
+	constexpr short int DOOR_BLOCKER_COLLISION_ID = 					0x0036;
+	
+	constexpr short int COLORED_COIN_MODEL_ID =							0x0037;
 
 	//Modify the object and actor tables.
 	void modTable(short int val, unsigned newFunc)
@@ -139,33 +152,33 @@ void init()
 {
 
 	//Shrinking platforms.
-	modTable(GALAXY_SHRINKING_PLATFORM_ID, (unsigned)&GalaxyShrinkingPlatform::spawnData);
+	modTable(GALAXY_SHRINKING_PLATFORM, (unsigned)&GalaxyShrinkingPlatform::spawnData);
 	GalaxyShrinkingPlatform::modelFile.Construct(GALAXY_SHRINKING_PLATFORM_MODEL_ID);
     GalaxyShrinkingPlatform::clsnFile .Construct(GALAXY_SHRINKING_PLATFORM_COLLISION_ID);
     GalaxyShrinkingPlatform::frameModelFile.Construct(GALAXY_SHRINKING_PLATFORM_FRAME_MODEL_ID);
 
     //Silver coins.
-	modTable(SILVER_COIN_ID, (unsigned)&SilverCoin::spawnData);
+	modTable(SILVER_COIN, (unsigned)&SilverCoin::spawnData);
 	SilverCoin::modelFile.Construct(SILVER_COIN_MODEL_ID);
 
 	//Invisible walls.
-	modTable(INVISIBLE_WALL_ID, (unsigned)&InvisibleWall::spawnData);
+	modTable(INVISIBLE_WALL, (unsigned)&InvisibleWall::spawnData);
 	InvisibleWall::clsnFile.Construct(INVISIBLE_WALL_COLLISION_ID);
 
 	//Berries.
-	modTable(BERRY_ID, (unsigned)&Berry::spawnData);
+	modTable(BERRY, (unsigned)&Berry::spawnData);
 	Berry::modelFile.Construct(BERRY_MODEL_ID);
 	Berry::stemFile.Construct(BERRY_STEM_MODEL_ID);
 
 	//Rideable yoshis.
-	modTable(YOSHI_RIDE_ID, (unsigned)&YoshiRide::spawnData);
+	modTable(YOSHI_RIDE, (unsigned)&YoshiRide::spawnData);
 	YoshiRide::ridingAnim.Construct(YOSHI_RIDE_ANIM_ID);
 
 	//Object lighting modifier.
-	modTable(OBJECT_LIGHTING_MODIFIER_ID, (unsigned)&ObjectLightingModifier::spawnData);
+	modTable(OBJECT_LIGHTING_MODIFIER, (unsigned)&ObjectLightingModifier::spawnData);
 
 	//2D level.
-	modTable(TWO_DEE_LEVEL_ID, (unsigned)&BlankObject::spawnData);
+	modTable(TWO_DEE_LEVEL, (unsigned)&BlankObject::spawnData);
 	modTable(TWO_DEE_CAMERA_LIMITER, (unsigned)&BlankObject::spawnData);
 
 	//Colored goombas.
@@ -274,4 +287,17 @@ void init()
 	SaveBlock::modelFile.Construct(SAVE_BLOCK_MODEL_ID);
 	SaveBlock::texSeqFile.Construct(SAVE_BLOCK_ANIM_ID);
 	SaveBlock::clsnFile.Construct(SAVE_BLOCK_COLLISION_ID);
+	
+	//Star Chip.
+	modTable(STAR_CHIP, (unsigned)&StarChip::spawnData);
+	StarChip::modelFile.Construct(STAR_CHIP_MODEL_ID);
+	
+	//Save Blocks.
+	modTable(DOOR_BLOCKER, (unsigned)&DoorBlocker::spawnData);
+	DoorBlocker::modelFile.Construct(DOOR_BLOCKER_MODEL_ID);
+	DoorBlocker::clsnFile.Construct(DOOR_BLOCKER_COLLISION_ID);
+
+    //Silver coins.
+	modTable(COLORED_COIN, (unsigned)&ColoredCoin::spawnData);
+	ColoredCoin::modelFile.Construct(COLORED_COIN_MODEL_ID);
 }

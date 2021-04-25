@@ -3,7 +3,7 @@
 <Level id="0" version="2">
 	<LevelSettings>
 		<ObjectBankSettings>
-			<Bank id="0">0</Bank>
+			<Bank id="0">2</Bank>
 			<Bank id="1">0</Bank>
 			<Bank id="2">5</Bank>
 			<Bank id="3">1</Bank>
@@ -3830,18 +3830,18 @@
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
-				<!--@CUSTOM%MG/011_noteblock.bmd-->
-				<ObjectID>524</ObjectID>
+				<!--@CUSTOM%MG/013_shyGuy.bmd-->
+				<ObjectID>525</ObjectID>
 				<Position>
 					<X>6</X>
 					<Y>0</Y>
 					<Z>5.7</Z>
 				</Position>
-				<YRotation>-71.49902</YRotation>
+				<YRotation>0</YRotation>
 				<Parameters count="3">
-					<Parameter id="0">65286</Parameter>
-					<Parameter id="1">200</Parameter>
-					<Parameter id="2">65535</Parameter>
+					<Parameter id="0">6</Parameter>
+					<Parameter id="1">1</Parameter>
+					<Parameter id="2">0</Parameter>
 				</Parameters>
 			</StandardObject>
 			<StandardObject area="0" star="0">
@@ -3879,7 +3879,7 @@
 				<ObjectID>531</ObjectID>
 				<Position>
 					<X>3.653</X>
-					<Y>1.005</Y>
+					<Y>0.835</Y>
 					<Z>-0.684</Z>
 				</Position>
 				<YRotation>0</YRotation>
@@ -3974,7 +3974,7 @@
 				</Position>
 				<YRotation>0</YRotation>
 				<Parameters count="3">
-					<Parameter id="0">65287</Parameter>
+					<Parameter id="0">2567</Parameter>
 					<Parameter id="1">176</Parameter>
 					<Parameter id="2">0</Parameter>
 				</Parameters>
@@ -4276,6 +4276,201 @@
 				<Parameters count="3">
 					<Parameter id="0">0</Parameter>
 					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/052_starChip.bmd-->
+				<ObjectID>541</ObjectID>
+				<Position>
+					<X>3.779</X>
+					<Y>1.1</Y>
+					<Z>-0.222</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">10</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/052_starChip.bmd-->
+				<ObjectID>541</ObjectID>
+				<Position>
+					<X>3.479</X>
+					<Y>1.1</Y>
+					<Z>-0.409</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">10</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/052_starChip.bmd-->
+				<ObjectID>541</ObjectID>
+				<Position>
+					<X>3.209</X>
+					<Y>1.1</Y>
+					<Z>-0.183</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">10</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/052_starChip.bmd-->
+				<ObjectID>541</ObjectID>
+				<Position>
+					<X>3.341</X>
+					<Y>1.1</Y>
+					<Z>0.143</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">10</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/052_starChip.bmd-->
+				<ObjectID>541</ObjectID>
+				<Position>
+					<X>3.693</X>
+					<Y>1.1</Y>
+					<Z>0.119</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">10</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/055_coloredCoin.bmd-->
+				<ObjectID>543</ObjectID>
+				<Position>
+					<X>2.449</X>
+					<Y>0</Y>
+					<Z>1.9</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">2114</Parameter>
+					<Parameter id="1">6244</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/055_coloredCoin.bmd-->
+				<ObjectID>543</ObjectID>
+				<Position>
+					<X>2.149</X>
+					<Y>0</Y>
+					<Z>1.9</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">31769</Parameter>
+					<Parameter id="1">2056</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/055_coloredCoin.bmd-->
+				<ObjectID>543</ObjectID>
+				<Position>
+					<X>1.849</X>
+					<Y>0</Y>
+					<Z>1.9</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">543</Parameter>
+					<Parameter id="1">259</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/055_coloredCoin.bmd-->
+				<ObjectID>543</ObjectID>
+				<Position>
+					<X>1.549</X>
+					<Y>0</Y>
+					<Z>1.9</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">32565</Parameter>
+					<Parameter id="1">775</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/055_coloredCoin.bmd-->
+				<ObjectID>543</ObjectID>
+				<Position>
+					<X>1.249</X>
+					<Y>0</Y>
+					<Z>1.9</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">31</Parameter>
+					<Parameter id="1">514</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/055_coloredCoin.bmd-->
+				<ObjectID>543</ObjectID>
+				<Position>
+					<X>0.949</X>
+					<Y>0</Y>
+					<Z>1.9</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">32767</Parameter>
+					<Parameter id="1">0</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/055_coloredCoin.bmd-->
+				<ObjectID>543</ObjectID>
+				<Position>
+					<X>0.649</X>
+					<Y>0</Y>
+					<Z>1.9</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">1023</Parameter>
+					<Parameter id="1">257</Parameter>
+					<Parameter id="2">0</Parameter>
+				</Parameters>
+			</StandardObject>
+			<StandardObject area="0" star="0">
+				<!--@CUSTOM%MG/055_coloredCoin.bmd-->
+				<ObjectID>543</ObjectID>
+				<Position>
+					<X>0.349</X>
+					<Y>0</Y>
+					<Z>1.9</Z>
+				</Position>
+				<YRotation>0</YRotation>
+				<Parameters count="3">
+					<Parameter id="0">992</Parameter>
+					<Parameter id="1">266</Parameter>
 					<Parameter id="2">0</Parameter>
 				</Parameters>
 			</StandardObject>

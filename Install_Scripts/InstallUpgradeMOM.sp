@@ -55,6 +55,10 @@ rename 30 048_characterBlockTransAll.bca
 rename 31 049_saveBlock.bmd
 rename 32 050_saveBlock.btp
 rename 33 051_saveBlock.kcl
+rename 34 052_starChip.bmd
+rename 35 053_doorBlocker.bmd
+rename 36 054_doorBlocker.kcl
+rename 37 055_coloredCoin.bmd
 
 # Replace assets.
 replace 0 ../Objects/GalaxyShrinkPlatform/ModelCollision/galaxyShrinkPlatformFrame.bmd
@@ -109,3 +113,7 @@ replace 30 ../Objects/CharacterBlock/Anim/hatena_karabox.bca
 replace 31 ../Objects/SaveBlock/ModelCollision/saveBlock.bmd
 replace 32 ../Objects/SaveBlock/TexAnim/saveBlock.btp
 replace 33 ../Objects/SaveBlock/ModelCollision/saveBlock.kcl
+replace 34 ../Objects/StarChip/Model/starChip.bmd
+replace 35 ../Objects/DoorBlocker/ModelCollision/door_blocker.bmd
+replace 36 ../Objects/DoorBlocker/ModelCollision/door_blocker.kcl
+replace 37 ../Objects/ColoredCoin/Model/coloredCoin.bmd

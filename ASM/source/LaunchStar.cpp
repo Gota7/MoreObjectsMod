@@ -195,6 +195,9 @@ int LaunchStar::InitResources()
 	launchSpeed = Fix12i(ang.x);
 	eventID = param1 >> 8 & 0xff;
 	particleID = 0;
+	camSet = true;
+	camFrames = 0;
+	flags--;
 	
 	Vector3 p0, p1;
 	pathPtr.FromID(param1 & 0xff);
@@ -208,6 +211,8 @@ int LaunchStar::InitResources()
 	UpdateModelTransform();
 	
 	pos.y -= 0x000a0000_f; //silly cylinder colliders that can't be offset
+	
+	//Event::ClearBit(eventID);
 	
 	return 1;
 }
@@ -225,9 +230,65 @@ int LaunchStar::Behavior()
 	if(eventID < 0x20)
 	{
 		if(Event::GetBit(eventID))
+		{
+			Event::ClearBit(eventID);
 			eventID = 0xff;
+			camSet = false;
+			camOldPos = CAMERA->pos;
+			camOldTarget = CAMERA->lookAt;
+			
+			camNewPos = pos;
+			camNewPos.y += 0x250000_f;
+			camNewPos.x += Sin(ang.x) * 0x350000_f;
+			camNewPos.z += Cos(ang.y) * 0x350000_f;
+			
+			playerOldPos = PLAYER_ARR[0]->pos;
+			playerOldAng = PLAYER_ARR[0]->ang;
+			playerOldState = PLAYER_ARR[0]->currState;
+			playerOldPrevState = PLAYER_ARR[0]->prevState;
+			playerOldNextState = PLAYER_ARR[0]->nextState;
+			
+			//Teleport the player up 10,000 editor measurements to ensure the player doesn't collide with objects or takes damage
+			playerNewPos = playerOldPos;
+			playerNewPos.y += 0x10000000_f;
+		}
 		else
 			return 1;
+	}
+	
+	if (eventID == 0xff && !camSet)
+	{
+		camFrames++;
+		
+		if (camFrames <= 90)
+		{
+			
+			//Keep the camera looking at the Launch Star
+			CAMERA->lookAt = pos;
+			CAMERA->pos = camNewPos;
+			
+			//Keep the player in the same position and rotation so they can't move
+			PLAYER_ARR[0]->pos = playerNewPos;
+			PLAYER_ARR[0]->ang = playerOldAng;
+			
+			//Play the 'secret found' sound effect
+			if (camFrames == 15)
+				Sound::LoadAndSetMusic(0x029);
+				//WOOD: Sound::PlayBank3(0x041, camSpacePos);
+		}
+		else
+		{
+			//Reset the player's original states and position
+			PLAYER_ARR[0]->currState = playerOldState;
+			PLAYER_ARR[0]->prevState = playerOldPrevState;
+			PLAYER_ARR[0]->nextState = playerOldNextState;
+			PLAYER_ARR[0]->pos = playerOldPos;
+			
+			//Reset the camera to it's original position
+			CAMERA->lookAt = camOldTarget;
+			CAMERA->pos = camOldPos;
+			camSet = true;
+		}
 	}
 		
 	Player* isThereAPlayer = ClosestPlayer();
@@ -258,10 +319,9 @@ int LaunchStar::Behavior()
 
 int LaunchStar::Render()
 {
-	if(eventID < 0x20)
-		return 1;
+	if(eventID >= 0x20)
+		rigMdl.Render(nullptr);
 	
-	rigMdl.Render(nullptr);
 	return 1;
 }
 

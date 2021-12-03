@@ -1,7 +1,7 @@
 #ifndef CHARACTER_BLOCK_INCLUDED
 #define CHARACTER_BLOCK_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct CharacterBlock : public Platform
 {	

@@ -12,7 +12,7 @@ namespace {
 	//constexpr Fix12i RADIUS = 0x64000_f;
 	//constexpr Fix12i HEIGHT = 0xA4000_f;
 
-	FixedSizeCLPS_Block<1> clpsBlock =
+	/*FixedSizeCLPS_Block<1> clpsBlock =
 	{
 		{'C', 'L', 'P', 'S'},
 		8,
@@ -20,7 +20,7 @@ namespace {
 		{
         	CLPS(0x00, 0, 0x3f, 0x0, 0x6, 0, 0, 0, 0, 0xff)
         }
-	};
+	};*/
 }
 
 SharedFilePtr FallingIcicle::modelFile;

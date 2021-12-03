@@ -62,7 +62,7 @@ void Berry::Kill()
 					Actor* coin = Actor::Spawn(0x120 + coinPrizeTypes[4 * (berryMaxCount - 1) + i], 0xf2, pos, nullptr, areaID, -1);
 					if(coin)
 					{
-						coin->motionAng = Vector3_16{0, i * 0x4000, 0};
+						coin->motionAng = Vector3_16{0,  short(i * 0x4000), 0};
 						coin->horzSpeed = COIN_SPEED;
 					}
 				}

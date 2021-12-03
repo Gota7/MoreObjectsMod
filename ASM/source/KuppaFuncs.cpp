@@ -2,7 +2,7 @@
 
 void RunKuppaScriptIfNotRanYet(char* file)
 {
-	if (KuppaPointer) return;
+	if (RUNNING_KUPPA_SCRIPT) return;
 
 	char* saveInfo;
     saveInfo = file;
@@ -12,7 +12,7 @@ void RunKuppaScriptIfNotRanYet(char* file)
     	saveInfo += *saveInfo;
     }
 
-    char* saveByte = &((char*)(&SAVE_DATA_0))[(unsigned)saveInfo[1]];
+    char* saveByte = &((char*)(&SAVE_DATA))[(unsigned)saveInfo[1]];
 
     if (*saveByte & saveInfo[2])
     {
@@ -25,7 +25,7 @@ void RunKuppaScriptIfNotRanYet(char* file)
 
 void UpdateScriptFiles(char** file, size_t size)
 {
-	if (KuppaPointer) return;
+	if (RUNNING_KUPPA_SCRIPT) return;
 
 	for (unsigned i = 0; i < size >> 2; i++)
 	{
@@ -39,7 +39,7 @@ void UpdateScriptFiles(char** file, size_t size)
 
 char* LoadAndRunKuppaScript(int ov0FileID)
 {
-	if (KuppaPointer) return nullptr;
+	if (RUNNING_KUPPA_SCRIPT) return nullptr;
 
 	char* file = LoadFile(ov0FileID);
 	RunKuppaScript(file);
@@ -48,7 +48,7 @@ char* LoadAndRunKuppaScript(int ov0FileID)
 
 char* LoadKuppaScriptAndRunIfNotRanYet(int ov0FileID)
 {
-	if (KuppaPointer) return nullptr;
+	if (RUNNING_KUPPA_SCRIPT) return nullptr;
 
 	char* file = LoadFile(ov0FileID);
 	RunKuppaScriptIfNotRanYet(file);

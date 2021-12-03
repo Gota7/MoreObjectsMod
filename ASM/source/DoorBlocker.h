@@ -1,7 +1,7 @@
 #ifndef DOOR_BLOCKER_INCLUDED
 #define DOOR_BLOCKER_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct DoorBlocker : public Platform
 {	

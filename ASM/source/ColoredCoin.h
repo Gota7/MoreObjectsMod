@@ -1,7 +1,7 @@
 #ifndef COLORED_COIN_INCLUDED
 #define COLORED_COIN_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct ColoredCoin : public Platform
 {	
@@ -22,11 +22,17 @@ struct ColoredCoin : public Platform
 	CylinderClsn cylClsn;
 	ShadowVolume shadow;
 	Matrix4x3 shadowMat;
+	Actor* spawnedStar;
 	bool killable = true;
 	bool fake;
 	bool hurt;
+	bool deathCoin;
+	bool deathStarted;
+	int deathFrames;
+	int frameCounter;
 	int health;
 	int value;
+	uint8_t starID;
 
 	static SpawnInfo<ColoredCoin> spawnData;
 };

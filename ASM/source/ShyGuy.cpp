@@ -194,7 +194,8 @@ int ShyGuy::InitResources()
 	targetPlayer = nullptr;
 	
 	offTrack = false;
-	backAndForth = ang.x > 0;
+	backAndForth = (ang.x & 0xf) > 0;
+	customColor = (ang.x >> 4 & 0xf) > 0;
 
 	if(param1 != 0xffff)
 	{
@@ -209,6 +210,10 @@ int ShyGuy::InitResources()
 	{
 		targetPos = Vector3{pos.x, FloorY(pos), pos.z};
 	}
+	
+	color = (uint16_t)ang.z | 0x8000 | (ang.z >>  0 & 0x1f) >> 1 << 16
+									 | (ang.z >>  5 & 0x1f) >> 1 << 21
+									 | (ang.z >> 10 & 0x1f) >> 1 << 26;
 	
 	return 1;
 }
@@ -601,7 +606,10 @@ int ShyGuy::Render()
 	rigMdl.Render(&scale);
 	
 	matChg.Update(rigMdl.data);
-	if(pathPtr.path)
+	
+	if (customColor)
+		rigMdl.data.materials[1].difAmb = color; //custom color
+	else if (pathPtr.path)
 		rigMdl.data.materials[1].difAmb = 0x0010801f; //red
 	else
 		rigMdl.data.materials[1].difAmb = 0x4100fe00; //blue

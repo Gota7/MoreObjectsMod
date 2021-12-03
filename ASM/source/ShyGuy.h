@@ -1,7 +1,7 @@
 #ifndef SHY_GUY_INCLUDED
 #define SHY_GUY_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct ShyGuy : public Enemy
 {
@@ -22,7 +22,9 @@ struct ShyGuy : public Enemy
 	bool alarmed;
 	bool backAndForth;
 	bool reverse;
+	bool customColor;
 	PathPtr pathPtr;
+	unsigned color;
 	
 	void UpdateModelTransform();
 	static Fix12i FloorY(const Vector3& pos);

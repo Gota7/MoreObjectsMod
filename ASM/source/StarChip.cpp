@@ -62,7 +62,6 @@ int StarChip::InitResources()
 	cylClsn.Init(this, RADIUS, HEIGHT, 0x00100002, 0x8000);
 	
 	eventID = param1 & 0xff;
-	SAVE_DATA.minigameRabbits1 = 0x00;
 	
 	return 1;
 }
@@ -120,7 +119,7 @@ void StarChip::Kill()
 	
 	Particle::System::NewSimple(0xD2, pos.x, pos.y + 0x28000_f, pos.z);
 	pos.y += 0x20000_f;
-	Actor* number = SpawnNumber(pos, chipCounter, false, 0, 0);
+	SpawnNumber(pos, chipCounter, false, 0, 0);
 	Sound::Play(4, 3, camSpacePos);
 	
 	if (chipCounter >= 5)

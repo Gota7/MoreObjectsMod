@@ -1,7 +1,7 @@
 #ifndef FALLINGICICLE_INCLUDED
 #define FALLINGICICLE_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct FallingIcicle : public Platform
 {

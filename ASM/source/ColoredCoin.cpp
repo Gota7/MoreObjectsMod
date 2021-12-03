@@ -43,7 +43,8 @@ void ColoredCoin::UpdateModelTransform()
 	model.mat4x3.r0c3 = pos.x >> 3;
 	model.mat4x3.r1c3 = pos.y >> 3;
 	model.mat4x3.r2c3 = pos.z >> 3;
-	DropShadowRadHeight(shadow, shadowMat, RADIUS, 0x200000_f, 0xf);
+	if (!deathStarted || !deathCoin)
+		DropShadowRadHeight(shadow, shadowMat, RADIUS, 0x200000_f, 0xf);
 }
 
 
@@ -53,6 +54,11 @@ int ColoredCoin::InitResources()
 	health = ang.x >> 8 & 0xf;
 	hurt = (ang.x >> 12 & 0xf) == 1;
 	fake = value == 0;
+	deathCoin = ang.z != 0;
+	
+	deathFrames = ang.z & 0x0fff;
+	starID = ang.z & 0xf000;
+	frameCounter = 0;
 	
 	char* modelF = Model::LoadFile(modelFile);
 	model.SetFile(modelF, 1, -1);
@@ -83,26 +89,58 @@ int ColoredCoin::Behavior()
 	HandleClsn();
 	cylClsn.Clear();
 	cylClsn.Update();
+	
+	if (deathStarted)
+	{
+		frameCounter++;
+		
+		if (PLAYER_ARR[0]->pos == spawnedStar->pos)
+		{
+			deathStarted = false;
+			KillAndTrackInDeathTable();
+		}
+		
+		else if (frameCounter == deathFrames)
+		{
+			//Make sure to kill the player properly
+			if (PLAYER_HEALTH == 1)
+			{
+				ClosestPlayer()->Hurt(pos, 1, 0xc000_f, 1, 0, 1);
+				deathStarted = false;
+				KillAndTrackInDeathTable();
+			}
+			else
+				PLAYER_HEALTH -= 1;
+			
+			frameCounter = 0;
+		}
+	}
+	
 	return 1;
 }
 
 int ColoredCoin::Render()
 {
-	model.Render(nullptr);
+	if (!deathStarted || !deathCoin)
+		model.Render(nullptr);
 	return 1;
 }
 
-void ColoredCoin::HandleClsn() {
-	Actor* other = Actor::FindWithID(cylClsn.otherObjID);
-	if(!other)
-		return;
-	if(other->actorID != 0x00bf)
-		return;
-	unsigned hitFlags = cylClsn.hitFlags;
-	if ((hitFlags & 0x8000) == 0 && killable) {
-		Kill();
-	} else {
-		killable = false;
+void ColoredCoin::HandleClsn()
+{
+	if (!deathStarted || !deathCoin)
+	{
+		Actor* other = Actor::FindWithID(cylClsn.otherObjID);
+		if(!other)
+			return;
+		if(other->actorID != 0x00bf)
+			return;
+		unsigned hitFlags = cylClsn.hitFlags;
+		if ((hitFlags & 0x8000) == 0 && killable) {
+			Kill();
+		} else {
+			killable = false;
+		}
 	}
 }
 
@@ -122,26 +160,46 @@ extern "C" void CollectCoin(int playerID, int numCoins);
 
 void ColoredCoin::Kill()
 {
-	KillAndTrackInDeathTable();
-	
-	if (fake)
+	if (!deathCoin)
 	{
-		Particle::System::NewSimple(0x0B, pos.x, pos.y + 0x28000_f, pos.z);
-		Sound::Play(4, 4, camSpacePos);
+		KillAndTrackInDeathTable();
+		
+		if (fake)
+		{
+			Particle::System::NewSimple(0x0B, pos.x, pos.y + 0x28000_f, pos.z);
+			Sound::Play(4, 4, camSpacePos);
+		}
+		else
+		{
+			Particle::System::NewSimple(0xD2, pos.x, pos.y + 0x28000_f, pos.z);
+			Sound::PlayBank3(17, camSpacePos);
+		}
+		
+		if (hurt)
+			ClosestPlayer()->Hurt(pos, health, 0xc000_f, 1, 0, 1);
+		else
+			PLAYER_HEALTH += (PLAYER_HEALTH + health > 8 ? 8 - PLAYER_HEALTH : health);
+		
+		
+		CollectCoin(0, value);
 	}
 	else
 	{
+		PLAYER_HEALTH -= 1;
+		deathStarted = true;
+		
+		Actor* starMarker = nullptr;
+		spawnedStar = nullptr;
+		
+		while (starMarker = FindWithActorID(0x00b4, starMarker))
+		{
+			if (starMarker->param1 == 0x20 + starID && spawnedStar == nullptr)
+				spawnedStar = Actor::Spawn(0x00b2, 0x0040 + starID, starMarker->pos, nullptr, areaID, -1);
+		}
+		
 		Particle::System::NewSimple(0xD2, pos.x, pos.y + 0x28000_f, pos.z);
 		Sound::PlayBank3(17, camSpacePos);
 	}
-	
-	if (hurt)
-		PLAYER_HEALTH -= (PLAYER_HEALTH - health < 0 ? PLAYER_HEALTH : health);
-	else
-		PLAYER_HEALTH += (PLAYER_HEALTH + health > 8 ? 8 - PLAYER_HEALTH : health);
-	
-	
-	CollectCoin(0, value);
 }
 
 ColoredCoin::~ColoredCoin() {}

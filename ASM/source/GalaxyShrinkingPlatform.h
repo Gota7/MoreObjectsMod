@@ -1,7 +1,7 @@
 #ifndef GALAXYSHRINKINGPLATFORM_INCLUDED
 #define GALAXYSHRINKINGPLATFORM_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct GalaxyShrinkingPlatform : public Platform
 {	

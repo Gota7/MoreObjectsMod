@@ -66,11 +66,9 @@ EVENT_FIELD							                                              = 0x0209f34c;
 VIEW_ARR_PTR						                                              = 0x0209f354;
 NUM_COINS																		  = 0x0209f358;
 PLAYER_ARR 							                                              = 0x0209f394;
+INPUT_ARR                                                                         = 0x0209f498;
                                                         
 SILVER_STARS 						                                              = 0x0209f40c;
-                                                        
-INPUT_PERSISTENT					                                              = 0x0209f49c;
-INPUT_1_FRAME						                                              = 0x0209f49e;
                                                         
 ACTOR_DEATH_TABLE_ARR 				                                              = 0x0209f4f8;
                                                         
@@ -565,10 +563,17 @@ Player_DoesStateEqual = 0x020E308C;
 OBJ_UpdateObjectXYZSpeedBasedOnForwardSpeedAndDirection = 0x02010C5C;
 ObjectMessageIDToActualMessageID = 0x0201FC10;
 PLAYER_HEALTH = 0x02092145;
-KuppaPointer = 0x0209fc48;
-RunKuppaScript = 0x0200ef04;
-EndKuppaScript = 0x0200e798;
+
+KS_CAMERA_FUNCTIONS                                                               = 0x0209b138;
+KS_FRAME_COUNTER                                                                  = 0x0209b274;
+RUNNING_KUPPA_SCRIPT                                                              = 0x0209fc48;
+RunKuppaScript                                                                    = 0x0200ef04;
+EndKuppaScript                                                                    = 0x0200e798;
+ReadUnalignedShort                                                                = 0x0200e768;
+
 PAUSE = 0x0209F2C4;
 FS_LoadOverlay = 0x02018ad0;
 FALL_DAMAGE_BIG = 0x020e2e88;
 FALL_DAMAGE_SMALL = 0x020e2e9c;
+
+GetAngleToCam = 0x0203db24;

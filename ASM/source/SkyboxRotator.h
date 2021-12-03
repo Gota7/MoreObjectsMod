@@ -1,7 +1,7 @@
 #ifndef SKYBOXROTATOR_INCLUDED
 #define SKYBOXROTATOR_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct SkyboxRotator : public Actor
 {	

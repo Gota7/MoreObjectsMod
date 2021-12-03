@@ -1,4 +1,4 @@
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 void InterpCubic(Vector3* n, Vector3* a, Vector3* b, Vector3* c, Vector3* d, Fix12i currTime) {
     

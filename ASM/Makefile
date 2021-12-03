@@ -61,6 +61,7 @@ ARCH	:=
 CFLAGS	:=	-g -Wall -O2\
  		-march=armv5te -mtune=arm946e-s -fomit-frame-pointer\
 		-ffast-math \
+		#-Werror -Wno-parentheses -Wno-narrowing \
 		$(ARCH)
 
 CFLAGS	+=	$(INCLUDE) -DARM9 -nodefaultlibs -I. -fno-builtin -c

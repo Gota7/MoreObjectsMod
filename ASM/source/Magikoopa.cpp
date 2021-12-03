@@ -1,4 +1,5 @@
 #include "Magikoopa.h"
+#include "include/ostream.h"
 
 //#define __aeabi_idivmod  Math_IDivMod
 //#define __aeabi_uidivmod Math_UDivMod
@@ -77,121 +78,6 @@ namespace
 	Magikoopa::SharedRes* ptrToRes = nullptr;
 	
 	unsigned onLoadFuncPtr = (unsigned)&Magikoopa::SharedRes::OnLoadFile;
-	
-	Particle::MainInfo particleInfo
-	{
-		0x00010104, //flags
-		0x00001000_f, //rate, fix20.12
-		0x00000000_f, //startHorzDist, fix23.9
-		Vector3_16f{0x0000_fs, 0x1000_fs, 0x0000_fs}, //dir
-		Color5Bit(0xff, 0xff, 0xff), //color
-		0x00000800_f, //horzSpeed, fix20.12 (fix23.9???)
-		0x00000000_f, //vertSpeed, fix20.12 (fix23.9???)
-		0x00002800_f, //scale, fix20.12
-		0x1000_fs, //horzScale, fix4.12
-		0x0000,
-		0x0079,
-		0x0261,
-		0x0000, //frames
-		0x002d, //lifetime
-		0x75, //scaleRand
-		0x9d, //lifetimeRand
-		0xce, //speedRand
-		0x00,
-		0x01, //spawnPeriod
-		0x1f, //alpha
-		0x24, //speedFalloff
-		SPRITE_ID, //spriteID
-		0x03,
-		0x00,
-		0x00, //velStretchFactor
-		0x00 //texMirrorFlags
-	};
-	
-	Particle::MainInfo bossParticleInfo
-	{
-		0x00010104, //flags
-		0x00001000_f, //rate, fix20.12
-		0x00000000_f, //startHorzDist, fix23.9
-		Vector3_16f{0x0000_fs, 0x1000_fs, 0x0000_fs}, //dir
-		Color5Bit(0xff, 0xff, 0xff), //color
-		0x00001000_f, //horzSpeed, fix20.12 (fix23.9???)
-		0x00000000_f, //vertSpeed, fix20.12 (fix23.9???)
-		0x00005000_f, //scale, fix20.12
-		0x1000_fs, //horzScale, fix4.12
-		0x0000,
-		0x0079,
-		0x0261,
-		0x0000, //frames
-		0x002d, //lifetime
-		0xff, //scaleRand
-		0x9d, //lifetimeRand
-		0xce, //speedRand
-		0x00,
-		0x01, //spawnPeriod
-		0x1f, //alpha
-		0x24, //speedFalloff
-		SPRITE_ID, //spriteID
-		0x03,
-		0x00,
-		0x00, //velStretchFactor
-		0x00 //texMirrorFlags
-	};
-	
-	Particle::ScaleTransition particleScaleTrans
-	{
-		0x1308_fs, //scaleStart, fix4.12
-		0x1000_fs, //scaleMiddle, fix4.12
-		0x06a9_fs, //scaleEnd, fix4.12
-		0x00, //scaleTrans1End
-		0x5b, //scaleTrans2Start;
-		0x0004,
-		0x057b
-	};
-	
-	Particle::Glitter particleGlitter
-	{
-		0x0002,
-		0x0000,
-		0x1000_f, //scale 1, fix4.12
-		0x0002, //lifetime
-		0x00,
-		0x40, //scale 2
-		Color5Bit(0xff, 0xff, 0xff),
-		0x01, //rate
-		0x04,
-		0x0c, //period
-		0x1c, //spriteID;
-		0x00000005, //texMirrorFlags;
-	};
-	
-	Particle::SysDef particleSysDefs[]
-	{
-		Particle::SysDef
-		{
-			&particleInfo,
-			&particleScaleTrans,
-			nullptr,
-			nullptr,
-			nullptr,
-			&particleGlitter,
-			nullptr,
-			0
-		},
-		
-		Particle::SysDef
-		{
-			&bossParticleInfo,
-			&particleScaleTrans,
-			nullptr,
-			nullptr,
-			nullptr,
-			&particleGlitter,
-			nullptr,
-			0
-		}
-	};
-	
 }
 
 SharedFilePtr Magikoopa::modelFiles[2];
@@ -273,13 +159,13 @@ Magikoopa::Resources::~Resources()
 }
 void Magikoopa::SharedRes::TrackRes()
 {
-	ptrToRes = this;
+	/*ptrToRes = this;
 	aLoadFileInst = *(unsigned*)0x02017bfc;
-	*(unsigned*)0x02017bfc = (onLoadFuncPtr - 0x02017bfc) / 4 - 2 & 0x00ffffff | 0xeb000000;
+	*(unsigned*)0x02017bfc = (onLoadFuncPtr - 0x02017bfc) / 4 - 2 & 0x00ffffff | 0xeb000000;*/
 }
 void Magikoopa::SharedRes::StopTracking()
 {
-	*(unsigned*)0x02017bfc = aLoadFileInst;
+	/* *(unsigned*)0x02017bfc = aLoadFileInst;*/
 }
 
 //START MAGIKOOPA SHOT
@@ -290,6 +176,10 @@ namespace
 	
 	constexpr Fix12i SHOT_RADIUS = 0x30000_f;
 }
+
+SharedFilePtr Magikoopa::Shot::magicModelFile;
+SharedFilePtr Magikoopa::Shot::magicTexSeqFile;
+
 SpawnInfo<Magikoopa::Shot> Magikoopa::Shot::spawnData =
 {
 	&Magikoopa::Shot::Spawn,
@@ -316,12 +206,28 @@ void Magikoopa::Shot::SetMagikoopa(Magikoopa& magik)
 
 Magikoopa::Shot* Magikoopa::Shot::Spawn()
 {
-	static_assert(sizeof(Particle::Particle) == 0x44, "Particle size is WRONG!");
+	//static_assert(sizeof(Particle::Particle) == 0x44, "Particle size is WRONG!");
 	return new Magikoopa::Shot;
 }
+
+void Magikoopa::Shot::UpdateModelTransform()
+{
+	model.mat4x3.ThisFromRotationY(ang.y);
+	model.mat4x3.r0c3 = pos.x >> 3;
+	model.mat4x3.r1c3 = pos.y >> 3;
+	model.mat4x3.r2c3 = pos.z >> 3;
+}
+
 int Magikoopa::Shot::InitResources()
 {
 	resourceRefCount = 0;
+	
+	Model::LoadFile(magicModelFile);
+	model.SetFile(magicModelFile.filePtr, 1, -1);
+	
+	TextureSequence::LoadFile(magicTexSeqFile);
+	TextureSequence::Prepare(magicModelFile.filePtr, magicTexSeqFile.filePtr);
+	texSeq.SetFile(magicTexSeqFile.filePtr, Animation::LOOP, 0x10000_f, 1);
 	
 	direction = Vector3_16f{Fix12s(ang.x, true), Fix12s(ang.y, true), Fix12s(ang.z, true)};
 	ang.x = ang.z = 0;
@@ -335,6 +241,7 @@ int Magikoopa::Shot::InitResources()
 	
 	return 1;
 }
+
 int Magikoopa::Shot::CleanupResources()
 {
 	if(res->numRefs == 1)
@@ -343,6 +250,7 @@ int Magikoopa::Shot::CleanupResources()
 		--res->numRefs;
 	return 1;
 }
+
 int Magikoopa::Shot::Behavior()
 {
 	UpdatePosWithOnlySpeed(nullptr);
@@ -371,7 +279,7 @@ int Magikoopa::Shot::Behavior()
 			}
 		}
 		else
-			newActor = Actor::Spawn(0x00c8, 0xffff, pos, &ang, areaID, -1);
+			newActor = Actor::Spawn(0x0209, 0xffff, pos, &ang, areaID, -1);
 		
 		res->StopTracking();
 		res->res.ProcessAdditions();
@@ -392,9 +300,18 @@ int Magikoopa::Shot::Behavior()
 	cylClsn.Clear();
 	cylClsn.Update();
 	MakeVanishLuigiWork(cylClsn);
+	UpdateModelTransform();
 	return 1;
 }
-int Magikoopa::Shot::Render() {return 1;}
+
+int Magikoopa::Shot::Render()
+{
+	model.Render(nullptr);
+	texSeq.Update(model.data);
+	texSeq.Advance();
+	return 1;
+}
+
 void Magikoopa::Shot::Virtual30() {}
 Magikoopa::Shot::~Shot() {}
 
@@ -453,13 +370,14 @@ int Magikoopa::InitResources()
 	termVel = TERM_VEL;
 	
 	eventToTrigger = param1 >> 8 & 0xff;
+	starID = ang.x >> 12 & 0xf;
 	pathPtr.FromID(param1 & 0xff);
 	numPathPts = pathPtr.NumPts();
 	currPathPt = numPathPts; //hax
 	
-	res->spawnActorID = ang.x;
+	res->spawnActorID = ang.x & 0xfff;
 	res->spawnActorParams = ang.z;
-	ang.x = ang.z = 0;
+	//ang.x = ang.z = 0;
 	originalPos = pos;
 	
 	res->TrackRes();
@@ -467,11 +385,18 @@ int Magikoopa::InitResources()
 	//avoid the glitch where particles mess up if all the whatevers are killed before the Magikoopa spawns a whatever.
 	//Fire uses only particles, so it doesn't count.
 	if(res->isBoss)
-		if((newActor = Actor::Spawn(0x00c8, 0xffff, pos, nullptr, 0, -1)))
+	{
+		if((newActor = Actor::Spawn(0x0209, 0xffff, pos, nullptr, areaID, -1)))
 			newActor->Destroy();
-	if(!res->isBoss)
-		if((newActor = Actor::Spawn(res->spawnActorID, res->spawnActorParams, pos, nullptr, 0, -1)))
+		if((newActor = Actor::Spawn(0x00fe, 0x0003, pos, nullptr, areaID, -1)))
 			newActor->Destroy();
+	}
+	
+	//cout << res->spawnActorID  << '\n';
+	//cout << res->spawnActorParams  << '\n';
+	if((newActor = Actor::Spawn(res->spawnActorID, res->spawnActorParams, pos,  nullptr, 0, -1)))
+		newActor->Destroy();
+	
 	res->StopTracking();
 	res->res.ProcessAdditions();
 	
@@ -755,6 +680,10 @@ void Magikoopa::Talk()
 			{
 				KillMagikoopa();
 				Sound::StopLoadedMusic();
+				if (starID < 8)
+					Actor::Spawn(0x00b2, (0x0040 + starID), Vector3{pos.x, pos.y + 250._f, pos.z}, nullptr, 0, -1);
+				else if (starID < 13)
+					Actor::Spawn(0x011a, (0x0000 + starID - 8), Vector3{pos.x, pos.y + 250._f, pos.z}, nullptr, 0, -1);
 			}
 			else
 			{
@@ -859,7 +788,7 @@ int Magikoopa::Behavior()
 	UpdatePos(nullptr);
 	UpdateModelTransform();
 	
-	Vector3 wandTip = GetWandTipPos();
+	//Vector3 wandTip = GetWandTipPos();
 	//shapesID = Particle::System::New(shapesID, (unsigned)&particleSysDefs[res->isBoss], wandTip.x, wandTip.y, wandTip.z, nullptr, nullptr);
 	
 	//UpdateWMClsn(&wmClsn, 2);

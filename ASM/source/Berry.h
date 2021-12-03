@@ -1,7 +1,7 @@
 #ifndef BERRY_INCLUDED
 #define BERRY_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct Berry : public Actor
 {

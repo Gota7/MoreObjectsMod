@@ -204,8 +204,8 @@ int LaunchStar::InitResources()
 	pathPtr.GetPt(p0, 0);
 	pathPtr.GetPt(p1, 1);
 	
-	ang.x = 0x4000 - p1.VertAngle(p0);
-	ang.y = p0.HorzAngle(p1);
+	ang.x = (ang.z == 1 ? 0 : 0x4000 - p1.VertAngle(p0));
+	ang.y = (ang.z == 1 ? 0 : p0.HorzAngle(p1));
 	ang.z = 0;
 	
 	UpdateModelTransform();
@@ -297,7 +297,7 @@ int LaunchStar::Behavior()
 	{
 		Player& player = *isThereAPlayer;
 		
-		if(player.uniqueID == cylClsn.otherObjID && (INPUT_1_FRAME & Input::A) &&
+		if(player.uniqueID == cylClsn.otherObjID && (INPUT_ARR[0].buttonsPressed & Input::A) &&
 		   ((unsigned)player.currState != Player::ST_LAUNCH_STAR || player.lsPtr != this))
 		{
 			ls_ptr = this;

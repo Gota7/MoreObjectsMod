@@ -1,7 +1,7 @@
 #ifndef STAR_CHIP_INCLUDED
 #define STAR_CHIP_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct StarChip : public Platform
 {	

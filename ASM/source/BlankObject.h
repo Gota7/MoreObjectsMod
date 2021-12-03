@@ -1,7 +1,7 @@
 #ifndef BLANKOBJECT_INCLUDED
 #define BLANKOBJECT_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct BlankObject : public Actor
 {	

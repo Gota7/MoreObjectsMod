@@ -10,9 +10,10 @@ Toolkit and resources for SM64DS for some custom objects.
 * 2D Level (With Camera Limiter)
 * Object Lighting Modifier
 * Toxic Levels
-* 2 Sets of Colored Goombas
+* 6 Types of Colored Goombas
 * Noteblocks
 * Shy Guys
+* Magikoopa & Kamella
 * Launch Stars & Star Chips
 * Skybox Rotator
 * Gravity Modifier
@@ -23,6 +24,14 @@ Toolkit and resources for SM64DS for some custom objects.
 * Save Blocks
 * Door Blockers
 * Colored Coins
+* Colored Toads
+* Peach NPC
+* Blue Ice Block
+* Mega Block
+* Cutscene Loader
+* Custom Block
+* Treasure Chest
+* Thwomp & Magma Thwomp
 * And More To Come!
 
 ## How It Works

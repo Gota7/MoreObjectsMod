@@ -1,7 +1,7 @@
 #ifndef LAUNCH_STAR_INCLUDED
 #define LAUNCH_STAR_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct LaunchStar : public Actor
 {

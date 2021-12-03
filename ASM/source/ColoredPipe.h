@@ -1,7 +1,7 @@
 #ifndef COLOREDPIPE_INCLUDED
 #define COLOREDPIPE_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct ColoredPipe : public Platform
 {	

@@ -1,5 +1,5 @@
-#include "DeleteFile.h"
-#include "SM64DS_2.h"
+#include "include/DeleteFile.h"
+#include "include/SM64DS_2.h"
 #include "GalaxyShrinkingPlatform.h"
 #include "SilverCoin.h"
 #include "InvisibleWall.h"
@@ -15,8 +15,7 @@
 #include "Magikoopa.h"
 #include "SkyboxRotator.h"
 #include "FallingIcicle.h"
-#include "GoombaColored2.h"
-#include "YoshiNPC.h"
+#include "NPC.h"
 #include "ColoredPipe.h"
 #include "CharacterBlock.h"
 #include "TreeShadow.h"
@@ -24,119 +23,186 @@
 #include "StarChip.h"
 #include "DoorBlocker.h"
 #include "ColoredCoin.h"
+#include "BlueIceBlock.h"
+#include "MegaBlock.h"
+#include "CutsceneLoader.h"
+#include "CustomBlock.h"
+#include "TreasureChest.h"
+#include "Thwomp.h"
+/*#include "ToxBox.h"
+#include "ToxBoxFlower.h"*/
 
 namespace {
 
 	//Object IDs.
-	constexpr short int BASE_OBJECT_ID = 								0x0200;
-	constexpr short int GALAXY_SHRINKING_PLATFORM = 					BASE_OBJECT_ID;
-	constexpr short int SILVER_COIN = 									BASE_OBJECT_ID + 0x1;
-	constexpr short int INVISIBLE_WALL = 								BASE_OBJECT_ID + 0x2;
-	constexpr short int BERRY = 										BASE_OBJECT_ID + 0x3;
-	constexpr short int YOSHI_RIDE = 									BASE_OBJECT_ID + 0x4;
-	constexpr short int OBJECT_LIGHTING_MODIFIER = 						BASE_OBJECT_ID + 0x5;
-	constexpr short int TWO_DEE_LEVEL = 								BASE_OBJECT_ID + 0x6;
-	constexpr short int TWO_DEE_CAMERA_LIMITER = 						BASE_OBJECT_ID + 0x7;
-	constexpr short int COLORED_GOOMBA_SMALL = 							BASE_OBJECT_ID + 0x8;
-	constexpr short int COLORED_GOOMBA =	 							BASE_OBJECT_ID + 0x9;
-	constexpr short int COLORED_GOOMBA_LARGE = 							BASE_OBJECT_ID + 0xA;
-	constexpr short int TOXIC_LEVEL = 									BASE_OBJECT_ID + 0xB;
-	constexpr short int NOTEBLOCK = 									BASE_OBJECT_ID + 0xC;
-	constexpr short int SHY_GUY = 										BASE_OBJECT_ID + 0xD;
-	constexpr short int LAUNCH_STAR = 									BASE_OBJECT_ID + 0xE;
-	constexpr short int KAMEK_SHOT = 									BASE_OBJECT_ID + 0xF;
-	constexpr short int KAMEK = 										BASE_OBJECT_ID + 0x10;
-	constexpr short int KAMELLA = 										BASE_OBJECT_ID + 0x11;
-	constexpr short int SKYBOX_ROTATOR = 								BASE_OBJECT_ID + 0x12;
-	constexpr short int FALLING_ICICLE = 								BASE_OBJECT_ID + 0x13;
-	constexpr short int GRAVITY_MODIFIER = 								BASE_OBJECT_ID + 0x14;
-	constexpr short int COLORED_GOOMBA_2_SMALL = 						BASE_OBJECT_ID + 0x15;
-	constexpr short int COLORED_GOOMBA_2 =	 							BASE_OBJECT_ID + 0x16;
-	constexpr short int COLORED_GOOMBA_2_LARGE = 						BASE_OBJECT_ID + 0x17;
-	constexpr short int YOSHI_NPC = 									BASE_OBJECT_ID + 0x18;
-	constexpr short int COLORED_PIPE = 									BASE_OBJECT_ID + 0x19;
-	constexpr short int CHARACTER_BLOCK =	 							BASE_OBJECT_ID + 0x1A;
-	constexpr short int TREE_SHADOW =	 								BASE_OBJECT_ID + 0x1B;
-	constexpr short int SAVE_BLOCK =	 								BASE_OBJECT_ID + 0x1C;
-	constexpr short int STAR_CHIP =	 									BASE_OBJECT_ID + 0x1D;
-	constexpr short int DOOR_BLOCKER =	 								BASE_OBJECT_ID + 0x1E;
-	constexpr short int COLORED_COIN =	 								BASE_OBJECT_ID + 0x1F;
+	
+	//Object IDs.
+	enum ObjectIDs:short
+	{
+		GALAXY_SHRINKING_PLATFORM = 0x0200,
+		SILVER_COIN,
+		INVISIBLE_WALL,
+		BERRY,
+		YOSHI_RIDE,
+		OBJECT_LIGHTING_MODIFIER,
+		TWO_DEE_LEVEL,
+		TWO_DEE_CAMERA_LIMITER,
+		COLORED_GOOMBA_SMALL,
+		COLORED_GOOMBA,
+		COLORED_GOOMBA_LARGE,
+		TOXIC_LEVEL,
+		NOTEBLOCK,
+		SHY_GUY,
+		LAUNCH_STAR,
+		KAMEK_SHOT,
+		KAMEK, //210
+		KAMELLA,
+		SKYBOX_ROTATOR,
+		FALLING_ICICLE,
+		GRAVITY_MODIFIER,
+		COLORED_GOOMBA_2_SMALL,
+		COLORED_GOOMBA_2,
+		COLORED_GOOMBA_2_LARGE,
+		YOSHI_NPC,
+		COLORED_PIPE,
+		CHARACTER_BLOCK,
+		TREE_SHADOW,
+		SAVE_BLOCK,
+		STAR_CHIP,
+		DOOR_BLOCKER,
+		COLORED_COIN,
+		COLORED_TOAD_NPC, //220
+		PEACH_NPC,
+		BLUE_ICE_BLOCK,
+		MEGA_BLOCK,
+		CUTSCENE_LOADER,
+		CUSTOM_BLOCK,
+		TREASURE_CHEST,
+		THWOMP,
+		MAGMA_THWOMP,
+		GIGA_THWOMP/*,
+		TOX_BOX,
+		PLAYER_TOX_BOX,
+		TOX_BOX_FLOWER*/
+	};
+	
 	//constexpr short int CONDITIONAL_CUTSCENE_LOADER_ID = 0x0165;
 
 	//Assets.
-	constexpr short int GALAXY_SHRINKING_PLATFORM_FRAME_MODEL_ID = 		0x0000;
-	constexpr short int GALAXY_SHRINKING_PLATFORM_MODEL_ID = 			0x0001;
-	constexpr short int GALAXY_SHRINKING_PLATFORM_COLLISION_ID = 		0x0002;
-
-	constexpr short int SILVER_COIN_MODEL_ID = 							0x0003;
-
-	constexpr short int INVISIBLE_WALL_COLLISION_ID = 					0x0005;
-
-	constexpr short int BERRY_MODEL_ID = 								0x0006;
-	constexpr short int BERRY_STEM_MODEL_ID = 							0x0007;
-
-	constexpr short int YOSHI_RIDE_ANIM_ID =							0x0008;
-
-	constexpr short int COLORED_GOOMBA_MODEL_ID = 						0x0009;
-	constexpr short int COLORED_GOOMBA_ANIM_ID = 						0x000A;
-
-	constexpr short int NOTEBLOCK_MODEL_ID = 							0x000B;
-	constexpr short int NOTEBLOCK_COLLISION_ID = 						0x000C;
-
-	constexpr short int SHY_GUY_MODEL_ID = 								0x000D;
-	constexpr short int SHY_GUY_WAIT_ANIM_ID = 							0x000E;
-	constexpr short int SHY_GUY_WALK_ANIM_ID = 							0x000F;
-	constexpr short int SHY_GUY_RUN_ANIM_ID = 							0x0010;
-	constexpr short int SHY_GUY_FREEZE_ANIM_ID = 						0x0011;
-
-	constexpr short int LAUNCH_STAR_MODEL_ID =							0x0012;
-	constexpr short int LAUNCH_STAR_WAIT_ANIM_ID =						0x0013;
-	constexpr short int LAUNCH_STAR_LAUNCH_ANIM_ID =					0x0014;
-
-	constexpr short int KAMEK_MODEL_ID = 								0x0015;
-	constexpr short int KAMELLA_MODEL_ID = 								0x0016;
-	constexpr short int KAMEK_APPEAR_ANIM_ID = 							0x0017;
-	constexpr short int KAMEK_WAVE_ANIM_ID = 							0x0018;
-	constexpr short int KAMEK_SHOOT_ANIM_ID = 							0x0019;
-	constexpr short int KAMEK_POOF_ANIM_ID = 							0x001A;
-	constexpr short int KAMEK_WAIT_ANIM_ID = 							0x001B;
-	constexpr short int KAMEK_HURT_ANIM_ID = 							0x001C;
-	constexpr short int KAMEK_DEFEAT_ANIM_ID = 							0x001D;
-	constexpr short int KAMEK_MAGIC_PARTICLE_ID = 						0x001E;
-
-	constexpr short int ICICLE_MODEL_ID = 								0x001F;
-
-	constexpr short int COLORED_GOOMBA_2_MODEL_ID = 					0x0020;
-	constexpr short int COLORED_GOOMBA_2_ANIM_ID = 						0x0021;
-
-	constexpr short int YOSHI_NPC_MODEL_ID = 							0x0022;
-	constexpr short int YOSHI_NPC_ANIM_ID = 							0x0023;
-
-	constexpr short int COLORED_PIPE_MODEL_ID = 						0x0024;
-	constexpr short int COLORED_PIPE_COLLISION_ID = 					0x0025;
-
-	constexpr short int MARIO_BLOCK_MODEL_ID = 							0x0026;
-	constexpr short int LUIGI_BLOCK_MODEL_ID = 							0x0027;
-	constexpr short int WARIO_BLOCK_MODEL_ID = 							0x0028;
-	constexpr short int YOSHI_BLOCK_MODEL_ID = 							0x0029;
-	constexpr short int CHARACTER_BLOCK_COLLSION_ID = 					0x002A;
-	constexpr short int CHARACTER_BLOCK_ANIMATION_ID = 					0x002B;
-	constexpr short int MARIO_BLOCK_TRANSPARENT_MODEL_ID = 				0x002C;
-	constexpr short int LUIGI_BLOCK_TRANSPARENT_MODEL_ID = 				0x002D;
-	constexpr short int WARIO_BLOCK_TRANSPARENT_MODEL_ID = 				0x002E;
-	constexpr short int YOSHI_BLOCK_TRANSPARENT_MODEL_ID = 				0x002F;
-	constexpr short int CHARACTER_BLOCK_TRANSPARENT_ANIMATION_ID = 		0x0030;
-	
-	constexpr short int SAVE_BLOCK_MODEL_ID = 							0x0031;
-	constexpr short int SAVE_BLOCK_ANIM_ID = 							0x0032;
-	constexpr short int SAVE_BLOCK_COLLISION_ID = 						0x0033;
-	
-	constexpr short int STAR_CHIP_MODEL_ID =							0x0034;
-	
-	constexpr short int DOOR_BLOCKER_MODEL_ID = 						0x0035;
-	constexpr short int DOOR_BLOCKER_COLLISION_ID = 					0x0036;
-	
-	constexpr short int COLORED_COIN_MODEL_ID =							0x0037;
+	enum AssetIDs:short
+	{
+		GALAXY_SHRINKING_PLATFORM_FRAME_MODEL_ID, //0
+		GALAXY_SHRINKING_PLATFORM_MODEL_ID,
+		GALAXY_SHRINKING_PLATFORM_COLLISION_ID,
+		
+		SILVER_COIN_MODEL_ID,
+		
+		INVISIBLE_WALL_MODEL_ID,
+		INVISIBLE_WALL_COLLISION_ID,
+		
+		BERRY_MODEL_ID,
+		BERRY_STEM_MODEL_ID,
+		
+		YOSHI_RIDE_ANIM_ID,
+		
+		COLORED_GOOMBA_MODEL_ID,
+		COLORED_GOOMBA_ANIM_ID,
+		
+		NOTEBLOCK_MODEL_ID,
+		NOTEBLOCK_COLLISION_ID,
+		
+		SHY_GUY_MODEL_ID,
+		SHY_GUY_WAIT_ANIM_ID,
+		SHY_GUY_WALK_ANIM_ID,
+		SHY_GUY_RUN_ANIM_ID, //10
+		SHY_GUY_FREEZE_ANIM_ID,
+		
+		LAUNCH_STAR_MODEL_ID,
+		LAUNCH_STAR_WAIT_ANIM_ID,
+		LAUNCH_STAR_LAUNCH_ANIM_ID,
+		
+		KAMEK_MODEL_ID,
+		KAMELLA_MODEL_ID,
+		KAMEK_APPEAR_ANIM_ID,
+		KAMEK_WAVE_ANIM_ID,
+		KAMEK_SHOOT_ANIM_ID,
+		KAMEK_POOF_ANIM_ID,
+		KAMEK_WAIT_ANIM_ID,
+		KAMEK_HURT_ANIM_ID,
+		KAMEK_DEFEAT_ANIM_ID,
+		KAMEK_MAGIC_MODEL_ID,
+		KAMEK_MAGIC_ANIM_ID,
+		
+		ICICLE_MODEL_ID, //20
+		
+		YOSHI_NPC_MODEL_ID,
+		YOSHI_NPC_ANIM_ID,
+		
+		COLORED_PIPE_MODEL_ID,
+		COLORED_PIPE_COLLISION_ID,
+		
+		MARIO_BLOCK_MODEL_ID,
+		LUIGI_BLOCK_MODEL_ID,
+		WARIO_BLOCK_MODEL_ID,
+		YOSHI_BLOCK_MODEL_ID,
+		CHARACTER_BLOCK_COLLSION_ID,
+		CHARACTER_BLOCK_ANIMATION_ID,
+		MARIO_BLOCK_TRANSPARENT_MODEL_ID,
+		LUIGI_BLOCK_TRANSPARENT_MODEL_ID,
+		WARIO_BLOCK_TRANSPARENT_MODEL_ID,
+		YOSHI_BLOCK_TRANSPARENT_MODEL_ID,
+		CHARACTER_BLOCK_TRANSPARENT_ANIMATION_ID,
+		
+		SAVE_BLOCK_MODEL_ID, //30
+		SAVE_BLOCK_ANIM_ID,
+		SAVE_BLOCK_COLLISION_ID,
+		
+		STAR_CHIP_MODEL_ID,
+		
+		DOOR_BLOCKER_MODEL_ID,
+		DOOR_BLOCKER_COLLISION_ID,
+		
+		COLORED_COIN_MODEL_ID,
+		
+		COLORED_TOAD_NPC_MODEL_ID,
+		COLORED_TOAD_NPC_TEXANIM_ID,
+		COLORED_TOAD_NPC_ANIM_1_ID,
+		COLORED_TOAD_NPC_ANIM_2_ID,
+		
+		PEACH_NPC_MODEL_ID,
+		PEACH_NPC_ANIM_1_ID,
+		PEACH_NPC_ANIM_2_ID,
+		
+		BLUE_ICE_BLOCK_MODEL_ID,
+		BLUE_ICE_BLOCK_COLLISION_ID,
+		
+		MEGA_BLOCK_MODEL_ID, //40
+		MEGA_BLOCK_COLLISION_ID,
+		
+		YELLOW_BLOCK_MODEL_ID,
+		RED_BLOCK_MODEL_ID,
+		RED_BLOCK_TRANSPARENT_MODEL_ID,
+		BLOCK_COLLSION_ID,
+		RED_BLOCK_TRANSPARENT_ANIMATION_ID,
+		
+		TREASURE_CHEST_MODEL_ID,
+		TREASURE_CHEST_ANIM_ID,
+		
+		THWOMP_MODEL_ID,
+		THWOMP_TEXANIM_ID,
+		THWOMP_COLLSION_ID,
+		MAGMA_THWOMP_MODEL_ID,
+		GIGA_THWOMP_MODEL_ID,
+		GIGA_THWOMP_COLLSION_ID/*,
+		
+		TOX_BOX_MODEL_ID,
+		TOX_BOX_COLLSION_ID, //50
+		TOX_BOX_SWITCH_MODEL_ID,
+		TOX_BOX_SWITCH_COLLSION_ID,
+		TOX_BOX_PLAYER_MODEL_ID,
+		TOX_BOX_PLAYER_TEXANIM_ID,
+		TOX_BOX_FLOWER_MODEL_ID*/
+	};
 
 	//Modify the object and actor tables.
 	void modTable(short int val, unsigned newFunc)
@@ -229,6 +295,8 @@ void init()
 	Magikoopa::animFiles[4].Construct(KAMEK_WAIT_ANIM_ID);
 	Magikoopa::animFiles[5].Construct(KAMEK_HURT_ANIM_ID);
 	Magikoopa::animFiles[6].Construct(KAMEK_DEFEAT_ANIM_ID);
+	Magikoopa::Shot::magicModelFile.Construct(KAMEK_MAGIC_MODEL_ID);
+	Magikoopa::Shot::magicTexSeqFile.Construct(KAMEK_MAGIC_ANIM_ID);
 
 	//Skybox rotator.
 	modTable(SKYBOX_ROTATOR, (unsigned)&SkyboxRotator::spawnData);
@@ -241,23 +309,24 @@ void init()
 	modTable(GRAVITY_MODIFIER, (unsigned)&BlankObject::spawnData);
 
 	//Colored goombas 2.
-	modTable(COLORED_GOOMBA_2_SMALL, (unsigned)&Goomba2::spawnDataSmall);
-	modTable(COLORED_GOOMBA_2, (unsigned)&Goomba2::spawnDataNormal);
-	modTable(COLORED_GOOMBA_2_LARGE, (unsigned)&Goomba2::spawnDataBig);
-	Goomba2::modelFile.Construct(COLORED_GOOMBA_2_MODEL_ID);
-	Goomba2::texSeqFile.Construct(COLORED_GOOMBA_2_ANIM_ID);
-	Goomba2::animFiles[0].Construct(0x0388);
-	Goomba2::animFiles[1].Construct(0x0389);
-	Goomba2::animFiles[2].Construct(0x038a);
-	Goomba2::animFiles[3].Construct(0x038b);
-	Goomba2::animFiles[4].Construct(0x038c);
-	Goomba2::animFiles[5].Construct(0x038d);
+	modTable(COLORED_GOOMBA_2_SMALL, (unsigned)&Goomba::spawnDataSmall);
+	modTable(COLORED_GOOMBA_2, (unsigned)&Goomba::spawnDataNormal);
+	modTable(COLORED_GOOMBA_2_LARGE, (unsigned)&Goomba::spawnDataBig);
 	
-	//Yoshi NPC.
-	modTable(YOSHI_NPC, (unsigned)&YoshiNPC::spawnData);
-	YoshiNPC::modelFile.Construct(YOSHI_NPC_MODEL_ID);
-	YoshiNPC::animFiles[0].Construct(YOSHI_NPC_ANIM_ID);
-	YoshiNPC::animFiles[1].Construct(YOSHI_NPC_ANIM_ID);
+	//NPCs.
+	modTable(YOSHI_NPC, (unsigned)&NPC::spawnData);
+	modTable(COLORED_TOAD_NPC, (unsigned)&NPC::spawnData);
+	modTable(PEACH_NPC, (unsigned)&NPC::spawnData);
+	NPC::modelFiles[0].Construct(YOSHI_NPC_MODEL_ID);
+	NPC::modelFiles[1].Construct(COLORED_TOAD_NPC_MODEL_ID);
+	NPC::modelFiles[2].Construct(PEACH_NPC_MODEL_ID);
+	NPC::animFiles[0].Construct(YOSHI_NPC_ANIM_ID);
+	NPC::animFiles[1].Construct(YOSHI_NPC_ANIM_ID);
+	NPC::animFiles[2].Construct(COLORED_TOAD_NPC_ANIM_1_ID);
+	NPC::animFiles[3].Construct(COLORED_TOAD_NPC_ANIM_2_ID);
+	NPC::animFiles[4].Construct(PEACH_NPC_ANIM_1_ID);
+	NPC::animFiles[5].Construct(PEACH_NPC_ANIM_2_ID);
+	NPC::texSeqFile.Construct(COLORED_TOAD_NPC_TEXANIM_ID);
 
 	//Colored Pipes.
 	modTable(COLORED_PIPE, (unsigned)&ColoredPipe::spawnData);
@@ -288,7 +357,7 @@ void init()
 	SaveBlock::texSeqFile.Construct(SAVE_BLOCK_ANIM_ID);
 	SaveBlock::clsnFile.Construct(SAVE_BLOCK_COLLISION_ID);
 	
-	//Star Chip.
+	//Star Chips.
 	modTable(STAR_CHIP, (unsigned)&StarChip::spawnData);
 	StarChip::modelFile.Construct(STAR_CHIP_MODEL_ID);
 	
@@ -297,7 +366,60 @@ void init()
 	DoorBlocker::modelFile.Construct(DOOR_BLOCKER_MODEL_ID);
 	DoorBlocker::clsnFile.Construct(DOOR_BLOCKER_COLLISION_ID);
 
-    //Silver coins.
+    //Colored Coins.
 	modTable(COLORED_COIN, (unsigned)&ColoredCoin::spawnData);
 	ColoredCoin::modelFile.Construct(COLORED_COIN_MODEL_ID);
+	
+	//Blue Ice Blocks.
+	modTable(BLUE_ICE_BLOCK, (unsigned)&BlueIceBlock::spawnData);
+	BlueIceBlock::modelFile.Construct(BLUE_ICE_BLOCK_MODEL_ID);
+	BlueIceBlock::clsnFile.Construct(BLUE_ICE_BLOCK_COLLISION_ID);
+	
+	//Mega Blocks.
+	modTable(MEGA_BLOCK, (unsigned)&MegaBlock::spawnData);
+	MegaBlock::modelFile.Construct(MEGA_BLOCK_MODEL_ID);
+	MegaBlock::clsnFile.Construct(MEGA_BLOCK_COLLISION_ID);
+	
+	//Cutscene Loader.
+	modTable(CUTSCENE_LOADER, (unsigned)&CutsceneLoader::spawnData);
+	
+	//Custom Blocks.
+	modTable(CUSTOM_BLOCK, (unsigned)&CustomBlock::spawnData);
+	CustomBlock::modelFiles[0].Construct(YELLOW_BLOCK_MODEL_ID);
+	CustomBlock::modelFiles[1].Construct(RED_BLOCK_MODEL_ID);
+	CustomBlock::modelFiles[2].Construct(RED_BLOCK_TRANSPARENT_MODEL_ID);
+	CustomBlock::clsnFile.Construct(BLOCK_COLLSION_ID);
+	CustomBlock::animFiles[0].Construct(CHARACTER_BLOCK_ANIMATION_ID);
+	CustomBlock::animFiles[1].Construct(RED_BLOCK_TRANSPARENT_ANIMATION_ID);
+	
+	//Treasure chest
+	modTable(TREASURE_CHEST, (unsigned)&TreasureChest::spawnData);
+	TreasureChest::modelFile.Construct(TREASURE_CHEST_MODEL_ID);
+	TreasureChest::animFiles[0].Construct(TREASURE_CHEST_ANIM_ID);
+	
+	//Thwomp, Magma Thwomp and Giga Thwomp
+	modTable(THWOMP, (unsigned)&Thwomp::spawnData);
+	modTable(MAGMA_THWOMP, (unsigned)&Thwomp::spawnData);
+	modTable(GIGA_THWOMP, (unsigned)&Thwomp::spawnData);
+	Thwomp::modelFiles[0].Construct(THWOMP_MODEL_ID);
+	Thwomp::modelFiles[1].Construct(MAGMA_THWOMP_MODEL_ID);
+	Thwomp::modelFiles[2].Construct(GIGA_THWOMP_MODEL_ID);
+	Thwomp::texSeqFile.Construct(THWOMP_TEXANIM_ID);
+	Thwomp::clsnFile.Construct(THWOMP_COLLSION_ID);
+	
+	/*//Tox Box
+	modTable(TOX_BOX, (unsigned)&ToxBox::spawnData);
+	ToxBox::modelFiles[0].Construct(TOX_BOX_MODEL_ID);
+	ToxBox::clsnFiles [0].Construct(TOX_BOX_COLLSION_ID);
+	ToxBox::modelFiles[1].Construct(TOX_BOX_SWITCH_MODEL_ID);
+	ToxBox::clsnFiles [1].Construct(TOX_BOX_SWITCH_COLLSION_ID);
+	
+	//Player Tox Box
+	modTable(PLAYER_TOX_BOX, (unsigned)&PlayerToxBox::spawnData);
+	PlayerToxBox::modelFile .Construct(TOX_BOX_PLAYER_MODEL_ID);
+	PlayerToxBox::texSeqFile.Construct(TOX_BOX_PLAYER_TEXANIM_ID);
+	
+	//Tox Box Flower
+	modTable(TOX_BOX_FLOWER, (unsigned)&ToxBoxFlower::spawnData);
+	ToxBoxFlower::modelFile.Construct(TOX_BOX_FLOWER_MODEL_ID);*/
 }

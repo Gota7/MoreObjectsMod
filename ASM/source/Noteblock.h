@@ -1,7 +1,7 @@
 #ifndef NOTEBLOCK_INCLUDED
 #define NOTEBLOCK_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct Noteblock : public Platform
 {	

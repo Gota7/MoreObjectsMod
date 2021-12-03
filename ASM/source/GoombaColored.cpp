@@ -1,4 +1,5 @@
 #include "GoombaColored.h"
+#include "include/ostream.h"
 
 //Goomba: 02129020 to 0212c10c and then 02130174 to 02130290 and then 02130880 to 021309c4
 /*
@@ -85,6 +86,9 @@ namespace
 	const short SMALL_ID = 0x0208;
 	const short NORMAL_ID = 0x0209;
 	const short LARGE_ID = 0x020A;
+	const short SMALL_ID_2 = 0x0215;
+	const short NORMAL_ID_2 = 0x0216;
+	const short LARGE_ID_2 = 0x0217;
 }
 
 SharedFilePtr Goomba::modelFile;
@@ -156,7 +160,8 @@ int Goomba::InitResources()
 	
 	spawnCapFlag = param1 >> 8 & 0xf;
 	charBehav = param1 >> 12 & 0xf;
-	extraDamage = charBehav == 2 ? 1 : 0;
+	extraDamage = charBehav == 2 ? 1 : (charBehav == 5 ? 8 : 0);
+	extraSpeed = charBehav == 3 ? 5 : 1;
 	
 	if(spawnSilverStar == 1)
 	{
@@ -187,14 +192,14 @@ int Goomba::InitResources()
 	MaterialChanger::Prepare(modelFile.filePtr, aliveMat);
 	materialChg.SetFile(aliveMat, Animation::NO_LOOP, 0x1000_f, 0);
 	TextureSequence::Prepare(modelFile.filePtr, texSeqFile.filePtr);
-	texSeq.SetFile(texSeqFile.filePtr, Animation::NO_LOOP, 0x1000_f, charBehav < 3 ? charBehav + 1 : 0);
+	texSeq.SetFile(texSeqFile.filePtr, Animation::NO_LOOP, 0x1000_f, charBehav < 6 ? charBehav + 1 : 0);
 	coinType = Enemy::CN_YELLOW;
 
-	if(actorID == SMALL_ID)
+	if(actorID == SMALL_ID || actorID == SMALL_ID_2)
 	{
 		sizeType = SizeType::SMALL;
 	}
-	else if(actorID == LARGE_ID)
+	else if(actorID == LARGE_ID || actorID == LARGE_ID_2)
 	{
 		sizeType = SizeType::BIG;
 		LoadBlueCoinModel();
@@ -555,7 +560,6 @@ void Goomba::GetHurtOrHurtPlayer()
 		}
 		if(!(hitFlags & 0x8000) && player->actorID == 0x00bf && !killedByOtherMeans)
 		{
-			Vector3 playerPos = player->pos;
 			if(player->isMetalWario && sizeType != SizeType::BIG)
 			{
 				ReleaseCap(CAP_OFFSET);
@@ -583,14 +587,37 @@ void Goomba::GetHurtOrHurtPlayer()
 				{
 					SmallPoofDust();
 					
-					player->Hurt(pos, 0 + extraDamage, 0xc000_f + 0x6000_f * extraDamage, 1, 0, 1);
+					if (charBehav == 3)
+					{
+						player->Shock(0 + extraDamage);
+					}
+					else if (charBehav == 4)
+					{
+						player->Burn();
+					}
+					else
+					{
+						player->Hurt(pos, 0 + extraDamage, 0xc000_f + 0x6000_f * (charBehav == 5 ? 1 : extraDamage), 1, 0, 1);
+					}
+					
 					Kill();
 					Sound::PlayBank3(0x110, camSpacePos);
 				}
 				else if(cylClsn.hitFlags & 0x400000)
 				{
-					Vector3 objPos = pos;
-					player->Hurt(pos, sizeType + extraDamage, 0xc000_f + 0x6000_f * extraDamage, 1, 0, 1);
+					if (charBehav == 3)
+					{
+						player->Shock(sizeType + extraDamage);
+					}
+					else if (charBehav == 4)
+					{
+						player->Burn();
+					}
+					else
+					{
+						player->Hurt(pos, sizeType + extraDamage, 0xc000_f + 0x6000_f * (charBehav == 5 ? 1 : extraDamage), 1, 0, 1);
+					}
+					
 					state = 1; //a.k.a. Haha, plumber!
 				}
 				
@@ -712,7 +739,7 @@ int Goomba::Behavior()
 	if(state >= 3)
 		rigMdl.anim.speed = 0x1000_f;
 	else
-		rigMdl.anim.speed = std::min(horzSpeed / (2 * scale.x), 0x3000_f);
+		rigMdl.anim.speed = std::min(horzSpeed * extraSpeed / (2 * scale.x), 0x3000_f);
 	
 	if(state != 2 && state != 4 && state != 5)
 	{
@@ -788,7 +815,7 @@ void Goomba::State0HelperFunc()
 	}
 	else if(noChargeTimer != 0)
 	{
-		targetSpeed = WALK_SPEEDS[sizeType];
+		targetSpeed = WALK_SPEEDS[sizeType] * extraSpeed;
 		rigMdl.SetAnim(animFiles[WALK].filePtr, Animation::Flags::LOOP, 0x1000_f, 0);
 		targetDir2 = pos.HorzAngle(originalPos);
 		angAccel = 0x400;
@@ -815,9 +842,9 @@ void Goomba::State0HelperFunc()
 				rigMdl.SetAnim(animFiles[RUN].filePtr, Animation::Flags::LOOP, 0x1000_f, 0);
 			
 			targetDir2 = targetDir;				
-			targetSpeed = RUN_SPEEDS[sizeType];
+			targetSpeed = RUN_SPEEDS[sizeType] * extraSpeed;
 			
-			if(charBehav < 2 && distToPlayer <= JUMP_DIST && rigMdl.anim.file == animFiles[RUN].filePtr)
+			if(((charBehav < 2 && charBehav != 3) || charBehav == 4) && distToPlayer <= JUMP_DIST && rigMdl.anim.file == animFiles[RUN].filePtr)
 			{
 				state = 4;
 				horzSpeed = JUMP_HORZ_SPEED;
@@ -830,7 +857,7 @@ void Goomba::State0HelperFunc()
 		}
 		else
 		{
-			targetSpeed = WALK_SPEEDS[sizeType];
+			targetSpeed = WALK_SPEEDS[sizeType] * extraSpeed;
 			rigMdl.SetAnim(animFiles[WALK].filePtr, Animation::Flags::LOOP, 0x1000_f, 0);
 			
 			if(movementTimer != 0)
@@ -959,7 +986,7 @@ void Goomba::State3()
 //0212a6f8
 void Goomba::State4()
 {
-	if(charBehav == 1 && speed.y < 0_f)
+	if((charBehav == 1 || charBehav == 4) && speed.y < 0_f)
 	{
 		state = 5;
 		termVel = SPIN_TERM_VEL;

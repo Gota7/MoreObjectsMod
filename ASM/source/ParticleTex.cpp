@@ -1,4 +1,4 @@
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 //@0208f9d0
 namespace Particle

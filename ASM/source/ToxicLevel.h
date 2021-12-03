@@ -1,7 +1,7 @@
 #ifndef TOXIC_LEVEL_INCLUDED
 #define TOXIC_LEVEL_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct ToxicLevel : public Actor
 {

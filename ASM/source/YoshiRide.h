@@ -1,7 +1,7 @@
 #ifndef YOSHI_RIDE_INCLUDED
 #define YOSHI_RIDE_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct YoshiRide : public Actor
 {

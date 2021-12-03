@@ -1,7 +1,7 @@
 #ifndef TREE_SHADOW_INCLUDED
 #define TREE_SHADOW_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct TreeShadow : public Actor
 {

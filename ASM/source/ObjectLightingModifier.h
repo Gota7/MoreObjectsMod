@@ -1,7 +1,7 @@
 #ifndef OBJECTLIGHTINGMODIFIER_INCLUDED
 #define OBJECTLIGHTINGMODIFIER_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct ObjectLightingModifier : public Actor
 {	

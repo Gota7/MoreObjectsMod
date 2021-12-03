@@ -1,7 +1,7 @@
 #ifndef INVISIBLEWALL_INCLUDED
 #define INVISIBLEWALL_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct InvisibleWall : public Platform
 {	

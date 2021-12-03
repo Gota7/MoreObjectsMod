@@ -1,7 +1,7 @@
 #ifndef MAGIKOOPA_INCLUDED
 #define MAGIKOOPA_INCLUDED
 
-#include "SM64DS_2.h"
+#include "include/SM64DS_2.h"
 
 struct Magikoopa : public Enemy
 {
@@ -43,8 +43,15 @@ struct Magikoopa : public Enemy
 		uint8_t numFireToSpawn;
 		uint8_t* resourceRefCount;
 		SharedRes* res;
-		unsigned shapesID;
+		//unsigned shapesID;
 		
+		Model model;
+		TextureSequence texSeq;
+		
+		static SharedFilePtr magicModelFile;
+		static SharedFilePtr magicTexSeqFile;
+		
+		void UpdateModelTransform();
 		void SetMagikoopa(Magikoopa& magik);
 		
 		static Shot* Spawn();
@@ -68,8 +75,9 @@ struct Magikoopa : public Enemy
 	uint8_t currPathPt;
 	uint8_t nextPathPt;
 	PathPtr pathPtr;
-	unsigned shapesID;
+	//unsigned shapesID;
 	uint8_t eventToTrigger;
+	uint8_t starID;
 	uint8_t resourceRefCount;
 	uint8_t shotState;
 	uint8_t health;

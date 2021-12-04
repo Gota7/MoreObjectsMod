@@ -5216,7 +5216,7 @@ Assets by: Josh65536 and Splatterboy
 	<object id='545'>
 		<category>1</category>
 		<name>Peach NPC</name>
-		<internalname>@CUSTOM%MG/057_peachNPC.bmd</internalname>
+		<internalname>@CUSTOM%MG/059_peachNPC.bmd</internalname>
 		<actorid>545</actorid>
 		<description>A custom Peach NPC that can have a message before and after an event.
 Note: Power Star only spawns after the event is triggered (unless the event is set to F)

@@ -89,6 +89,7 @@ rename 52 082_toxBoxSwitch.kcl
 rename 53 083_toxBoxPlayer.bmd
 rename 54 084_toxBoxPlayer.btp
 rename 55 085_toxBoxFlower.bmd
+rename 56 086_coloredGoomba_2.bmd
 
 # Replace assets.
 replace 0 ../Objects/GalaxyShrinkPlatform/ModelCollision/galaxyShrinkPlatformFrame.bmd
@@ -176,4 +177,5 @@ replace 51 ../Objects/ToxBox/ModelCollision/onimasu_switch.bmd
 replace 52 ../Objects/ToxBox/ModelCollision/onimasu_switch.kcl
 replace 53 ../Objects/ToxBox/ModelCollision/player.bmd
 replace 54 ../Objects/ToxBox/TexAnim/player.btp
-replace 55 ../Objects/ToxBox/ModelCollision/flower.bmd
+replace 55 ../Objects/ToxBox/ModelCollision/flower.bmd	
+replace 56 ../Objects/ColoredGoombas/Model/kuribo_model_2.bmd

@@ -85,6 +85,10 @@ int Berry::InitResources()
 	stem.SetFile(stemFile.filePtr, 1, -1);
 	model.data.materials[0].difAmb = (param1 & 0x7fff) << 16 | 0x8000;
 	
+	Model::LoadFile(COIN_YELLOW_POLY4_MODEL_PTR);
+	Model::LoadFile(COIN_BLUE_POLY32_MODEL_PTR);
+	Model::LoadFile(COIN_BLUE_POLY4_MODEL_PTR);
+	
 	cylClsn.Init(this, RADIUS, RADIUS * 2, 0x00200000, 0x00008000);
 	shadow.InitCylinder();
 	

@@ -36,6 +36,7 @@ struct Goomba : public CapEnemy
 	unsigned sizeType;
 	char spawnSilverStar; //1 is true, any other value is false
 	char silverStarID;
+	char modelType;
 	char charBehav; //0 = jump, 1 = jump 'n' spin, 2 = do double damage, 3 = speed + shock, 4 = fire, 5 = instakill
 	char regurgBounceCount;
 	char flags468;
@@ -90,7 +91,7 @@ struct Goomba : public CapEnemy
 		NUM_ANIMS
 	};
 	
-	static SharedFilePtr modelFile;
+	static SharedFilePtr modelFiles[2];
 	static SharedFilePtr texSeqFile;
 	static SharedFilePtr animFiles[NUM_ANIMS];
 	

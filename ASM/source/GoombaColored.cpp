@@ -1,5 +1,4 @@
 #include "GoombaColored.h"
-#include "include/ostream.h"
 
 //Goomba: 02129020 to 0212c10c and then 02130174 to 02130290 and then 02130880 to 021309c4
 /*
@@ -89,9 +88,11 @@ namespace
 	const short SMALL_ID_2 = 0x0215;
 	const short NORMAL_ID_2 = 0x0216;
 	const short LARGE_ID_2 = 0x0217;
+	
+	const Fix12i HitRadius[] = {50._f, 100._f, 200._f};
 }
 
-SharedFilePtr Goomba::modelFile;
+SharedFilePtr Goomba::modelFiles[2];
 SharedFilePtr Goomba::texSeqFile;
 SharedFilePtr Goomba::animFiles[Goomba::NUM_ANIMS];
 
@@ -160,6 +161,7 @@ int Goomba::InitResources()
 	
 	spawnCapFlag = param1 >> 8 & 0xf;
 	charBehav = param1 >> 12 & 0xf;
+	modelType = charBehav < 3 ? 0 : 1;
 	extraDamage = charBehav == 2 ? 1 : (charBehav == 5 ? 8 : 0);
 	extraSpeed = charBehav == 3 ? 5 : 1;
 	
@@ -169,7 +171,7 @@ int Goomba::InitResources()
 		LoadSilverStarAndNumber();
 	}
 		
-	Model::LoadFile(modelFile);
+	Model::LoadFile(modelFiles[modelType]);
 	TextureSequence::LoadFile(texSeqFile);
 	for(int i = 0; i < NUM_ANIMS; ++i)
 		BoneAnimation::LoadFile(animFiles[i]);
@@ -183,16 +185,16 @@ int Goomba::InitResources()
 	if(!DestroyIfCapNotNeeded())
 		return 0;
 	
-	if(!rigMdl.SetFile(modelFile.filePtr, 1, -1))
+	if(!rigMdl.SetFile(modelFiles[modelType].filePtr, 1, -1))
 		return 0;
 	
 	if(!shadow.InitCylinder())
 		return 0;
 	
-	MaterialChanger::Prepare(modelFile.filePtr, aliveMat);
+	MaterialChanger::Prepare(modelFiles[modelType].filePtr, aliveMat);
 	materialChg.SetFile(aliveMat, Animation::NO_LOOP, 0x1000_f, 0);
-	TextureSequence::Prepare(modelFile.filePtr, texSeqFile.filePtr);
-	texSeq.SetFile(texSeqFile.filePtr, Animation::NO_LOOP, 0x1000_f, charBehav < 6 ? charBehav + 1 : 0);
+	TextureSequence::Prepare(modelFiles[modelType].filePtr, texSeqFile.filePtr);
+	texSeq.SetFile(texSeqFile.filePtr, Animation::NO_LOOP, 0x1000_f, charBehav < 6 ? (charBehav + 1) - (modelType * 3) : 0);
 	coinType = Enemy::CN_YELLOW;
 
 	if(actorID == SMALL_ID || actorID == SMALL_ID_2)
@@ -250,7 +252,7 @@ int Goomba::CleanupResources()
 	if(sizeType == SizeType::BIG)
 		UnloadBlueCoinModel();
 	
-	modelFile.Release();
+	modelFiles[modelType].Release();
 	texSeqFile.Release();
 	for(int i = 0; i < NUM_ANIMS; ++i)
 		animFiles[i].Release();
@@ -320,7 +322,7 @@ bool Goomba::UpdateIfDying()
 	{
 		Sound::PlayBank3(DYING_SOUND_IDS[sizeType], camSpacePos);
 		SpawnSilverStarIfNecessary();
-		if(capID < 6)
+		if(capID < 4)
 		{
 			pos = originalPos;
 			RespawnIfHasCap();
@@ -411,7 +413,7 @@ bool Goomba::UpdateIfEaten()
 				RenderRegurgGoombaHelpless(eater);
 				horzSpeed = -0xf000_f;
 				speed.y = 0x14000_f;
-				MaterialChanger::Prepare(modelFile.filePtr, regurgMat);
+				MaterialChanger::Prepare(modelFiles[modelType].filePtr, regurgMat);
 				materialChg.SetFile(regurgMat, Animation::NO_LOOP, 0x1000_f, 0);
 				materialChg.currFrame = 0_f;
 				cylClsn.Clear();
@@ -447,7 +449,7 @@ bool Goomba::UpdateIfEaten()
 				motionAng.y += 0x8000;
 				horzSpeed = -horzSpeed;
 				
-				MaterialChanger::Prepare(modelFile.filePtr, regurgMat);
+				MaterialChanger::Prepare(modelFiles[modelType].filePtr, regurgMat);
 				materialChg.SetFile(regurgMat, Animation::NO_LOOP, 0x1000_f, 0);
 				materialChg.currFrame = 0_f;
 			}
@@ -574,10 +576,13 @@ void Goomba::GetHurtOrHurtPlayer()
 			}
 			else if(JumpedOnByPlayer(cylClsn, *player))
 			{
-				player->Bounce(0x28000_f);
-				Sound::PlayBank3(0xe0, camSpacePos);
-				defeatMethod = Enemy::DF_SQUASHED;
-				scale.x = scale.y = scale.z = 0x1000_f;
+				if (player->pos.x <= pos.x + HitRadius[sizeType] && player->pos.x >= pos.x - HitRadius[sizeType] && player->pos.z <= pos.z + HitRadius[sizeType] && player->pos.z >= pos.z - HitRadius[sizeType])
+				{
+					player->Bounce(0x28000_f);
+					Sound::PlayBank3(0xe0, camSpacePos);
+					defeatMethod = Enemy::DF_SQUASHED;
+					scale.x = scale.y = scale.z = 0x1000_f;
+				}
 			}
 			else if(player->isVanishLuigi)
 				return;

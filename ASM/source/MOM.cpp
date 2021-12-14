@@ -193,7 +193,7 @@ namespace {
 		THWOMP_COLLSION_ID,
 		MAGMA_THWOMP_MODEL_ID,
 		GIGA_THWOMP_MODEL_ID,
-		GIGA_THWOMP_COLLSION_ID/*,
+		GIGA_THWOMP_COLLSION_ID,
 		
 		TOX_BOX_MODEL_ID,
 		TOX_BOX_COLLSION_ID, //50
@@ -201,7 +201,9 @@ namespace {
 		TOX_BOX_SWITCH_COLLSION_ID,
 		TOX_BOX_PLAYER_MODEL_ID,
 		TOX_BOX_PLAYER_TEXANIM_ID,
-		TOX_BOX_FLOWER_MODEL_ID*/
+		TOX_BOX_FLOWER_MODEL_ID,
+		
+		COLORED_GOOMBA_MODEL_ID_2
 	};
 
 	//Modify the object and actor tables.
@@ -251,7 +253,8 @@ void init()
 	modTable(COLORED_GOOMBA_SMALL, (unsigned)&Goomba::spawnDataSmall);
 	modTable(COLORED_GOOMBA, (unsigned)&Goomba::spawnDataNormal);
 	modTable(COLORED_GOOMBA_LARGE, (unsigned)&Goomba::spawnDataBig);
-	Goomba::modelFile.Construct(COLORED_GOOMBA_MODEL_ID);
+	Goomba::modelFiles[0].Construct(COLORED_GOOMBA_MODEL_ID);
+	Goomba::modelFiles[1].Construct(COLORED_GOOMBA_MODEL_ID_2);
 	Goomba::texSeqFile.Construct(COLORED_GOOMBA_ANIM_ID);
 	Goomba::animFiles[0].Construct(0x0388);
 	Goomba::animFiles[1].Construct(0x0389);

@@ -109,7 +109,7 @@ int ColoredCoin::Behavior()
 				deathStarted = false;
 				KillAndTrackInDeathTable();
 			}
-			else
+			else if (PLAYER_HEALTH <= 8 && PLAYER_HEALTH > 1)
 				PLAYER_HEALTH -= 1;
 			
 			frameCounter = 0;
@@ -147,11 +147,14 @@ void ColoredCoin::HandleClsn()
 void ColoredCoin::OnTurnIntoEgg(Player& player)
 {
 	Kill();
-	Destroy();
+	if (!deathCoin)
+		Destroy();
 }
 
 unsigned ColoredCoin::OnYoshiTryEat()
 {
+	if (deathStarted && deathCoin)
+		return Actor::YE_DONT_EAT;
 	return Actor::YE_SWALLOW;
 }
 

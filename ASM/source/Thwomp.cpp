@@ -481,7 +481,7 @@ int Thwomp::Behavior()
 	
 	if (actorID == MAGMA_THWOMP_ID)
 	{
-		if (DistToCPlayer() < 750._f && ClosestPlayer()->currState != (Player::State*)Player::ST_BURN_FIRE)
+		if (DistToCPlayer() < 750._f && ClosestPlayer()->currState != (Player::State*)Player::ST_BURN_FIRE && PLAYER_HEALTH != 0)
 		{
 			ClosestPlayer()->Burn();
 		}

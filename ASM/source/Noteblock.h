@@ -13,6 +13,7 @@ struct Noteblock : public Platform
 	virtual void launch();
 	virtual int InitResources() override;
 	virtual int CleanupResources() override;
+	virtual bool BeforeBehavior() override;
 	virtual int Behavior() override;
 	virtual int Render() override;
 	virtual ~Noteblock();

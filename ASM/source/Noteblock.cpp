@@ -126,9 +126,9 @@ int Noteblock::CleanupResources()
 int Noteblock::Behavior()
 {
 	UpdateModelTransform();
+
 	if(IsClsnInRange(0_f, 0_f))
 	{
-
 		if (stage > 0 && stage < 4) {
 			jiggle();
 		}
@@ -142,21 +142,17 @@ int Noteblock::Behavior()
 			boost = true;
 		}
 
-		if (PLAYER_ARR[0]->pos.y >= pos.y) {
-			IMMUNE_TO_DAMAGE = true;
-		} else {
-			IMMUNE_TO_DAMAGE = false;
-		}
-
 		UpdateClsnPosAndRot();
-
-	} else {
-
-		IMMUNE_TO_DAMAGE = false;
-
 	}
 	
 	return 1;
+}
+
+bool Noteblock::BeforeBehavior()
+{
+	IMMUNE_TO_DAMAGE = PLAYER_ARR[0]->pos.y >= pos.y && IsClsnInRange(0_f, 0_f);
+
+	return Actor::BeforeBehavior();
 }
 
 int Noteblock::Render()
@@ -165,4 +161,7 @@ int Noteblock::Render()
 	return 1;
 }
 
-Noteblock::~Noteblock() {}
+Noteblock::~Noteblock()
+{
+	IMMUNE_TO_DAMAGE = false;
+}

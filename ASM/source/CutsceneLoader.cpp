@@ -68,7 +68,7 @@ int CutsceneLoader::Behavior()
 		// If condition == noUpperHallKey, run the script if the upper hall   (0x04) hasn't been collected
 		condition <= noUpperHallKey && !(SAVE_DATA.keysObtained & 1 << ((condition - 1 & 3) + (-condition >> 2) + 3)) ||
 
-		// If condition == 7, run the script if a specific star in the hub has been collected
+		// If condition == 7, run the script if a specific star in the hub hasn't been collected
 		condition == noStar7InHub && (SAVE_DATA.stars[29] & 1 << 7) == 0 ||
 
 		//If condition == 8, run the script if an event is set

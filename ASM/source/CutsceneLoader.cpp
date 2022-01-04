@@ -1,10 +1,5 @@
 #include "CutsceneLoader.h"
 
-namespace
-{
-	
-}
-
 SpawnInfo<CutsceneLoader> CutsceneLoader::spawnData =
 {
 	&CutsceneLoader::Spawn,
@@ -43,17 +38,11 @@ E: Event ID
 
 */
 
-void CutsceneLoader::RunScript()
-{
-	LoadAndRunKuppaScript(param1);
-}
-
 int CutsceneLoader::InitResources()
 {
-	trigger = (ang.x & 0xF000) >> 12;
+	condition = (ang.x & 0xF000) >> 12;
 	eventID = ang.x & 0xFF;
 	hasLoaded = false;
-	flags--;
 	
 	return 1;
 }
@@ -65,81 +54,32 @@ int CutsceneLoader::CleanupResources()
 
 int CutsceneLoader::Behavior()
 {
-	if (!hasLoaded)
+	if (hasLoaded) return 1;
+
+	if (condition == always || // Run the script always if condition == always
+
+		// If condition == 0, run the script if no stars have been collected in the current level
+		condition == noStarsInCurrentLevel && SAVE_DATA.stars[SUBLEVEL_LEVEL_TABLE[LEVEL_ID]] == 0 ||
+
+		// If condition == noMarioKey,     run the script if Mario's key      (0x08) hasn't been collected
+		// If condition == noLuigiKey,     run the script if Luigi's key      (0x10) hasn't been collected
+		// If condition == noWarioKey,     run the script if Wario's key      (0x20) hasn't been collected
+		// If condition == noBasementKey,  run the script if the basement key (0x02) hasn't been collected
+		// If condition == noUpperHallKey, run the script if the upper hall   (0x04) hasn't been collected
+		condition <= noUpperHallKey && !(SAVE_DATA.keysObtained & 1 << ((condition - 1 & 3) + (-condition >> 2) + 3)) ||
+
+		// If condition == 7, run the script if a specific star in the hub has been collected
+		condition == noStar7InHub && (SAVE_DATA.stars[29] & 1 << 7) == 0 ||
+
+		//If condition == 8, run the script if an event is set
+		condition == eventSet && eventID < 0x20 && Event::GetBit(eventID)
+	)
 	{
-		if (trigger == 0)
-		{
-			//Only runs if no stars have been collected in the current level
-			if (LEVEL_ID < 15)
-			{
-				if (SAVE_DATA.mainStars[SUBLEVEL_LEVEL_TABLE[LEVEL_ID]] == 0)
-				{
-					RunScript();
-					hasLoaded = true;
-				}
-			}
-			else
-			{
-				if (SAVE_DATA.secretStars[SUBLEVEL_LEVEL_TABLE[LEVEL_ID] - 15] == 0)
-				{
-					RunScript();
-					hasLoaded = true;
-				}
-			}
-		}
-		else if (trigger == 1)
-		{
-			//Always runs
-			RunScript();
-			hasLoaded = true;
-		}
-		else if (trigger == 2 && (SAVE_DATA.keysObtained & 1 << 3) == 0)
-		{
-			//Only runs if Mario's key hasn't been obtained
-			RunScript();
-			hasLoaded = true;
-		}
-		else if (trigger == 3 && (SAVE_DATA.keysObtained & 1 << 4) == 0)
-		{
-			//Only runs if Luigi's key hasn't been obtained
-			RunScript();
-			hasLoaded = true;
-		}
-		else if (trigger == 4 && (SAVE_DATA.keysObtained & 1 << 5) == 0)
-		{
-			//Only runs if Wario's key hasn't been obtained
-			RunScript();
-			hasLoaded = true;
-		}
-		else if (trigger == 5 && (SAVE_DATA.keysObtained & 1 << 3) == 0)
-		{
-			//Only runs if the first Bowser key hasn't been obtained
-			RunScript();
-			hasLoaded = true;
-		}
-		else if (trigger == 6 && (SAVE_DATA.keysObtained & 1 << 3) == 0)
-		{
-			//Only runs if the second Bowser key hasn't been obtained
-			RunScript();
-			hasLoaded = true;
-		}
-		else if (trigger == 7 && (SAVE_DATA.secretStars[14] & 1 << 7) == 0)
-		{
-			//Only runs if HUB star 7 hasn't been collected
-			RunScript();
-			hasLoaded = true;
-		}
-		else if (eventID < 0x20 && trigger == 8)
-		{
-			//Runs when an event is set
-			if (Event::GetBit(eventID))
-			{
-				RunScript();
-				hasLoaded = true;
-			}
-		}
+		LoadAndRunKuppaScript(param1);
+
+		hasLoaded = true;
 	}
-	
+
 	return 1;
 }
 

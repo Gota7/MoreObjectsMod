@@ -3,14 +3,14 @@
 
 #include "SM64DS_Common.h"
 
-const int NUM_LEVELS = 52;
-const int NUM_MAIN_LEVELS = 15;
-const int NUM_SECRET_LEVELS = 15;
-const int NUM_MINIGAMES = 36;
+constexpr int NUM_LEVELS = 52;
+constexpr int NUM_MAIN_LEVELS = 15;
+constexpr int NUM_SECRET_LEVELS = 15;
+constexpr int NUM_MINIGAMES = 36;
 
 
-struct SaveData {
-
+struct SaveData
+{
 	uint32_t magic8000;			//8000 in ASCII
 	uint8_t keysObtained;		/*	0x01: File saved //set when file is saved
 									0x02: Basement key obtained
@@ -133,22 +133,24 @@ struct SaveData {
 									0x20: ??? //Unused
 									0x40: ??? //Unused
 									0x80: ??? //Unused	*/
-	uint8_t mainStars[NUM_MAIN_LEVELS];		//0xFE (7 stars) & 0x01 (100 coins)
-	uint8_t secretStars[NUM_SECRET_LEVELS];	/*	0: Bowser 1 (0x02=Red, 0x04=Time)
-												1: Bowser 2 (0x02=Red, 0x04=Time)
-												2: Bowser 3 (0x02=Red, 0x04=Time)
-												3: Mario painting (0x02=Red, 0x04=Time)
-												4: Luigi painting (0x02=Red, 0x04=Std)
-												5: Wario painting (0x02=Red, 0x04=Wario)
-												6: Slide stars (0x02=Std, 0x04=20s)
-												7: Water temple (0x02=Red)
-												8: Switch palace (0x02=Red)
-												9: Moat secret (0x02=Red, 0x04=Time)
-												A: Behind the waterfall (0x02=Red, 0x04=Std)
-												B: Rainbow secret (0x02=Red, 0x04=Wario)
-												C: Beach painting (0x02=SS)
-												D: Battle fort (0x02=SS)
-												E: Castle secrets (0x02=Red, 0x04=Toad[HMC], 0x08=Toad[2ndF], 0x10=Toad[3rdF], 0x20=White[2ndF], 0x40=White[CR]) */
+	uint8_t stars[NUM_MAIN_LEVELS + NUM_SECRET_LEVELS]; // Main levels: 0xFE (7 stars) & 0x01 (100 coins)
+								 /* Secret levels:
+								 	15: Bowser 1 (0x02=Red, 0x04=Time)
+									16: Bowser 2 (0x02=Red, 0x04=Time)
+									17: Bowser 3 (0x02=Red, 0x04=Time)
+									18: Mario painting (0x02=Red, 0x04=Time)
+									19: Luigi painting (0x02=Red, 0x04=Std)
+									20: Wario painting (0x02=Red, 0x04=Wario)
+									21: Slide stars (0x02=Std, 0x04=20s)
+									22: Water temple (0x02=Red)
+									23: Switch palace (0x02=Red)
+									24: Moat secret (0x02=Red, 0x04=Time)
+									25: Behind the waterfall (0x02=Red, 0x04=Std)
+									26: Rainbow secret (0x02=Red, 0x04=Wario)
+									27: Beach painting (0x02=SS)
+									28: Battle fort (0x02=SS)
+									29: Castle secrets (0x02=Red, 0x04=Toad[HMC], 0x08=Toad[2ndF], 0x10=Toad[3rdF], 0x20=White[2ndF], 0x40=White[CR]) */
+
 	uint8_t coinRecords[NUM_MAIN_LEVELS];		//Coin counts in each main level
 	uint8_t currentCharacter;				/* (Mario=0, Luigi=1, Wario=2, Yoshi=3)	*/
 	uint8_t unused_0x42[2];					//Always 0
@@ -176,10 +178,9 @@ struct SaveData {
 	uint8_t unused_0x51[3];						//Unused
 	uint32_t minigameRecords[NUM_MINIGAMES][5];	/*	Minigame records 1-36; each minigame stores 5 scores */
 	uint8_t unused_0x324[4];						//Unused
+}
+extern SAVE_DATA;
 
-};
-
-extern SaveData SAVE_DATA;
 
 /* 	All unused fields can be safely used for custom purposes. A full function trackdown where every write is noted would be too tedious; 
 	Rather, writes to SaveData have been trapped by triggering in-game events. Flags have been compared with real-world savefiles to ensure nothing is missing. 

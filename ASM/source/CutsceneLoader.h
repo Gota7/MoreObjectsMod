@@ -15,8 +15,21 @@ struct CutsceneLoader : public Actor
 	virtual int Render() override;
 	virtual ~CutsceneLoader();
 	void RunScript();
+
+	enum Condition
+	{
+		noStarsInCurrentLevel = 0,
+		always = 1,
+		noMarioKey = 2,
+		noLuigiKey = 3,
+		noWarioKey = 4,
+		noBasementKey = 5,
+		noUpperHallKey = 6,
+		noStar7InHub = 7,
+		eventSet = 8
+	};
 	
-	uint8_t trigger;
+	uint8_t condition;
 	uint8_t eventID;
 	bool hasLoaded;
 

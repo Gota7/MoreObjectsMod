@@ -139,7 +139,7 @@ replace 2B ../Objects/CharacterBlock/ModelCollision/hatena_karabox_m.bmd
 replace 2C ../Objects/CharacterBlock/ModelCollision/hatena_karabox_l.bmd
 replace 2D ../Objects/CharacterBlock/ModelCollision/hatena_karabox_w.bmd
 replace 2E ../Objects/CharacterBlock/ModelCollision/hatena_karabox_y.bmd
-replace 3F ../Objects/CharacterBlock/Anim/hatena_karabox.bca
+replace 2F ../Objects/CharacterBlock/Anim/hatena_karabox.bca
 replace 30 ../Objects/SaveBlock/ModelCollision/saveBlock.bmd
 replace 31 ../Objects/SaveBlock/TexAnim/saveBlock.btp
 replace 32 ../Objects/SaveBlock/ModelCollision/saveBlock.kcl

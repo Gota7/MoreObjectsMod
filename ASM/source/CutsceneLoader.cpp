@@ -66,7 +66,7 @@ int CutsceneLoader::Behavior()
 		// If condition == noWarioKey,     run the script if Wario's key      (0x20) hasn't been collected
 		// If condition == noBasementKey,  run the script if the basement key (0x02) hasn't been collected
 		// If condition == noUpperHallKey, run the script if the upper hall   (0x04) hasn't been collected
-		condition <= noUpperHallKey && !(SAVE_DATA.keysObtained & 1 << ((condition - 1 & 3) + (-condition >> 2) + 3)) ||
+		condition >= noMarioKey && condition <= noUpperHallKey && !(SAVE_DATA.keysObtained & 1 << ((condition - 1 & 3) + (-condition >> 2) + 3)) ||
 
 		// If condition == 7, run the script if a specific star in the hub hasn't been collected
 		condition == noStar7InHub && (SAVE_DATA.stars[29] & 1 << 7) == 0 ||

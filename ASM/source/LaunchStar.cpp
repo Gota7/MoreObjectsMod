@@ -19,6 +19,8 @@ BezierPathIter LaunchStar::bzIt;
 Vector3_16 LaunchStar::lsDiffAng;
 Vector3_16 LaunchStar::lsInitAng;
 
+Player::State launchStarState {};
+
 SpawnInfo<LaunchStar> LaunchStar::spawnData =
 {
 	&LaunchStar::Spawn,
@@ -298,13 +300,13 @@ int LaunchStar::Behavior()
 		Player& player = *isThereAPlayer;
 		
 		if(player.uniqueID == cylClsn.otherObjID && (INPUT_ARR[0].buttonsPressed & Input::A) &&
-		   ((unsigned)player.currState != Player::ST_LAUNCH_STAR || player.lsPtr != this))
+		   (player.currState != &launchStarState || player.lsPtr != this))
 		{
 			ls_ptr = this;
-			((Player::State*)Player::ST_LAUNCH_STAR)->init    = &Player::LS_Init;
-			((Player::State*)Player::ST_LAUNCH_STAR)->main    = &Player::LS_Behavior;
-			((Player::State*)Player::ST_LAUNCH_STAR)->cleanup = &Player::LS_Cleanup;
-			player.ChangeState(*(Player::State*)Player::ST_LAUNCH_STAR);
+			launchStarState.init    = &Player::LS_Init;
+			launchStarState.main    = &Player::LS_Behavior;
+			launchStarState.cleanup = &Player::LS_Cleanup;
+			player.ChangeState(launchStarState);
 		}
 	}
 	

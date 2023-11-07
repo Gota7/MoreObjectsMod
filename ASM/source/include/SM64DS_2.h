@@ -814,12 +814,7 @@ struct Player : public Actor
 		ST_CLIMB              = 0x021106dc,
 		ST_HEADSTAND          = 0x021106f4,
 		ST_POLE_JUMP          = 0x0211070c,
-		ST_HEADSTAND_JUMP     = 0x02110724,
-		
-		
-		
-		
-		ST_LAUNCH_STAR        = 0x0211079c
+		ST_HEADSTAND_JUMP     = 0x02110724
     };
 	
 	enum TalkStates

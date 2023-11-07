@@ -92,7 +92,7 @@ The first step is to add a new overlay to SM64DS. This is where MOM will be stor
 1. Open your ROM in SM64DSe Ultimate, and hit Tools->Edit Overlays.
 2. Right click the last overlay, and click "Add Below".
 3. Note the overlay ID. Mine is 155.
-4. Change the overlay RAM address to a free area big enough to house MOM (I use 0x023EC400).
+4. Change the overlay RAM address to a free area big enough to house MOM (I use 0x023c4000). **Note that the overlay must end before the address 0x023fc000**, because otherwise it will break compatibility with some flashcards, if not all.
 5. Click "Update" then "Save Changes".
 
 #### Compiling MOM

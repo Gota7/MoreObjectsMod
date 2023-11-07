@@ -33,6 +33,19 @@ void Initialize()
 
 }
 
+bool repl_0201a7c8(int ovID)
+{
+	const bool res = LoadObjBankOverlay(ovID);
+
+	if (ovID == 2 && !init)
+	{
+		Initialize();
+		init = true;
+	}
+
+	return res;
+}
+
 //Manage modes.
 void ManageModes() 
 {
@@ -65,16 +78,7 @@ void ManageModes()
 //Hooks every frame.
 void hook_0200da0c()
 {
-	
-	//Initialize if needed.
-	if (!init) {
-		Initialize();
-		init = true;
-	}
-
-	//2D code.
 	twoDee::Update();
-
 }
 
 //Hooks when course is changed.
